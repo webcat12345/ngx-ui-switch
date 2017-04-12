@@ -1,4 +1,4 @@
-#Angular2 UI Switch Component
+# Angular2 UI Switch Component
 
 [![Build Status](https://travis-ci.org/webcat12345/ng2-ui-switch-aot.svg?branch=master)](https://travis-ci.org/webcat12345/ng2-ui-switch-aot) [![npm version](https://badge.fury.io/js/ng2-ui-switch-aot.svg)](https://badge.fury.io/js/ng2-ui-switch-aot) [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://www.npmjs.com/package/ng2-ui-switch-aot)
 

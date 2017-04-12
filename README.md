@@ -4,11 +4,11 @@
 
 # Description
 
-This is a simple iOS 7 style switch component for Angular2 & 4.
+This is a simple iOS 7 style switch component for Angular4.
 
 ![alt](logo.png)
 
-Inspired by [switchery](https://github.com/abpetkov/switchery) - in angula2 & 4.
+Inspired by [switchery](https://github.com/abpetkov/switchery) - in angular4.
 
 # Installation
 

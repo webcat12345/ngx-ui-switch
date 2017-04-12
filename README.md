@@ -1,25 +1,25 @@
-# Angular2 UI Switch Component
+# Ngx UI Switch Component
 
-[![Build Status](https://travis-ci.org/webcat12345/ng2-ui-switch-aot.svg?branch=master)](https://travis-ci.org/webcat12345/ng2-ui-switch-aot) [![npm version](https://badge.fury.io/js/ng2-ui-switch-aot.svg)](https://badge.fury.io/js/ng2-ui-switch-aot) [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://www.npmjs.com/package/ng2-ui-switch-aot)
+[![Build Status](https://travis-ci.org/webcat12345/ngx-ui-switch.svg?branch=master)](https://travis-ci.org/webcat12345/ngx-ui-switch) [![npm version](https://badge.fury.io/js/ngx-ui-switch.svg)](https://badge.fury.io/js/ngx-ui-switch) [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://www.npmjs.com/package/ngx-ui-switch)
 
 # Description
 
-This is a simple iOS 7 style switch component for Angular2.
+This is a simple iOS 7 style switch component for Angular2 & 4.
 
 ![alt](logo.png)
 
-Inspired by [switchery](https://github.com/abpetkov/switchery) - in angular2.
+Inspired by [switchery](https://github.com/abpetkov/switchery) - in angula2 & 4.
 
 # Installation
 
 ```bash
-npm install angular2-ui-switch --save
+npm install ngx-ui-switch --save
 ```
 
 # Usage
 
 ```javascript
-import { UiSwitchModule } from 'angular2-ui-switch'
+import { UiSwitchModule } from 'ngx-ui-switch'
 import { AppComponent } from './app.component';
 
 @NgModule({

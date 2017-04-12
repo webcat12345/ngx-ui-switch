@@ -1,4 +1,4 @@
-# Description
+# Description [![Build Status](https://travis-ci.org/webcat12345/ng2-ui-switch-aot.svg?branch=master)](https://travis-ci.org/webcat12345/ng2-ui-switch-aot)
 
 This is a simple iOS 7 style switch component for Angular2.
 

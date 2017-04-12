@@ -1,5 +1,7 @@
 # Ngx UI Switch Component
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/webcat12345/ngx-ui-switch.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/webcat12345/ngx-ui-switch.svg?branch=master)](https://travis-ci.org/webcat12345/ngx-ui-switch) [![npm version](https://badge.fury.io/js/ngx-ui-switch.svg)](https://badge.fury.io/js/ngx-ui-switch) [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://www.npmjs.com/package/ngx-ui-switch)
 
 # Description

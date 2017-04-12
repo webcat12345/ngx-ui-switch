@@ -1,6 +1,6 @@
 {
-  "name": "angular2-ui-switch",
-  "version": "1.2.0",
+  "name": "ng2-ui-switch-aot",
+  "version": "1.0.0",
   "description": "switch button for angular2",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -15,9 +15,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yuyang041060120/angular2-ui-switch.git"
+    "url": "git+https://github.com/webcat12345/ng2-ui-switch-aot.git"
   },
-  "author": "yuyangyang",
+  "author": "webcat12345",
   "license": "MIT",
   "keywords": [
     "angular2",
@@ -48,7 +48,7 @@
     "zone.js": "^0.6.12"
   },
   "bugs": {
-    "url": "https://github.com/yuyang041060120/angular2-ui-switch/issues"
+    "url": "https://github.com/webcat12345/ng2-ui-switch-aot/issues"
   },
-  "homepage": "https://github.com/yuyang041060120/angular2-ui-switch#readme"
+  "homepage": "https://github.com/webcat12345/ng2-ui-switch-aot#readme"
 }

@@ -21,7 +21,7 @@ npm install ngx-ui-switch --save
 # Usage
 
 ```javascript
-import { UiSwitchModule } from 'ngx-ui-switch'
+import { UiSwitchModule } from 'ngx-ui-switch/src'
 import { AppComponent } from './app.component';
 
 @NgModule({

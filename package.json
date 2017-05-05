@@ -35,7 +35,7 @@
     "@angular/core": "4.1.0",
     "@angular/forms": "4.1.0",
     "@angular/http": "4.1.0",
-    "@angular/platform-browser": "4.1.0",
+    "@angular/platform-browser": "4.1.1",
     "@angular/platform-browser-dynamic": "4.1.1",
     "@types/jasmine": "^2.2.29",
     "@types/node": "^7.0.12",

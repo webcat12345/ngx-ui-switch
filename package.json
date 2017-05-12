@@ -1,6 +1,6 @@
 {
   "name": "ngx-ui-switch",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "switch button for angular4",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

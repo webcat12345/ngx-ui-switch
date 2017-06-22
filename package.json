@@ -34,7 +34,7 @@
     "@angular/compiler": "4.2.2",
     "@angular/core": "4.2.2",
     "@angular/forms": "4.2.3",
-    "@angular/http": "4.2.3",
+    "@angular/http": "4.2.4",
     "@angular/platform-browser": "4.2.3",
     "@angular/platform-browser-dynamic": "4.2.2",
     "@types/jasmine": "^2.2.29",

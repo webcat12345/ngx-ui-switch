@@ -38,7 +38,7 @@
     "@angular/platform-browser": "4.2.4",
     "@angular/platform-browser-dynamic": "4.2.4",
     "@types/jasmine": "^2.5.53",
-    "@types/node": "^8.0.0",
+    "@types/node": "^8.0.7",
     "glob": "^7.1.0",
     "raw-loader": "^0.5.1",
     "reflect-metadata": "^0.1.3",

@@ -36,7 +36,7 @@
     "@angular/forms": "4.2.4",
     "@angular/http": "4.2.4",
     "@angular/platform-browser": "4.2.4",
-    "@angular/platform-browser-dynamic": "4.2.4",
+    "@angular/platform-browser-dynamic": "4.2.5",
     "@types/jasmine": "^2.5.53",
     "@types/node": "^8.0.0",
     "glob": "^7.1.0",

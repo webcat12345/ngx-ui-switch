@@ -30,7 +30,7 @@
   ],
   "dependencies": {},
   "devDependencies": {
-    "@angular/common": "4.2.4",
+    "@angular/common": "4.2.5",
     "@angular/compiler": "4.2.4",
     "@angular/core": "4.2.4",
     "@angular/forms": "4.2.4",

@@ -44,7 +44,7 @@
     "reflect-metadata": "^0.1.3",
     "rimraf": "^2.5.4",
     "rxjs": "6.0.0-alpha.0",
-    "ts-loader": "^2.0.3",
+    "ts-loader": "^2.2.2",
     "typescript": "2.4.0",
     "webpack": "^3.0.0",
     "webpack-dev-server": "^2.4.5",

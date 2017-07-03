@@ -145,8 +145,8 @@ export class UiSwitchComponent implements ControlValueAccessor {
   @Input() color: string = 'rgb(100, 189, 99)';
   @Input() switchOffColor: string = '';
   @Input() switchColor: string = '#fff';
-  defaultBgColor: string = '#fff';
-  defaultBoColor: string = '#dfdfdf';
+  @Input() defaultBgColor: string = '#fff';
+  @Input() defaultBoColor: string = '#dfdfdf';
 
   getColor(flag='') {
     if (flag === 'borderColor') return this.defaultBoColor;

@@ -119,5 +119,28 @@ export class AppModule {
 <ui-switch switchColor="#fcfcfc"></ui-switch>
 ```
 
+### defaultBgColor
+
+> type: *string*
+
+> default: #fff 
+
+
+```html
+<ui-switch defaultBgColor="red"></ui-switch>
+```
+
+### defaultBoColor
+
+> type: *string*
+
+> default: #dfdfdf 
+
+
+```html
+<ui-switch defaultBgColor="black"></ui-switch>
+```
+
+
 # License
 MIT

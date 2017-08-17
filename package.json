@@ -46,7 +46,7 @@
     "rxjs": "6.0.0-alpha.0",
     "ts-loader": "^2.2.2",
     "typescript": "2.4.0",
-    "webpack": "^3.5.4",
+    "webpack": "3.5.3",
     "webpack-dev-server": "^2.4.5",
     "zone.js": "^0.8.5"
   },

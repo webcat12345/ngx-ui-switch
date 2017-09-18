@@ -32,7 +32,7 @@
   "devDependencies": {
     "@angular/common": "4.4.0-RC.0",
     "@angular/compiler": "4.3.6",
-    "@angular/core": "4.3.6",
+    "@angular/core": "4.4.0-RC.0",
     "@angular/forms": "4.3.6",
     "@angular/http": "4.3.6",
     "@angular/platform-browser": "4.3.6",

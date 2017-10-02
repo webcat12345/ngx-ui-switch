@@ -21,7 +21,7 @@ npm install ngx-ui-switch --save
 # Usage
 
 ```javascript
-import { UiSwitchModule } from 'ngx-ui-switch/src'
+import { UiSwitchModule } from 'ngx-ui-switch';
 import { AppComponent } from './app.component';
 
 @NgModule({
@@ -140,7 +140,8 @@ export class AppModule {
 ```html
 <ui-switch defaultBgColor="black"></ui-switch>
 ```
-
+  
+### FAQ
 
 # License
 MIT

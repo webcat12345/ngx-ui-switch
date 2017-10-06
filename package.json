@@ -73,7 +73,7 @@
     "rollup-plugin-sourcemaps": "^0.4.2",
     "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
-    "typedoc": "^0.8.0",
+    "typedoc": "^0.9.0",
     "typescript": "~2.3.3"
   },
   "angular-cli": {},

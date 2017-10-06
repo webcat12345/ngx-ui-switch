@@ -21,7 +21,7 @@
     "start": "ng serve",
     "build": "rimraf dist && ts-node build.ts",
     "build:demo": "rimraf demo && ng build --base-href=/ngx-ui-switch/demo/ --output-path=demo",
-    "publish": "cd dist/packages-dist && npm publish",
+    "publish": "cd dist/packages-dist && yarn publish",
     "bundlesize": "bundlesize",
     "test": "ng test",
     "test:ci": "ng test --browser ChromeHeadless --watch false",

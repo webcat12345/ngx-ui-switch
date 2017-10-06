@@ -14,6 +14,7 @@ const pkg = require(`${process.cwd()}/package.json`);
 const GLOBALS = {
   '@angular/core': 'ng.core',
   '@angular/common': 'ng.common',
+  '@angular/forms': 'ng.forms',
   '@angular/animations': 'ng.animations',
   '@angular/platform-browser': 'ng.platformBrowser',
   'rxjs': 'Rx',

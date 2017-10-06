@@ -91,7 +91,7 @@ export class AppModule {
 <ui-switch size="large"></ui-switch>
 ```
 
-### reverse 
+### reverse
 
 > type: *boolean*
 
@@ -111,11 +111,11 @@ export class AppModule {
 <ui-switch color="red"></ui-switch>
 ```
 
-### switchColor  
+### switchColor
 
 > type: *string*
 
-> default: #fff 
+> default: #fff
 
 
 ```html
@@ -126,7 +126,7 @@ export class AppModule {
 
 > type: *string*
 
-> default: #fff 
+> default: #fff
 
 
 ```html
@@ -137,13 +137,36 @@ export class AppModule {
 
 > type: *string*
 
-> default: #dfdfdf 
+> default: #dfdfdf
 
 
 ```html
 <ui-switch defaultBgColor="black"></ui-switch>
 ```
-  
+
+### Development
+
+#### Setup
+
+```bash
+yarn install
+```
+
+#### Demo
+
+Edit files in `src/app` to add to the demo or try changes to the library.
+
+#### Build library
+
+*First, edit version in `package.json` and `src/lib/package.json` to publish a new version to npmjs.org*
+
+```bash
+# Build the library into dist/{es5,es2015}
+yarn build
+# Publish to npm
+yarn run publish
+```
+
 ### FAQ
 
 # License

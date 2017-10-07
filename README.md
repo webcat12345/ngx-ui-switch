@@ -1,11 +1,11 @@
 # Ngx UI Switch Component
-
 [![Greenkeeper badge](https://badges.greenkeeper.io/webcat12345/ngx-ui-switch.svg)](https://greenkeeper.io/)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ngx-discuss/Lobby)
 [![Build Status](https://travis-ci.org/webcat12345/ngx-ui-switch.svg?branch=master)](https://travis-ci.org/webcat12345/ngx-ui-switch) [![npm version](https://badge.fury.io/js/ngx-ui-switch.svg)](https://badge.fury.io/js/ngx-ui-switch) [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://www.npmjs.com/package/ngx-ui-switch)
 [![Throughput Graph](https://graphs.waffle.io/webcat12345/ngx-ui-switch/throughput.svg)](https://waffle.io/webcat12345/ngx-ui-switch/metrics)
+[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors)
 
-# Description
+## Description
 
 This is a simple iOS 7 style switch component for Angular4.
 
@@ -15,22 +15,22 @@ Live [demo](https://webcat12345.github.io/ngx-ui-switch/demo/)
 
 Inspired by [switchery](https://github.com/abpetkov/switchery) - in angular4.
 
-# Installation
+## Installation
 
 ```bash
 npm install ngx-ui-switch --save
 ```
 
-# Usage
+## Usage
 
 ```javascript
 import { UiSwitchModule } from 'ngx-ui-switch';
 import { AppComponent } from './app.component';
 
 @NgModule({
-    imports: [BrowserModule, FormsModule, UiSwitchModule],
-    declarations: [AppComponent],
-    bootstrap: [AppComponent]
+  imports: [BrowserModule, FormsModule, UiSwitchModule],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
@@ -144,19 +144,19 @@ export class AppModule {
 <ui-switch defaultBgColor="black"></ui-switch>
 ```
 
-### Development
+## Development
 
-#### Setup
+### Setup
 
 ```bash
 yarn install
 ```
 
-#### Demo
+### Demo
 
 Edit files in `src/app` to add to the demo or try changes to the library.
 
-#### Build library
+### Build library
 
 *First, edit version in `package.json` and `src/lib/package.json` to publish a new version to npmjs.org*
 
@@ -167,7 +167,18 @@ yarn build
 yarn run publish
 ```
 
-### FAQ
+## Contributors
 
-# License
+Thanks goes to these wonderful people ([emoji key](https://github.com/kentcdodds/all-contributors#emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+| [<img src="https://avatars3.githubusercontent.com/u/19761422?v=4" width="100px;"/><br /><sub>webcat_black</sub>](https://webcat12345.github.io/)<br />[💻](https://github.com/webcat12345/ngx-ui-switch/commits?author=webcat12345 "Code") [🎨](#design-webcat12345 "Design") [💡](#example-webcat12345 "Examples") [🤔](#ideas-webcat12345 "Ideas, Planning, & Feedback") [👀](#review-webcat12345 "Reviewed Pull Requests") | [<img src="https://avatars0.githubusercontent.com/u/735717?v=4" width="100px;"/><br /><sub>Chris McKnight</sub>](https://github.com/cmckni3)<br />[💬](#question-cmckni3 "Answering Questions") [💻](https://github.com/webcat12345/ngx-ui-switch/commits?author=cmckni3 "Code") [📖](https://github.com/webcat12345/ngx-ui-switch/commits?author=cmckni3 "Documentation") [🤔](#ideas-cmckni3 "Ideas, Planning, & Feedback") [🚇](#infra-cmckni3 "Infrastructure (Hosting, Build-Tools, etc)") [🔌](#plugin-cmckni3 "Plugin/utility libraries") [👀](#review-cmckni3 "Reviewed Pull Requests") [🔧](#tool-cmckni3 "Tools") |
+| :---: | :---: |
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification. Contributions of any kind welcome!
+
+## FAQ
+
+## License
 MIT

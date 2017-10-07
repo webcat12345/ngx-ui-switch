@@ -124,6 +124,8 @@ export class AppModule {
 
 ### defaultBgColor
 
+*Default background color*
+
 > type: *string*
 
 > default: #fff
@@ -135,13 +137,15 @@ export class AppModule {
 
 ### defaultBoColor
 
+*Default border color*
+
 > type: *string*
 
 > default: #dfdfdf
 
 
 ```html
-<ui-switch defaultBgColor="black"></ui-switch>
+<ui-switch defaultBoColor="black"></ui-switch>
 ```
 
 ## Development

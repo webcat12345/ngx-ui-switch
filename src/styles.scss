@@ -40,3 +40,17 @@ body {
 strong {
   font-weight: 500;
 }
+
+.custom-switches {
+  .ui-switch {
+    background: #999999;
+  }
+
+  .ui-switch small {
+    background: #333333;
+  }
+
+  .ui-switch.checked {
+    background: #61435d;
+  }
+}

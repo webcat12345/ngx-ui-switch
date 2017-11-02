@@ -39,7 +39,7 @@
     "@angular/core": "^4.4.3",
     "@angular/forms": "^4.4.3",
     "@angular/platform-browser": "^4.4.3",
-    "@angular/platform-browser-dynamic": "^4.4.3",
+    "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^4.4.3",
     "all-contributors-cli": "^4.5.0",
     "bootstrap": "^4.0.0-beta",

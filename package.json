@@ -36,7 +36,7 @@
     "@angular/animations": "^4.4.3",
     "@angular/common": "^4.4.3",
     "@angular/compiler": "^4.4.3",
-    "@angular/core": "^4.4.3",
+    "@angular/core": "^5.0.0",
     "@angular/forms": "^4.4.3",
     "@angular/platform-browser": "^4.4.3",
     "@angular/platform-browser-dynamic": "^4.4.3",

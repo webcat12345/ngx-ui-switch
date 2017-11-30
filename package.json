@@ -83,5 +83,18 @@
       "path": "./dist/packages-dist/ui-switch.umd.js",
       "maxSize": "8 kB"
     }
-  ]
+  ],
+  "greenkeeper": {
+    "ignore": [
+      "@angular/animations",
+      "@angular/common",
+      "@angular/compiler-cli",
+      "@angular/core",
+      "@angular/forms",
+      "@angular/language-service",
+      "@angular/platform-browser",
+      "@angular/platform-browser-dynamic",
+      "@angular/router"
+    ]
+  }
 }

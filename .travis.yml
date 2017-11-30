@@ -15,7 +15,9 @@ addons:
 before_install:
   - # start your web application and listen on `localhost`
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost:4200 &
+  - yarn global add greenkeeper-lockfile@1
 
+before_script: greenkeeper-lockfile-update
 script:
   - yarn build
   - yarn build:demo
@@ -27,6 +29,7 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
   - yarn ghpages
+after_script: greenkeeper-lockfile-upload
 
 deploy:
   provider: pages

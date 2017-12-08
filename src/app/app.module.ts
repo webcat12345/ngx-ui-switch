@@ -21,7 +21,6 @@ import { GithubLinkComponent } from './github-link/github-link.component';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
     BrowserAnimationsModule,
     UiSwitchModule
   ],

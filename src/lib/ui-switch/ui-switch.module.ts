@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { UiSwitchComponent } from './ui-switch.component';
 
@@ -6,7 +8,13 @@ import { UiSwitchComponent } from './ui-switch.component';
   declarations: [
     UiSwitchComponent
   ],
+  imports: [
+    CommonModule,
+    FormsModule
+  ],
   exports: [
+    FormsModule,
+
     UiSwitchComponent
   ]
 })

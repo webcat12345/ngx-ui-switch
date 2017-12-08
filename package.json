@@ -18,9 +18,9 @@
   ],
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --aot",
     "build": "rimraf dist && ts-node build.ts",
-    "build:demo": "rimraf demo && ng build --base-href=/ngx-ui-switch/demo/ --output-path=demo",
+    "build:demo": "rimraf demo && ng build --aot --target=production --base-href=/ngx-ui-switch/demo/ --output-path=demo",
     "publish": "cd dist/packages-dist && yarn publish",
     "bundlesize": "bundlesize",
     "test": "ng test",
@@ -33,14 +33,14 @@
     "typedoc": "typedoc --options typedoc.json ngx-ui-switch.ts src/*.ts"
   },
   "dependencies": {
-    "@angular/animations": "^4.4.3",
-    "@angular/common": "^4.4.3",
-    "@angular/compiler": "^4.4.3",
-    "@angular/core": "^4.4.3",
-    "@angular/forms": "^4.4.3",
-    "@angular/platform-browser": "^4.4.3",
-    "@angular/platform-browser-dynamic": "^4.4.3",
-    "@angular/router": "^4.4.3",
+    "@angular/animations": "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "@angular/compiler": "^5.0.0",
+    "@angular/core": "^5.0.0",
+    "@angular/forms": "^5.0.0",
+    "@angular/platform-browser": "^5.0.0",
+    "@angular/platform-browser-dynamic": "^5.0.0",
+    "@angular/router": "^5.0.0",
     "all-contributors-cli": "^4.5.0",
     "bootstrap": "^4.0.0-beta",
     "core-js": "^2.5.1",
@@ -50,8 +50,8 @@
   },
   "devDependencies": {
     "@angular/cli": "^1.4.7",
-    "@angular/compiler-cli": "^4.4.3",
-    "@angular/language-service": "^4.4.3",
+    "@angular/compiler-cli": "^5.0.0",
+    "@angular/language-service": "^5.0.0",
     "@types/jasmine": "^2.6.0",
     "@types/jasminewd2": "^2.0.3",
     "@types/node": "^8.0.30",
@@ -75,7 +75,7 @@
     "ts-node": "^3.3.0",
     "tslint": "^5.7.0",
     "typedoc": "^0.8.0",
-    "typescript": "~2.3.3"
+    "typescript": "~2.4.2"
   },
   "angular-cli": {},
   "bundlesize": [

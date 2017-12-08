@@ -28,7 +28,7 @@ import { UiSwitchModule } from 'ngx-ui-switch';
 import { AppComponent } from './app.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, UiSwitchModule],
+  imports: [BrowserModule, UiSwitchModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent]
 })

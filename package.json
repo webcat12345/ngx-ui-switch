@@ -1,12 +1,13 @@
 {
   "name": "ngx-ui-switch",
-  "version": "1.4.8",
+  "version": "1.4.9",
   "description": "switch button for angular4",
   "bugs": "https://github.com/webcat12345/ngx-ui-switch/issues",
   "homepage": "https://github.com/webcat12345/ngx-ui-switch#readme",
   "repository": "https://github.com/webcat12345/ngx-ui-switch.git",
   "license": "MIT",
   "author": "webcat12345",
+  "private": true,
   "keywords": [
     "angular2",
     "angular4",
@@ -21,7 +22,7 @@
     "start": "ng serve --aot",
     "build": "rimraf dist && ts-node build.ts",
     "build:demo": "rimraf demo && ng build --aot --target=production --base-href=/ngx-ui-switch/demo/ --output-path=demo",
-    "publish": "cd dist/packages-dist && yarn publish",
+    "release": "cd dist/packages-dist && yarn publish",
     "bundlesize": "bundlesize",
     "test": "ng test",
     "test:ci": "ng test --browser ChromeHeadless --watch false",

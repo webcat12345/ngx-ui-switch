@@ -168,7 +168,7 @@ Edit files in `src/app` to add to the demo or try changes to the library.
 # Build the library into dist/{es5,es2015}
 yarn build
 # Publish to npm
-yarn run publish
+yarn release
 ```
 
 ## Contributors

@@ -27,7 +27,7 @@
     "test:ci": "ng test --browser ChromeHeadless --watch false",
     "cleanup": "rimraf build dist waste deploy demo docs",
     "ghpages": "ng build --prod --build-optimizer --aot --no-progress --baseHref='/ngx-ui-switch/'",
-    "lint": "ng lint",
+    "lint": "ng lint --type-check",
     "e2e": "ng e2e",
     "e2e:ci": "ng e2e --config protractor-ci.conf.js --watch false",
     "typedoc": "typedoc --options typedoc.json ngx-ui-switch.ts src/*.ts"

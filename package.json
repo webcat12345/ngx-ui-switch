@@ -1,6 +1,6 @@
 {
   "name": "ngx-ui-switch",
-  "version": "1.4.9",
+  "version": "2.0.0",
   "description": "switch button for angular4",
   "bugs": "https://github.com/webcat12345/ngx-ui-switch/issues",
   "homepage": "https://github.com/webcat12345/ngx-ui-switch#readme",
@@ -43,7 +43,7 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
     "all-contributors-cli": "^4.5.0",
-    "bootstrap": "^4.0.0-beta",
+    "bootstrap": "^4.0.0",
     "core-js": "^2.5.1",
     "rxjs": "^5.4.3",
     "web-animations-js": "^2.3.1",

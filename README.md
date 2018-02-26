@@ -17,8 +17,33 @@ Inspired by [switchery](https://github.com/abpetkov/switchery) - in angular4.
 
 ## Installation
 
-```bash
+### Angular v4
+
+Angular v5 uses a different metadata version for decorators, therefore, the
+Angular v4 compatible versions of this library are 1.4.4 and below. However,
+versions < 1.5.0 have been deprecated to avoid the confusion brought up in
+issue [#219]](https://github.com/webcat12345/ngx-ui-switch/issues/219)
+
+The code in the [1.x-stable](https://github.com/webcat12345/ngx-ui-switch/tree/1.x-stable)
+branch contains the Angular v4 code.
+
+*Note: The Angular v4 branch will only receive bug fixes.*
+
+```sh
+npm install ngx-ui-switch@^1.5.0 --save
+# yarn add ngx-ui-switch@^1.5.0
+```
+
+### Beyond Angular v4
+
+The master branch will contain the latest code for the latest version of Angular.
+When upgrading this library to a new version of Angular, a new _x.y-stable_
+branch will be created to allow bugfixes. Below is how to install the latest
+version of the library.
+
+```sh
 npm install ngx-ui-switch --save
+# yarn add ngx-ui-switch
 ```
 
 ## Usage
@@ -152,7 +177,7 @@ export class AppModule {
 
 ### Setup
 
-```bash
+```sh
 yarn install
 ```
 
@@ -164,7 +189,7 @@ Edit files in `src/app` to add to the demo or try changes to the library.
 
 *First, edit version in `package.json` and `src/lib/package.json` to publish a new version to npmjs.org*
 
-```bash
+```sh
 # Build the library into dist/{es5,es2015}
 yarn build
 # Publish to npm

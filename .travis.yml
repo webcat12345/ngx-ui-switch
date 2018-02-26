@@ -17,7 +17,10 @@ before_install:
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost:4200 &
   - yarn global add greenkeeper-lockfile@1
 
-before_script: greenkeeper-lockfile-update
+before_script:
+  - "sudo chown root /opt/google/chrome/chrome-sandbox"
+  - "sudo chmod 4755 /opt/google/chrome/chrome-sandbox"
+  - greenkeeper-lockfile-update
 script:
   - yarn build
   - yarn build:demo

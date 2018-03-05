@@ -21,7 +21,7 @@ Inspired by [switchery](https://github.com/abpetkov/switchery) - in angular4.
 
 Angular v5 uses a different metadata version for decorators, therefore, the
 Angular v4 compatible versions of this library are 1.4.4 and below. However,
-versions < 1.5.0 have been deprecated to avoid the confusion brought up in
+versions < 1.6.0 have been deprecated to avoid the confusion brought up in
 issue [#219]](https://github.com/webcat12345/ngx-ui-switch/issues/219)
 
 The code in the [1.x-stable](https://github.com/webcat12345/ngx-ui-switch/tree/1.x-stable)
@@ -30,8 +30,8 @@ branch contains the Angular v4 code.
 *Note: The Angular v4 branch will only receive bug fixes.*
 
 ```sh
-npm install ngx-ui-switch@^1.5.0 --save
-# yarn add ngx-ui-switch@^1.5.0
+npm install ngx-ui-switch@^1.6.0 --save
+# yarn add ngx-ui-switch@^1.6.0
 ```
 
 ### Beyond Angular v4

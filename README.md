@@ -65,6 +65,8 @@ export class AppModule {
 <ui-switch></ui-switch>
 ```
 
+Note that if you are using the switch in a submodule, such as a lazy loaded module, then you must also import the module in that module itself. Otherwise you will get the error that it is an unknown component as seen in issue [#227](https://github.com/webcat12345/ngx-ui-switch/issues/227).
+
 # Two way binding
 
 ```html

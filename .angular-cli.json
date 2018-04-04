@@ -19,7 +19,8 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "lib/switch.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",

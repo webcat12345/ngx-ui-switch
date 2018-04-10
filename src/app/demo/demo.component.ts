@@ -2,18 +2,17 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-demo',
-  templateUrl: './demo.component.html'
+  templateUrl: './demo.component.html',
 })
 export class DemoComponent implements OnInit {
-
   enable = true;
   count = 0;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit() {}
 
-  onSubmit() { }
+  onSubmit() {}
 
   onChange() {
     this.count++;

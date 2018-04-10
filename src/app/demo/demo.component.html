@@ -1,50 +1,63 @@
 <div class="row justify-content-center">
-  <div class="col-lg-10 col-sm-12">
+  <div class="col-lg-5 col-sm-6">
+    <h2>Basic Usage</h2>
+
     <h3>checked</h3>
     <p>
-        <ui-switch checked></ui-switch>
-        <ui-switch [checked]="false"></ui-switch>
+      <ui-switch checked></ui-switch>
+      <ui-switch [checked]="false"></ui-switch>
     </p>
 
     <h3>disabled</h3>
     <p>
-        <ui-switch disabled></ui-switch>
-        <ui-switch checked [disabled]="true"></ui-switch>
-    </p>
-
-    <h3>two way binding</h3>
-    <p>
-        <ui-switch [(ngModel)]="enable"></ui-switch> {{enable}}
+      <ui-switch disabled></ui-switch>
+      <ui-switch checked
+                 [disabled]="true"></ui-switch>
     </p>
 
     <h3>change</h3>
+    <ui-switch (change)="onChange()"></ui-switch>
     <p>
-        <ui-switch (change)="onChange()"></ui-switch> change count {{count}}
+      change count {{count}}
     </p>
 
     <h3>size</h3>
     <p>
-        <ui-switch size="small"></ui-switch>
-        <ui-switch></ui-switch>
-        <ui-switch size="large"></ui-switch>
+      <ui-switch size="small"></ui-switch>
+      <ui-switch></ui-switch>
+      <ui-switch size="large"></ui-switch>
     </p>
 
     <h3>reverse</h3>
     <p>
-        <ui-switch reverse></ui-switch>
+      <ui-switch reverse></ui-switch>
     </p>
 
     <h3>color</h3>
-    <p>
-        <ui-switch></ui-switch>
-        <ui-switch color="blue"></ui-switch>
-        <ui-switch color="red"></ui-switch>
-    </p>
+    <ui-switch></ui-switch>
+    <ui-switch color="blue"></ui-switch>
+    <ui-switch color="red"></ui-switch>
 
     <h3>switchColor</h3>
     <p>
-        <ui-switch switchColor="red"></ui-switch>
-        <ui-switch switchColor="blue"></ui-switch>
+      <ui-switch switchColor="red"></ui-switch>
+      <ui-switch switchColor="blue"></ui-switch>
     </p>
+  </div>
+
+  <div class="col-lg-5 col-sm-6 border-left pl-5">
+    <h2>
+      <span class="font-weight-bold">ngModel</span>
+      Usage
+    </h2>
+    <div class="ro">
+      <div class="col-12">
+        <h3>two way binding</h3>
+        <p>
+          <ui-switch [(ngModel)]="enable"></ui-switch> {{enable}}
+        </p>
+      </div>
+      <app-demo-cdr></app-demo-cdr>
+    </div>
   </div>
 </div>

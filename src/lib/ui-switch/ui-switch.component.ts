@@ -1,11 +1,19 @@
-import { Component, Input, Output, EventEmitter, HostListener, forwardRef } from '@angular/core';
+import {
+  ChangeDetectorRef,
+  Component,
+  Input,
+  Output,
+  EventEmitter,
+  HostListener,
+  forwardRef,
+} from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 
 const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
   /* tslint:disable-next-line: no-use-before-declare */
   useExisting: forwardRef(() => UiSwitchComponent),
-  multi: true
+  multi: true,
 };
 
 @Component({
@@ -24,7 +32,8 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
     </small>
     </span>
   `,
-  styles: [`
+  styles: [
+    `
     .switch {
     background: #f00;
     border: 1px solid #dfdfdf;
@@ -104,11 +113,11 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
     opacity: .50;
     cursor: not-allowed;
     }
-    `],
-  providers: [UI_SWITCH_CONTROL_VALUE_ACCESSOR]
+    `,
+  ],
+  providers: [UI_SWITCH_CONTROL_VALUE_ACCESSOR],
 })
 export class UiSwitchComponent implements ControlValueAccessor {
-
   private _checked: boolean;
   private _disabled: boolean;
   private _reverse: boolean;
@@ -121,7 +130,8 @@ export class UiSwitchComponent implements ControlValueAccessor {
   @Input() defaultBgColor = '#fff';
   @Input() defaultBoColor = '#dfdfdf';
 
-  @Input() set checked(v: boolean) {
+  @Input()
+  set checked(v: boolean) {
     this._checked = v !== false;
   }
 
@@ -129,7 +139,8 @@ export class UiSwitchComponent implements ControlValueAccessor {
     return this._checked;
   }
 
-  @Input() set disabled(v: boolean) {
+  @Input()
+  set disabled(v: boolean) {
     this._disabled = v !== false;
   }
 
@@ -137,13 +148,16 @@ export class UiSwitchComponent implements ControlValueAccessor {
     return this._disabled;
   }
 
-  @Input() set reverse(v: boolean) {
+  @Input()
+  set reverse(v: boolean) {
     this._reverse = v !== false;
   }
 
   get reverse() {
     return this._reverse;
   }
+
+  constructor(private cdr: ChangeDetectorRef) {}
 
   getColor(flag = '') {
     if (flag === 'borderColor') {
@@ -170,11 +184,15 @@ export class UiSwitchComponent implements ControlValueAccessor {
     this.change.emit(this.checked);
     this.onChangeCallback(this.checked);
     this.onTouchedCallback(this.checked);
+    this.cdr.markForCheck();
   }
 
   writeValue(obj: any): void {
     if (obj !== this.checked) {
       this.checked = !!obj;
+    }
+    if (this.cdr) {
+      this.cdr.markForCheck();
     }
   }
 
@@ -190,6 +208,6 @@ export class UiSwitchComponent implements ControlValueAccessor {
     this.disabled = isDisabled;
   }
 
-  private onTouchedCallback = (v: any) => { };
-  private onChangeCallback = (v: any) => { };
+  private onTouchedCallback = (v: any) => {};
+  private onChangeCallback = (v: any) => {};
 }

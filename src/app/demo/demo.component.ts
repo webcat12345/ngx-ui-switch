@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 export class DemoComponent implements OnInit {
   enable = true;
   count = 0;
+  change = false;
+  valueChange = false;
+  changeEvent: MouseEvent;
 
   constructor() {}
 
@@ -14,7 +17,16 @@ export class DemoComponent implements OnInit {
 
   onSubmit() {}
 
-  onChange() {
+  onChange(value: boolean) {
     this.count++;
+    this.change = value;
+  }
+
+  onChangeEvent(event: MouseEvent) {
+    this.changeEvent = event;
+  }
+
+  onValueChange(value: boolean) {
+    this.valueChange = value;
   }
 }

@@ -123,7 +123,6 @@ export class UiSwitchComponent implements ControlValueAccessor {
   private _reverse: boolean;
 
   @Input() size = 'medium';
-  @Output() change = new EventEmitter<boolean>();
   @Input() color = 'rgb(100, 189, 99)';
   @Input() switchOffColor = '';
   @Input() switchColor = '#fff';
@@ -157,6 +156,21 @@ export class UiSwitchComponent implements ControlValueAccessor {
     return this._reverse;
   }
 
+  /**
+   * Emits changed value
+   */
+  @Output() change = new EventEmitter<boolean>();
+
+  /**
+   * Emits DOM event
+   */
+  @Output() changeEvent = new EventEmitter<MouseEvent>();
+
+  /**
+   * Emits changed value
+   */
+  @Output() valueChange = new EventEmitter<boolean>();
+
   constructor(private cdr: ChangeDetectorRef) {}
 
   getColor(flag = '') {
@@ -175,13 +189,19 @@ export class UiSwitchComponent implements ControlValueAccessor {
     return this.checked ? this.color : this.defaultBgColor;
   }
 
-  @HostListener('click')
-  onToggle() {
+  @HostListener('click', ['$event'])
+  onToggle(event: MouseEvent) {
     if (this.disabled) {
       return;
     }
     this.checked = !this.checked;
+
+    // Component events
     this.change.emit(this.checked);
+    this.valueChange.emit(this.checked);
+    this.changeEvent.emit(event);
+
+    // value accessor callbacks
     this.onChangeCallback(this.checked);
     this.onTouchedCallback(this.checked);
     this.cdr.markForCheck();

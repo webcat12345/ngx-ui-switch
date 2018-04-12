@@ -8,20 +8,31 @@
       <ui-switch [checked]="false"></ui-switch>
     </p>
 
-    <h3>disabled</h3>
+    <h3>Disabled</h3>
     <p>
       <ui-switch disabled></ui-switch>
       <ui-switch checked
                  [disabled]="true"></ui-switch>
     </p>
 
-    <h3>change</h3>
-    <ui-switch (change)="onChange()"></ui-switch>
+    <h3>Change</h3>
+    <ui-switch (change)="onChange($event)"></ui-switch>
     <p>
       change count {{count}}
     </p>
+    <p>value {{change}}</p>
 
-    <h3>size</h3>
+    <h3>Value Change</h3>
+    <ui-switch (valueChange)="onValueChange($event)"></ui-switch>
+    <p>value {{valueChange}}</p>
+
+    <h3>Change Event</h3>
+    <ui-switch (changeEvent)="onChangeEvent($event)"></ui-switch>
+    <p>
+      event {{changeEvent}}
+    </p>
+
+    <h3>Size</h3>
     <p>
       <ui-switch size="small"></ui-switch>
       <ui-switch></ui-switch>

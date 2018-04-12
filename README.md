@@ -99,12 +99,33 @@ Note that if you are using the switch in a submodule, such as a lazy loaded modu
 
 ### change
 
-> type: *event*
+> type: *boolean*
 
 > default: noop
 
 ```html
 <ui-switch (change)="onChange($event)"></ui-switch>
+```
+
+### changeEvent
+
+> type: *MouseEvent*
+
+> default: noop
+
+```html
+<ui-switch (changeEvent)="onChangeEvent($event)"></ui-switch>
+<ui-switch (changeEvent)="$event.stopPropagation()"></ui-switch>
+```
+
+### valueChange
+
+> type: *boolean*
+
+> default: noop
+
+```html
+<ui-switch (valueChange)="onValueChange($event)"></ui-switch>
 ```
 
 ### size

@@ -8,6 +8,7 @@ import { UiSwitchModule } from '../lib/public_api';
 
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
+import { DemoCdrComponent } from './demo-cdr/demo-cdr.component';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 import { GithubLinkComponent } from './github-link/github-link.component';
@@ -15,15 +16,11 @@ import { GithubLinkComponent } from './github-link/github-link.component';
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [
-        BrowserAnimationsModule,
-        FormsModule,
-        ReactiveFormsModule,
-        UiSwitchModule,
-      ],
+      imports: [BrowserAnimationsModule, FormsModule, ReactiveFormsModule, UiSwitchModule],
       declarations: [
         AppComponent,
         DemoComponent,
+        DemoCdrComponent,
         FooterComponent,
         HeaderComponent,
         GithubLinkComponent,

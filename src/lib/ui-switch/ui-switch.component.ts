@@ -5,9 +5,11 @@ import {
   Output,
   EventEmitter,
   HostListener,
-  forwardRef,
+  forwardRef, Inject, Optional,
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
+import { UI_SWITCH_OPTIONS } from './ui-switch.token';
+import { UiSwitchModuleConfig } from './ui-switch.config';
 
 const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
@@ -122,12 +124,12 @@ export class UiSwitchComponent implements ControlValueAccessor {
   private _disabled: boolean;
   private _reverse: boolean;
 
-  @Input() size = 'medium';
-  @Input() color = 'rgb(100, 189, 99)';
-  @Input() switchOffColor = '';
-  @Input() switchColor = '#fff';
-  @Input() defaultBgColor = '#fff';
-  @Input() defaultBoColor = '#dfdfdf';
+  @Input() size;
+  @Input() color;
+  @Input() switchOffColor;
+  @Input() switchColor;
+  @Input() defaultBgColor;
+  @Input() defaultBoColor;
 
   @Input()
   set checked(v: boolean) {
@@ -171,7 +173,17 @@ export class UiSwitchComponent implements ControlValueAccessor {
    */
   @Output() valueChange = new EventEmitter<boolean>();
 
-  constructor(private cdr: ChangeDetectorRef) {}
+  constructor(
+    @Inject(UI_SWITCH_OPTIONS) @Optional() config: UiSwitchModuleConfig = {},
+    private cdr: ChangeDetectorRef
+  ) {
+    this.size = config && config.size || 'medium';
+    this.color = config && config.color || 'rgb(100, 189, 99)';
+    this.switchOffColor = config && config.switchOffColor || '';
+    this.switchColor = config && config.switchColor || '#fff';
+    this.defaultBgColor = config && config.defaultBgColor || '#fff';
+    this.defaultBoColor = config && config.defaultBoColor || '#dfdfdf';
+  }
 
   getColor(flag = '') {
     if (flag === 'borderColor') {

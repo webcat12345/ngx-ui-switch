@@ -61,6 +61,32 @@ export class AppModule {
 }
 ```
 
+## Global config
+
+Use when you want to change default values globaly.
+
+```javascript
+import { UiSwitchModule } from 'ngx-ui-switch';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  imports: [
+    BrowserModule,
+    UiSwitchModule.forRoot({
+      size: 'small',
+      color: 'rgb(0, 189, 99)',
+      switchColor: '#80FFA2',
+      defaultBgColor: '#00ACFF',
+      defaultBoColor : '#476EFF',
+    })
+  ],
+  declarations: [AppComponent],
+  bootstrap: [AppComponent]
+})
+export class AppModule {
+}
+```
+
 ```html
 <ui-switch></ui-switch>
 ```

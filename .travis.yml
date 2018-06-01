@@ -25,7 +25,7 @@ script:
   - yarn build
   - yarn build:demo
   - yarn bundlesize
-  - yarn lint
+  - yarn lint:ngx-ui-switch
   - yarn test:ci
   - yarn e2e:ci
   - yarn typedoc

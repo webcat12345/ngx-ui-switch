@@ -2,9 +2,12 @@
 // from https://github.com/angular/angularfire2/blob/master/tools/build.js
 import { rollup } from 'rollup';
 import { spawn } from 'child_process';
-import { Observable } from 'rxjs';
-import { from as observableFrom } from 'rxjs/observable/from';
-import { forkJoin as observableForkJoin } from 'rxjs/observable/forkJoin';
+import {
+  bindCallback as observableBindCallback,
+  from as observableFrom,
+  forkJoin as observableForkJoin,
+  Observable,
+} from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
 import { copy } from 'fs-extra';
 import * as copyfiles from 'copy';
@@ -37,7 +40,7 @@ const TSC_ARGS = (config = 'build') => [`-p`, `${process.cwd()}/src/lib/tsconfig
  * @param {string[]} args
  */
 function spawnObservable(command, args) {
-  return Observable.create(observer => {
+  return new Observable(observer => {
     const cmd = spawn(command, args);
     observer.next(''); // hack to kick things off, not every command will have a stdout
     cmd.stdout.on('data', data => {
@@ -125,8 +128,8 @@ function createBundles(globals) {
 }
 
 function copyFiles() {
-  const copyAll: ((s: string, s1: string) => any) = Observable.bindCallback(copyfiles);
-  return Observable.forkJoin(
+  const copyAll: ((s: string, s1: string) => any) = observableBindCallback(copyfiles);
+  return observableForkJoin(
     copyAll(`${process.cwd()}/dist/es5/**/*.d.ts`, `${process.cwd()}/dist/packages-dist`),
     copyAll(`${process.cwd()}/dist/es5/**/*.metadata.json`, `${process.cwd()}/dist/packages-dist`),
     observableFrom(

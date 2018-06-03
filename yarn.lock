@@ -196,14 +196,6 @@
     semver "^5.3.0"
     semver-intersect "^1.1.2"
 
-"@types/arrify@^1.0.1":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@types/arrify/-/arrify-1.0.2.tgz#4a6856b9bfd4713c781df95349c6b15db60d4de1"
-
-"@types/diff@^3.2.1":
-  version "3.2.2"
-  resolved "https://registry.yarnpkg.com/@types/diff/-/diff-3.2.2.tgz#4d6f45537322a7a420d353a0939513c7e96d14a6"
-
 "@types/fs-extra@^4.0.0":
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/@types/fs-extra/-/fs-extra-4.0.2.tgz#7b9b1bbf85962cbe029b5a83c9b530d7c75af3ba"
@@ -251,16 +243,6 @@
   version "2.0.29"
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-2.0.29.tgz#5002e14f75e2d71e564281df0431c8c1b4a2a36a"
 
-"@types/minimist@^1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@types/minimist/-/minimist-1.2.0.tgz#69a23a3ad29caf0097f06eda59b361ee2f0639f6"
-
-"@types/mkdirp@^0.5.0":
-  version "0.5.2"
-  resolved "https://registry.yarnpkg.com/@types/mkdirp/-/mkdirp-0.5.2.tgz#503aacfe5cc2703d5484326b1b27efa67a339c1f"
-  dependencies:
-    "@types/node" "*"
-
 "@types/node@*", "@types/node@^8.0.30":
   version "8.0.46"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.46.tgz#6e1766b2d0ed06631d5b5f87bb8e72c8dbb6888e"
@@ -268,10 +250,6 @@
 "@types/node@^6.0.46":
   version "6.0.90"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-6.0.90.tgz#0ed74833fa1b73dcdb9409dcb1c97ec0a8b13b02"
-
-"@types/node@^8.0.27":
-  version "8.0.57"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-8.0.57.tgz#e5d8b4dc112763e35cfc51988f4f38da3c486d99"
 
 "@types/q@^0.0.32":
   version "0.0.32"
@@ -287,28 +265,6 @@
   dependencies:
     "@types/glob" "*"
     "@types/node" "*"
-
-"@types/source-map-support@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@types/source-map-support/-/source-map-support-0.4.0.tgz#a62a1866614af68c888173c001481f242aaf148b"
-  dependencies:
-    "@types/node" "*"
-
-"@types/strip-bom@^3.0.0":
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/@types/strip-bom/-/strip-bom-3.0.0.tgz#14a8ec3956c2e81edb7520790aecf21c290aebd2"
-
-"@types/strip-json-comments@0.0.30":
-  version "0.0.30"
-  resolved "https://registry.yarnpkg.com/@types/strip-json-comments/-/strip-json-comments-0.0.30.tgz#9aa30c04db212a9a0649d6ae6fd50accc40748a1"
-
-"@types/v8flags@types/npm-v8flags#de224ae1cd5fd7dbb4e7158a6cc7a29e5315930d":
-  version "2.0.0"
-  resolved "https://codeload.github.com/types/npm-v8flags/tar.gz/de224ae1cd5fd7dbb4e7158a6cc7a29e5315930d"
-
-"@types/yn@types/npm-yn#ca75f6c82940fae6a06fb41d2d37a6aa9b4ea8e9":
-  version "2.0.0"
-  resolved "https://codeload.github.com/types/npm-yn/tar.gz/ca75f6c82940fae6a06fb41d2d37a6aa9b4ea8e9"
 
 "@webassemblyjs/ast@1.4.3":
   version "1.4.3"
@@ -3208,7 +3164,7 @@ hoek@4.x.x:
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/hoek/-/hoek-4.2.0.tgz#72d9d0754f7fe25ca2d01ad8f8f9a9449a89526d"
 
-homedir-polyfill@^1.0.0, homedir-polyfill@^1.0.1:
+homedir-polyfill@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/homedir-polyfill/-/homedir-polyfill-1.0.1.tgz#4c2bbc8a758998feebf5ed68580f76d46768b4bc"
   dependencies:
@@ -6386,6 +6342,13 @@ source-map-support@^0.5.0:
   dependencies:
     source-map "^0.6.0"
 
+source-map-support@^0.5.6:
+  version "0.5.6"
+  resolved "https://registry.yarnpkg.com/source-map-support/-/source-map-support-0.5.6.tgz#4435cee46b1aab62b8e8610ce60f788091c51c13"
+  dependencies:
+    buffer-from "^1.0.0"
+    source-map "^0.6.0"
+
 source-map-url@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/source-map-url/-/source-map-url-0.4.0.tgz#3e935d7ddd73631b97659956d55128e87b5084a3"
@@ -6614,7 +6577,7 @@ strip-indent@^1.0.1:
   dependencies:
     get-stdin "^4.0.1"
 
-strip-json-comments@^2.0.0, strip-json-comments@~2.0.1:
+strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
@@ -6853,37 +6816,17 @@ trim-right@^1.0.1:
   dependencies:
     glob "^6.0.4"
 
-ts-node@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-4.0.1.tgz#4d368088b50c382d78285c029784ea0f32a4eb5c"
+ts-node@^6.1.0:
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-6.1.0.tgz#a2c37a11fdb58e60eca887a1269b025cf4d2f8b8"
   dependencies:
-    "@types/arrify" "^1.0.1"
-    "@types/diff" "^3.2.1"
-    "@types/minimist" "^1.2.0"
-    "@types/mkdirp" "^0.5.0"
-    "@types/node" "^8.0.27"
-    "@types/source-map-support" "^0.4.0"
-    "@types/v8flags" types/npm-v8flags#de224ae1cd5fd7dbb4e7158a6cc7a29e5315930d
-    "@types/yn" types/npm-yn#ca75f6c82940fae6a06fb41d2d37a6aa9b4ea8e9
     arrify "^1.0.0"
-    chalk "^2.3.0"
     diff "^3.1.0"
     make-error "^1.1.1"
     minimist "^1.2.0"
     mkdirp "^0.5.1"
-    source-map-support "^0.5.0"
-    tsconfig "^7.0.0"
-    v8flags "^3.0.0"
+    source-map-support "^0.5.6"
     yn "^2.0.0"
-
-tsconfig@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/tsconfig/-/tsconfig-7.0.0.tgz#84538875a4dc216e5c4a5432b3a4dec3d54e91b7"
-  dependencies:
-    "@types/strip-bom" "^3.0.0"
-    "@types/strip-json-comments" "0.0.30"
-    strip-bom "^3.0.0"
-    strip-json-comments "^2.0.0"
 
 tsickle@^0.27.2:
   version "0.27.5"
@@ -7191,12 +7134,6 @@ uuid@^3.0.0, uuid@^3.1.0:
 uuid@^3.0.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.2.1.tgz#12c528bb9d58d0b9265d9a2f6f0fe8be17ff1f14"
-
-v8flags@^3.0.0:
-  version "3.0.1"
-  resolved "https://registry.yarnpkg.com/v8flags/-/v8flags-3.0.1.tgz#dce8fc379c17d9f2c9e9ed78d89ce00052b1b76b"
-  dependencies:
-    homedir-polyfill "^1.0.1"
 
 validate-npm-package-license@^3.0.1:
   version "3.0.1"

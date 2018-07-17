@@ -61,7 +61,7 @@
     "bundlesize": "^0.17.0",
     "codelyzer": "^4.0.2",
     "copy": "^0.3.1",
-    "fs-extra": "^4.0.2",
+    "fs-extra": "^7.0.0",
     "jasmine-core": "^2.8.0",
     "jasmine-spec-reporter": "^4.2.1",
     "karma": "^2.0.2",

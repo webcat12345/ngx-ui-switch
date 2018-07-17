@@ -91,6 +91,7 @@
     "ignore": [
       "@angular/animations",
       "@angular/common",
+      "@angular/cli",
       "@angular/compiler",
       "@angular/compiler-cli",
       "@angular/core",
@@ -98,7 +99,13 @@
       "@angular/language-service",
       "@angular/platform-browser",
       "@angular/platform-browser-dynamic",
-      "@angular/router"
+      "@angular/router",
+      "@angular-devkit/build-angular",
+      "all-contributors-cli",
+      "rxjs",
+      "tslint",
+      "typedoc",
+      "typescript"
     ]
   }
 }

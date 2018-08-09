@@ -34,89 +34,6 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
     </small>
     </span>
   `,
-  styles: [
-    `
-    .switch {
-    background: #f00;
-    border: 1px solid #dfdfdf;
-    position: relative;
-    display: inline-block;
-    box-sizing: content-box;
-    overflow: visible;
-    padding: 0;
-    margin: 0;
-    cursor: pointer;
-    box-shadow: rgb(223, 223, 223) 0 0 0 0 inset;
-    transition: 0.3s ease-out all;
-    -webkit-transition: 0.3s ease-out all;
-    }
-
-    small {
-    border-radius: 100%;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: 0.3s ease-out all;
-    -webkit-transition: 0.3s ease-out all;
-    }
-
-    .switch-large {
-    width: 66px;
-    height: 40px;
-    border-radius: 40px;
-    }
-
-    .switch-large small {
-    width: 40px;
-    height: 40px;
-    }
-
-    .switch-medium {
-    width: 50px;
-    height: 30px;
-    border-radius: 30px;
-    }
-
-    .switch-medium small {
-    width: 30px;
-    height: 30px;
-    }
-
-    .switch-small {
-    width: 33px;
-    height: 20px;
-    border-radius: 20px;
-    }
-
-    .switch-small small {
-    width: 20px;
-    height: 20px;
-    }
-
-    .checked {
-    background: rgb(100, 189, 99);
-    border-color: rgb(100, 189, 99);
-    }
-
-    .switch-large.checked small {
-    left: 26px;
-    }
-
-    .switch-medium.checked small {
-    left: 20px;
-    }
-
-    .switch-small.checked small {
-    left: 13px;
-    }
-
-    .disabled {
-    opacity: .50;
-    cursor: not-allowed;
-    }
-    `,
-  ],
   providers: [UI_SWITCH_CONTROL_VALUE_ACCESSOR],
 })
 export class UiSwitchComponent implements ControlValueAccessor {
@@ -178,11 +95,11 @@ export class UiSwitchComponent implements ControlValueAccessor {
     private cdr: ChangeDetectorRef
   ) {
     this.size = config && config.size || 'medium';
-    this.color = config && config.color || 'rgb(100, 189, 99)';
-    this.switchOffColor = config && config.switchOffColor || '';
-    this.switchColor = config && config.switchColor || '#fff';
-    this.defaultBgColor = config && config.defaultBgColor || '#fff';
-    this.defaultBoColor = config && config.defaultBoColor || '#dfdfdf';
+    this.color = config && config.color;
+    this.switchOffColor = config && config.switchOffColor;
+    this.switchColor = config && config.switchColor;
+    this.defaultBgColor = config && config.defaultBgColor;
+    this.defaultBoColor = config && config.defaultBoColor;
   }
 
   getColor(flag = '') {

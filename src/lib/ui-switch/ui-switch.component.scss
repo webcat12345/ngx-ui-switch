@@ -1,0 +1,72 @@
+.switch {
+    border: 1px solid #dfdfdf;
+    position: relative;
+    display: inline-block;
+    box-sizing: content-box;
+    overflow: visible;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    box-shadow: rgb(223, 223, 223) 0 0 0 0 inset;
+    transition: 0.3s ease-out all;
+    -webkit-transition: 0.3s ease-out all;
+
+    small {
+        border-radius: 100%;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: 0.3s ease-out all;
+        -webkit-transition: 0.3s ease-out all;
+        background:#fff;
+    }
+
+    &.checked {
+        background: rgb(100, 189, 99);
+    }
+
+    &.disabled {
+        opacity: .50;
+        cursor: not-allowed;
+    }
+
+    &.switch-small {
+        width: 33px;
+        height: 20px;
+        border-radius: 20px;
+        small {
+            width: 20px;
+            height: 20px;
+        }
+        &.checked small {
+            left: 13px;
+        }
+    }
+
+    &.switch-medium {
+        width: 50px;
+        height: 30px;
+        border-radius: 30px;
+        small {
+            width: 30px;
+            height: 30px;
+        }
+        &.checked small {
+            left: 20px;
+        }
+    }
+
+    &.switch-large {
+        width: 66px;
+        height: 40px;
+        border-radius: 40px;
+        small {
+            width: 40px;
+            height: 40px;
+        }
+        &.checked small {
+            left: 26px;
+        }
+    }
+}

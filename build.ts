@@ -9,12 +9,18 @@ import {
   Observable,
 } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
-import { copy } from 'fs-extra';
+import { copy, outputFile } from 'fs-extra';
+import { render } from 'node-sass';
 import * as copyfiles from 'copy';
 import * as filesize from 'rollup-plugin-filesize';
 import * as sourcemaps from 'rollup-plugin-sourcemaps';
 
 const pkg = require(`${process.cwd()}/package.json`);
+const cssProcessConfig = {
+  inputPath   : `${process.cwd()}/src/lib/ui-switch/`,
+  outputPath  : `${process.cwd()}/dist/packages-dist/`,
+  filename    : 'ui-switch.component'
+};
 
 // Rollup globals
 const GLOBALS = {
@@ -140,7 +146,26 @@ function copyFiles() {
         `${process.cwd()}/src/lib/package.json`,
         `${process.cwd()}/dist/packages-dist/package.json`
       )
+    ),
+    observableFrom(
+      copy(
+          `${cssProcessConfig.inputPath}${cssProcessConfig.filename}.scss`,
+          `${cssProcessConfig.outputPath}${cssProcessConfig.filename}.scss`
+      )
     )
+  );
+}
+
+function compileCss() {
+  return new Observable(observer => {
+      render({file: `${cssProcessConfig.inputPath}${cssProcessConfig.filename}.scss`}, (err, compiled) => observer.next(compiled)
+    );
+  });
+}
+
+function saveCss(compiled) {
+  return observableFrom(
+      outputFile(`${cssProcessConfig.outputPath}${cssProcessConfig.filename}.css`, compiled.css)
   );
 }
 
@@ -149,7 +174,9 @@ function buildLibrary(globals) {
   return observableForkJoin(modules$).pipe(
     switchMap(() => createBundles(globals)),
     switchMap(() => copyFiles()),
-    tap(() => verifyVersions())
+    switchMap(() => compileCss()),
+    switchMap(result => saveCss(result)),
+    tap( () => verifyVersions())
   );
 }
 

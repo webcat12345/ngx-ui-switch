@@ -57,7 +57,7 @@
     "@angular/language-service": "^6.0.3",
     "@types/jasmine": "^2.6.0",
     "@types/jasminewd2": "^2.0.3",
-    "@types/node": "^8.0.30",
+    "@types/node": "^10.7.0",
     "bundlesize": "^0.17.0",
     "codelyzer": "^4.0.2",
     "copy": "^0.3.1",

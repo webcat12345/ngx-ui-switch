@@ -42,7 +42,7 @@ jobs:
         - yarn build:demo
         - yarn typedoc
         - echo "Deploying to github pages..."
-    - deploy:
+      deploy:
         provider: pages
         skip_cleanup: true
         github_token: $GITHUB_TOKEN

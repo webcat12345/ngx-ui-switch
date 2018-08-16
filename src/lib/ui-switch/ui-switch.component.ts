@@ -30,6 +30,10 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
     [style.background-color]="getColor()"
     [style.border-color]="getColor('borderColor')"
     >
+    <span class="switch-pane" *ngIf="checkedLabel || uncheckedLabel">
+        <span class="switch-label-checked">{{ this.checkedLabel }}</span>
+        <span class="switch-label-unchecked">{{ this.uncheckedLabel }}</span>
+    </span>
     <small [style.background]="getColor('switchColor')">
     </small>
     </span>
@@ -47,6 +51,8 @@ export class UiSwitchComponent implements ControlValueAccessor {
   @Input() switchColor;
   @Input() defaultBgColor;
   @Input() defaultBoColor;
+  @Input() checkedLabel;
+  @Input() uncheckedLabel;
 
   @Input()
   set checked(v: boolean) {

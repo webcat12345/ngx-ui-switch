@@ -1,4 +1,3 @@
-
 export interface UiSwitchModuleConfig {
   size?: string;
   color?: string;
@@ -6,4 +5,6 @@ export interface UiSwitchModuleConfig {
   switchColor?: string;
   defaultBgColor?: string;
   defaultBoColor?: string;
+  checkedLabel?: string;
+  uncheckedLabel?: string;
 }

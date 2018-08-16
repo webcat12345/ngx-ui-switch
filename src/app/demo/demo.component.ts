@@ -23,6 +23,7 @@ export class DemoComponent implements OnInit {
   }
 
   onChangeEvent(event: MouseEvent) {
+    console.log(event, event.toString(), JSON.stringify(event));
     this.changeEvent = event;
   }
 

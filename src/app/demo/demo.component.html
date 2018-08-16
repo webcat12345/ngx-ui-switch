@@ -2,85 +2,58 @@
   <div class="col-lg-5 col-sm-6">
     <h2>Basic Usage</h2>
 
-    <h3>checked</h3>
+    <h4>checked</h4>
     <p>
       <ui-switch checked></ui-switch>
       <ui-switch [checked]="false"></ui-switch>
     </p>
 
-    <h3>Disabled</h3>
+    <h4>Disabled</h4>
     <p>
       <ui-switch disabled></ui-switch>
       <ui-switch checked
                  [disabled]="true"></ui-switch>
     </p>
 
-    <h3>Change</h3>
+    <h4>Change</h4>
     <ui-switch (change)="onChange($event)"></ui-switch>
     <p>
       change count {{count}}
     </p>
     <p>value {{change}}</p>
 
-    <h3>Value Change</h3>
+    <h4>Value Change</h4>
     <ui-switch (valueChange)="onValueChange($event)"></ui-switch>
     <p>value {{valueChange}}</p>
 
-    <h3>Change Event</h3>
+    <h4>Change Event</h4>
     <ui-switch (changeEvent)="onChangeEvent($event)"></ui-switch>
     <p>
       event {{changeEvent}}
     </p>
 
-    <h3>Size</h3>
+    <h4>Size</h4>
     <p>
       <ui-switch size="small"></ui-switch>
       <ui-switch></ui-switch>
       <ui-switch size="large"></ui-switch>
     </p>
 
-    <h3>reverse</h3>
+    <h4>reverse</h4>
     <p>
       <ui-switch reverse></ui-switch>
     </p>
 
-    <h3>color</h3>
+    <h4>color</h4>
     <ui-switch></ui-switch>
     <ui-switch color="blue"></ui-switch>
     <ui-switch color="red"></ui-switch>
 
-    <h3>switchColor</h3>
+    <h4>switchColor</h4>
     <p>
       <ui-switch switchColor="red"></ui-switch>
       <ui-switch switchColor="blue"></ui-switch>
     </p>
-
-    <!-- Please uncomment the following to check the labels
-    <h3>with labels</h3>
-    <p>
-      <ui-switch uncheckedLabel="off" checkedLabel="on" size="small"></ui-switch>
-      <ui-switch uncheckedLabel="off" checkedLabel="on"></ui-switch>
-      <ui-switch uncheckedLabel="off" checkedLabel="on" size="large"></ui-switch>
-    </p>
-
-    <p>
-      <ui-switch checkedLabel="on" size="small"></ui-switch>
-      <ui-switch checkedLabel="on"></ui-switch>
-      <ui-switch checkedLabel="on" size="large"></ui-switch>
-    </p>
-
-    <p>
-      <ui-switch uncheckedLabel="off" size="small"></ui-switch>
-      <ui-switch uncheckedLabel="off" ></ui-switch>
-      <ui-switch uncheckedLabel="off" size="large"></ui-switch>
-    </p>
-
-    <p>
-      <ui-switch checkedLabel="SUPERDUPERLONGLABEL" uncheckedLabel="SUPERDUPERLONGLABEL" size="small"></ui-switch>
-      <ui-switch checkedLabel="SUPERDUPERLONGLABEL" uncheckedLabel="SUPERDUPERLONGLABEL"></ui-switch>
-      <ui-switch checkedLabel="SUPERDUPERLONGLABEL" uncheckedLabel="SUPERDUPERLONGLABEL" size="large"></ui-switch>
-    </p>
-    -->
   </div>
 
   <div class="col-lg-5 col-sm-6 border-left pl-5">
@@ -88,14 +61,42 @@
       <span class="font-weight-bold">ngModel</span>
       Usage
     </h2>
-    <div class="ro">
+    <div class="row">
       <div class="col-12">
-        <h3>two way binding</h3>
+        <h4>two way binding</h4>
+        <ui-switch [(ngModel)]="enable"></ui-switch>
         <p>
-          <ui-switch [(ngModel)]="enable"></ui-switch> {{enable}}
+          Current Value: {{enable}}
         </p>
       </div>
       <app-demo-cdr></app-demo-cdr>
+    </div>
+    <hr />
+    <div class="row">
+      <div class="col-12">
+        <h2>Custom labels</h2>
+        <p>
+          <ui-switch uncheckedLabel="off"
+                     checkedLabel="on"
+                     size="small"></ui-switch>
+          <ui-switch uncheckedLabel="off"
+                     checkedLabel="on"></ui-switch>
+          <ui-switch uncheckedLabel="off"
+                     checkedLabel="on"
+                     size="large"></ui-switch>
+        </p>
+
+        <p>
+          <ui-switch checkedLabel="SUPERDUPERLONGLABEL"
+                     uncheckedLabel="SUPERDUPERLONGLABEL"
+                     size="small"></ui-switch>
+          <ui-switch checkedLabel="SUPERDUPERLONGLABEL"
+                     uncheckedLabel="SUPERDUPERLONGLABEL"></ui-switch>
+          <ui-switch checkedLabel="SUPERDUPERLONGLABEL"
+                     uncheckedLabel="SUPERDUPERLONGLABEL"
+                     size="large"></ui-switch>
+        </p>
+      </div>
     </div>
   </div>
 </div>

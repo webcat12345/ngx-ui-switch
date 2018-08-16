@@ -27,7 +27,7 @@
     "test": "ng test",
     "test:ci": "ng test --browsers ChromeHeadless --watch false",
     "cleanup": "rimraf build dist waste deploy demo docs",
-    "ghpages": "ng build -prod --build-optimizer --aot --no-progress --baseHref='/ngx-ui-switch/'",
+    "ghpages": "ng build --prod --build-optimizer --aot --no-progress --baseHref='/ngx-ui-switch/'",
     "lint": "ng lint",
     "lint:ngx-ui-switch": "ng lint ngx-ui-switch --type-check",
     "e2e": "ng e2e",

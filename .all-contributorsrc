@@ -45,6 +45,47 @@
         "code",
         "doc"
       ]
+    },
+    {
+      "login": "cmajsmith",
+      "name": "Serhii Kovalenko",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/915077?v=4",
+      "profile": "https://github.com/cmajsmith",
+      "contributions": [
+        "code",
+        "example",
+        "platform"
+      ]
+    },
+    {
+      "login": "rmcsharry",
+      "name": "Richard McSharry",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1156100?v=4",
+      "profile": "https://github.com/rmcsharry",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "bitsprint",
+      "name": "bitsprint",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/507874?v=4",
+      "profile": "https://github.com/bitsprint",
+      "contributions": [
+        "infra",
+        "platform",
+        "tool"
+      ]
+    },
+    {
+      "login": "gparonitti",
+      "name": "Gianluca Paronitti",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/11628507?v=4",
+      "profile": "http://www.gamepix.com",
+      "contributions": [
+        "code"
+      ]
     }
-  ]
+  ],
+  "repoType": "github"
 }

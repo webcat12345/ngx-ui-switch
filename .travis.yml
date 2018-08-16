@@ -14,7 +14,7 @@ addons:
 
 # https://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-the-Chrome-addon-in-the-headless-mode
 before_install:
-  -  # start your web application and listen on `localhost`
+  # start your web application and listen on `localhost`
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost:4200 &
   - yarn global add greenkeeper-lockfile@1
 
@@ -38,7 +38,10 @@ jobs:
   include:
     - stage: deploy github pages
       node_js: 10
-      script: echo "Deploying to github pages..."
+      script:
+        - yarn build:demo
+        - yarn typedoc
+    - script: echo "Deploying to github pages..."
       deploy:
         provider: pages
         skip_cleanup: true

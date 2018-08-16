@@ -32,7 +32,6 @@ script:
   - yarn typedoc
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  - yarn ghpages
 after_script: greenkeeper-lockfile-upload
 
 jobs:

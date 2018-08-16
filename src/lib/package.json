@@ -22,6 +22,7 @@
   "typings": "./index.d.ts",
   "peerDependencies": {
     "@angular/core": ">=5.0.0 <7.0.0",
-    "@angular/common": ">=5.0.0 <7.0.0"
+    "@angular/common": ">=5.0.0 <7.0.0",
+    "@angular/forms": ">=5.0.0 <7.0.0"
   }
 }

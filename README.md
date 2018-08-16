@@ -95,6 +95,8 @@ import { AppComponent } from './app.component';
       switchColor: '#80FFA2',
       defaultBgColor: '#00ACFF',
       defaultBoColor : '#476EFF',
+      checkedLabel: 'on',
+      uncheckedLabel: 'off'
     })
   ],
   declarations: [AppComponent],

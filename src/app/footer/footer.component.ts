@@ -11,20 +11,21 @@ import { Component, OnInit, VERSION } from '@angular/core';
     <a href="https://github.com/webcat12345/ngx-ui-switch">View source</a>.
   </footer>
   `,
-  styles: [`
-  .footer {
-    line-height: 2;
-    text-align: center;
-    font-size: 12px;
-    color: #999;
-  }
-  `],
+  styles: [
+    `
+      .footer {
+        line-height: 2;
+        text-align: center;
+        font-size: 12px;
+        color: #999;
+      }
+    `,
+  ],
 })
 export class FooterComponent implements OnInit {
   version = VERSION.full;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() { }
-
+  ngOnInit() {}
 }

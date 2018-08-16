@@ -1,8 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
-import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CommonModule } from '@angular/common';
 
 import { UiSwitchModule } from '../lib/public_api';
 

@@ -8,14 +8,12 @@ describe('DemoCdrComponent', () => {
   let component: DemoCdrComponent;
   let fixture: ComponentFixture<DemoCdrComponent>;
 
-  beforeEach(
-    async(() => {
-      TestBed.configureTestingModule({
-        declarations: [DemoCdrComponent],
-        imports: [FormsModule, ReactiveFormsModule, UiSwitchModule],
-      }).compileComponents();
-    })
-  );
+  beforeEach(async(() => {
+    TestBed.configureTestingModule({
+      declarations: [DemoCdrComponent],
+      imports: [FormsModule, ReactiveFormsModule, UiSwitchModule],
+    }).compileComponents();
+  }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DemoCdrComponent);

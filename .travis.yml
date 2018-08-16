@@ -38,12 +38,10 @@ jobs:
   include:
     - stage: deploy github pages
       if: branch = master
-      node_js: 10
       script:
         - yarn build:demo
         - yarn typedoc
-    - stage: deploy github pages
-      script: echo "Deploying to github pages..."
+    - script: echo "Deploying to github pages..."
       deploy:
         provider: pages
         skip_cleanup: true

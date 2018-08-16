@@ -37,6 +37,7 @@ after_script: greenkeeper-lockfile-upload
 jobs:
   include:
     - stage: deploy github pages
+      if: branch = master
       node_js: 10
       script:
         - yarn build:demo

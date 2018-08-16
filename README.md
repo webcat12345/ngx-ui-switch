@@ -9,6 +9,8 @@ This is a simple iOS 7 style switch component for Angular4.
 
 Live [demo](https://webcat12345.github.io/ngx-ui-switch/demo/)
 
+A [stackblitz](https://stackblitz.com) is also available [here](https://stackblitz.com/edit/ngx-ui-switch)
+
 ![alt](logo.png)
 
 Inspired by [switchery](https://github.com/abpetkov/switchery) - in angular4.
@@ -28,8 +30,8 @@ branch contains the Angular v4 code.
 *Note: The Angular v4 branch will only receive bug fixes.*
 
 ```sh
-npm install ngx-ui-switch@^1.6.0 --save
-# yarn add ngx-ui-switch@^1.6.0
+yarn add ngx-ui-switch@^1.6.0
+# npm install ngx-ui-switch@^1.6.0 --save
 ```
 
 ### Beyond Angular v4
@@ -40,13 +42,16 @@ branch will be created to allow bugfixes. Below is how to install the latest
 version of the library.
 
 ```sh
-npm install ngx-ui-switch --save
-# yarn add ngx-ui-switch
+yarn add ngx-ui-switch
+# npm install ngx-ui-switch --save
 ```
 
 ## Usage
 
+* Import into a module (`AppModule` example below)
+
 ```javascript
+// app.module.ts
 import { UiSwitchModule } from 'ngx-ui-switch';
 import { AppComponent } from './app.component';
 
@@ -55,13 +60,27 @@ import { AppComponent } from './app.component';
   declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}
+```
+
+* Add default css file to appropriate project(s) `angular.json`
+
+```json
+"styles": [
+  "src/styles.css",
+  "./node_modules/ngx-ui-switch/ui-switch.component.css"
+]
+```
+
+Alternatively, the scss version can be imported into a scss file:
+
+```scss
+@import '~ngx-ui-switch/ui-switch.component.scss';
 ```
 
 ## Global config
 
-Use when you want to change default values globaly.
+Use when you want to change default values globally.
 
 ```javascript
 import { UiSwitchModule } from 'ngx-ui-switch';
@@ -81,15 +100,14 @@ import { AppComponent } from './app.component';
   declarations: [AppComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-}
+export class AppModule {}
 ```
 
 ```html
 <ui-switch></ui-switch>
 ```
 
-Note that if you are using the switch in a submodule, such as a lazy loaded module, then you must also import the module in that module itself. Otherwise you will get the error that it is an unknown component as seen in issue [#227](https://github.com/webcat12345/ngx-ui-switch/issues/227).
+Note that if you are using the switch in a child `NgModule`, such as a lazy loaded module, then you must also import the module in the module itself or within a shared module. Otherwise you will get the error that it is an unknown component as seen in issue [#227](https://github.com/webcat12345/ngx-ui-switch/issues/227).
 
 # Two way binding
 

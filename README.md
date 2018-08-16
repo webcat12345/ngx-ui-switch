@@ -220,6 +220,32 @@ Note that if you are using the switch in a submodule, such as a lazy loaded modu
 <ui-switch defaultBoColor="black"></ui-switch>
 ```
 
+### checkedLabel
+
+*Checked label (on)*
+
+> type: *string*
+
+> default: null
+
+
+```html
+<ui-switch checkedLabel="on"></ui-switch>
+```
+
+### uncheckedLabel
+
+*Unchecked label (off)*
+
+> type: *string*
+
+> default: null
+
+
+```html
+<ui-switch uncheckedLabel="off"></ui-switch>
+```
+
 ## Development
 
 ### Setup

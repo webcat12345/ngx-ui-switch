@@ -5,7 +5,7 @@
 
 ## Description
 
-This is a simple iOS 7 style switch component for Angular4.
+This is a simple iOS 7 style switch component for [Angular](https://angular.io).
 
 Live [demo](https://webcat12345.github.io/ngx-ui-switch/demo/)
 
@@ -13,13 +13,13 @@ A [stackblitz](https://stackblitz.com) is also available [here](https://stackbli
 
 ![alt](logo.png)
 
-Inspired by [switchery](https://github.com/abpetkov/switchery) - in angular4.
+Inspired by [switchery](https://github.com/abpetkov/switchery) in [Angular](https://angular.io).
 
 ## Installation
 
 ### Angular v4
 
-Angular v5 uses a different metadata version for decorators, therefore, the
+Angular v5/v6 uses a different metadata version for decorators, therefore, the
 Angular v4 compatible versions of this library are 1.4.4 and below. However,
 versions < 1.6.0 have been deprecated to avoid the confusion brought up in
 issue [#219](https://github.com/webcat12345/ngx-ui-switch/issues/219)

@@ -82,6 +82,8 @@ Alternatively, the scss version can be imported into a scss file:
 
 Use when you want to change default values globally.
 
+These settings will override anything passed in via property bindings.
+
 ```javascript
 import { UiSwitchModule } from 'ngx-ui-switch';
 import { AppComponent } from './app.component';

@@ -106,6 +106,8 @@ export class UiSwitchComponent implements ControlValueAccessor {
     this.switchColor = config && config.switchColor;
     this.defaultBgColor = config && config.defaultBgColor;
     this.defaultBoColor = config && config.defaultBoColor;
+    this.checkedLabel = config && config.checkedLabel;
+    this.uncheckedLabel = config && config.uncheckedLabel;
   }
 
   getColor(flag = '') {

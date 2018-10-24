@@ -1,4 +1,3 @@
-/* tslint:disable:import-blacklist */
 // from https://github.com/angular/angularfire2/blob/master/tools/build.js
 import { rollup } from 'rollup';
 import { spawn } from 'child_process';

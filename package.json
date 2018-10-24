@@ -33,7 +33,7 @@
     "lint:ngx-ui-switch": "ng lint ngx-ui-switch --type-check",
     "e2e": "ng e2e",
     "e2e:ci": "ng e2e --protractor-config protractor-ci.conf.js",
-    "typedoc": "typedoc --options typedoc.json ngx-ui-switch.ts src/*.ts"
+    "typedoc": "typedoc --options typedoc.json ngx-ui-switch.ts src/*.ts && ts-node docs.ts"
   },
   "dependencies": {
     "@angular/animations": "^6.0.3",

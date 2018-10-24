@@ -4730,7 +4730,7 @@ minimalistic-crypto-utils@^1.0.0, minimalistic-crypto-utils@^1.0.1:
 
 minimist@0.0.8:
   version "0.0.8"
-  resolved "https://registry.yarnpkg.com/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
+  resolved "http://registry.npmjs.org/minimist/-/minimist-0.0.8.tgz#857fcabfc3397d2625b8228262e86aa7a011b05d"
 
 minimist@^1.1.3, minimist@^1.2.0:
   version "1.2.0"
@@ -7473,8 +7473,8 @@ tsconfig@^7.0.0:
     strip-json-comments "^2.0.0"
 
 tsickle@^0.33.0:
-  version "0.33.0"
-  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.33.0.tgz#337a8a1abdbc8c9586010a566daf0cd135496fa7"
+  version "0.33.1"
+  resolved "https://registry.yarnpkg.com/tsickle/-/tsickle-0.33.1.tgz#eee4ebabeda3bcd8afc32cee34c822cbe3e839ec"
   dependencies:
     minimist "^1.2.0"
     mkdirp "^0.5.1"

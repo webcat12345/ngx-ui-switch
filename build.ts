@@ -17,9 +17,9 @@ import * as sourcemaps from 'rollup-plugin-sourcemaps';
 
 const pkg = require(`${process.cwd()}/package.json`);
 const cssProcessConfig = {
-  inputPath   : `${process.cwd()}/src/lib/ui-switch/`,
-  outputPath  : `${process.cwd()}/dist/packages-dist/`,
-  filename    : 'ui-switch.component'
+  inputPath: `${process.cwd()}/src/lib/ui-switch/`,
+  outputPath: `${process.cwd()}/dist/packages-dist/`,
+  filename: 'ui-switch.component',
 };
 
 // Rollup globals
@@ -142,6 +142,9 @@ function copyFiles() {
       copy(`${process.cwd()}/README.md`, `${process.cwd()}/dist/packages-dist/README.md`)
     ),
     observableFrom(
+      copy(`${process.cwd()}/logo.png`, `${process.cwd()}/dist/packages-dist/logo.png`)
+    ),
+    observableFrom(
       copy(
         `${process.cwd()}/src/lib/package.json`,
         `${process.cwd()}/dist/packages-dist/package.json`
@@ -149,8 +152,8 @@ function copyFiles() {
     ),
     observableFrom(
       copy(
-          `${cssProcessConfig.inputPath}${cssProcessConfig.filename}.scss`,
-          `${cssProcessConfig.outputPath}${cssProcessConfig.filename}.scss`
+        `${cssProcessConfig.inputPath}${cssProcessConfig.filename}.scss`,
+        `${cssProcessConfig.outputPath}${cssProcessConfig.filename}.scss`
       )
     )
   );
@@ -158,14 +161,16 @@ function copyFiles() {
 
 function compileCss() {
   return new Observable(observer => {
-      render({file: `${cssProcessConfig.inputPath}${cssProcessConfig.filename}.scss`}, (err, compiled) => observer.next(compiled)
+    render(
+      { file: `${cssProcessConfig.inputPath}${cssProcessConfig.filename}.scss` },
+      (err, compiled) => observer.next(compiled)
     );
   });
 }
 
 function saveCss(compiled) {
   return observableFrom(
-      outputFile(`${cssProcessConfig.outputPath}${cssProcessConfig.filename}.css`, compiled.css)
+    outputFile(`${cssProcessConfig.outputPath}${cssProcessConfig.filename}.css`, compiled.css)
   );
 }
 
@@ -176,7 +181,7 @@ function buildLibrary(globals) {
     switchMap(() => copyFiles()),
     switchMap(() => compileCss()),
     switchMap(result => saveCss(result)),
-    tap( () => verifyVersions())
+    tap(() => verifyVersions())
   );
 }
 

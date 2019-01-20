@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { By } from '@angular/platform-browser';
 
 import { UiSwitchModule } from '../../lib/ui-switch/ui-switch.module';
 
@@ -23,8 +24,13 @@ describe('DemoComponent', () => {
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
-
   it('should be created', () => {
     expect(component).toBeTruthy();
+  });
+  it('Custom switch icons should have images', () => {
+    expect(
+      fixture.debugElement.query(By.css('.custom-icons')).query(By.css('small'))
+        .nativeElement.innerHTML
+    ).toContain('i');
   });
 });

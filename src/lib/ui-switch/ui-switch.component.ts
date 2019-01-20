@@ -35,6 +35,7 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
         <span class="switch-label-unchecked">{{ this.uncheckedLabel }}</span>
     </span>
     <small [style.background]="getColor('switchColor')">
+    <ng-content></ng-content>
     </small>
     </span>
   `,

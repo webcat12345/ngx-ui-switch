@@ -268,6 +268,13 @@ Note that if you are using the switch in a child `NgModule`, such as a lazy load
 <ui-switch uncheckedLabel="off"></ui-switch>
 ```
 
+## Switch Content
+```html
+<ui-switch uncheckedLabel="off">
+  <img src=""/>
+</ui-switch>
+```
+
 ## Development
 
 ### Setup

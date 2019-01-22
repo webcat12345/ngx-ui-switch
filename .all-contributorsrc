@@ -85,6 +85,17 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "mbejda",
+      "name": "Milos Bejda",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/5429780?v=4",
+      "profile": "http://mbejda.com",
+      "contributions": [
+        "code",
+        "doc",
+        "example"
+      ]
     }
   ],
   "repoType": "github"

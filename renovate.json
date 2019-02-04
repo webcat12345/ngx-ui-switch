@@ -1,8 +1,24 @@
 {
   "extends": [
-    "config:base"
+    "config:base",
+    ":preserveSemverRanges"
   ],
-  "statusCheckVerify": true,
+  "packageRules": [
+    {
+      "packagePatterns": [
+        "*"
+      ],
+      "semanticCommitType": "build",
+      "semanticCommitScope": "dev-dependencies"
+    },
+    {
+      "depTypeList": [
+        "dependencies"
+      ],
+      "semanticCommitType": "fix",
+      "semanticCommitScope": "dependencies"
+    }
+  ],
   "ignoreDeps": [
     "@angular/animations",
     "@angular/common",

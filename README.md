@@ -34,6 +34,12 @@ yarn add ngx-ui-switch@^1.6.0
 # npm install ngx-ui-switch@^1.6.0 --save
 ```
 
+Features not available
+
+- CSS styling
+- Switch content (checkedLabel, uncheckedLabel) [#309](https://github.com/webcat12345/ngx-ui-switch/issues/309) [#343](https://github.com/webcat12345/ngx-ui-switch/issues/343)
+- Global options
+
 ### Beyond Angular v4
 
 The master branch will contain the latest code for the latest version of Angular.

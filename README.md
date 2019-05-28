@@ -34,11 +34,13 @@ yarn add ngx-ui-switch@^1.6.0
 # npm install ngx-ui-switch@^1.6.0 --save
 ```
 
-Features not available
+**Some features are not available in previous versions:**
 
 - CSS styling
 - Switch content (checkedLabel, uncheckedLabel) [#309](https://github.com/webcat12345/ngx-ui-switch/issues/309) [#343](https://github.com/webcat12345/ngx-ui-switch/issues/343)
 - Global options
+
+> PRs welcome to add these features for the 1.x line.
 
 ### Beyond Angular v4
 

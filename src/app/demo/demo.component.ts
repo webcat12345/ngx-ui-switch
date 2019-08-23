@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-demo',
@@ -10,6 +11,15 @@ export class DemoComponent implements OnInit {
   change = false;
   valueChange = false;
   changeEvent: MouseEvent;
+  isLoading = false;
+  fakeAsync: Observable<boolean> = Observable.create((observer) => {
+    this.isLoading = true;
+    const timeout = setTimeout(() => {
+      this.isLoading = false;
+      observer.next(true);
+    }, 2000);
+    return () => clearTimeout(timeout);
+  });
 
   constructor() {}
 
@@ -30,4 +40,5 @@ export class DemoComponent implements OnInit {
   onValueChange(value: boolean) {
     this.valueChange = value;
   }
+
 }

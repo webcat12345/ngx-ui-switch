@@ -11,7 +11,6 @@ import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { UI_SWITCH_OPTIONS } from './ui-switch.token';
 import { UiSwitchModuleConfig } from './ui-switch.config';
 import { Observable, Subscription } from 'rxjs';
-import { map } from 'rxjs/operators';
 
 const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,

@@ -196,7 +196,7 @@ Note that if you are using the switch in a child `NgModule`, such as a lazy load
 <ui-switch (valueChange)="onValueChange($event)"></ui-switch>
 ```
 
-### beforeChange Event
+### beforeChange
 
 *Utilize an observable to check that the toggle event should complete*
 
@@ -206,6 +206,15 @@ Note that if you are using the switch in a child `NgModule`, such as a lazy load
 
 ```html
 <ui-switch [beforeChange]="OnBeforeChange"></ui-switch>
+```
+
+```javascript
+  OnBeforeChange: Observable<boolean> = Observable.create((observer) => {
+    const timeout = setTimeout(() => {
+      observer.next(true);
+    }, 2000);
+    return () => clearTimeout(timeout);
+  });
 ```
 
 ### size

@@ -54,3 +54,7 @@ strong {
     }
   }
 }
+
+.fa-spin, .fa-pulse {
+  filter: blur(0);
+}

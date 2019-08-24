@@ -5,11 +5,12 @@ import {
   Output,
   EventEmitter,
   HostListener,
-  forwardRef, Inject, Optional,
+  forwardRef, Inject, Optional, OnDestroy,
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { UI_SWITCH_OPTIONS } from './ui-switch.token';
 import { UiSwitchModuleConfig } from './ui-switch.config';
+import { Observable, Subscription } from 'rxjs';
 
 const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
@@ -24,6 +25,7 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
     <span class="switch"
     [class.checked]="checked"
     [class.disabled]="disabled"
+    [class.loading]="loading"
     [class.switch-large]="size === 'large'"
     [class.switch-medium]="size === 'medium'"
     [class.switch-small]="size === 'small'"
@@ -31,20 +33,22 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
     [style.border-color]="getColor('borderColor')"
     >
     <span class="switch-pane" *ngIf="checkedLabel || uncheckedLabel">
-        <span class="switch-label-checked">{{ this.checkedLabel }}</span>
-        <span class="switch-label-unchecked">{{ this.uncheckedLabel }}</span>
+      <span class="switch-label-checked">{{ this.checkedLabel }}</span>
+      <span class="switch-label-unchecked">{{ this.uncheckedLabel }}</span>
     </span>
     <small [style.background]="getColor('switchColor')">
-    <ng-content></ng-content>
+      <ng-content></ng-content>
     </small>
     </span>
   `,
   providers: [UI_SWITCH_CONTROL_VALUE_ACCESSOR],
 })
-export class UiSwitchComponent implements ControlValueAccessor {
+export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
   private _checked: boolean;
   private _disabled: boolean;
   private _reverse: boolean;
+  private _loading: boolean;
+  private _beforeChange: Subscription;
 
   @Input() size;
   @Input() color;
@@ -54,6 +58,7 @@ export class UiSwitchComponent implements ControlValueAccessor {
   @Input() defaultBoColor;
   @Input() checkedLabel;
   @Input() uncheckedLabel;
+  @Input() beforeChange: Observable<boolean>;
 
   @Input()
   set checked(v: boolean) {
@@ -80,6 +85,15 @@ export class UiSwitchComponent implements ControlValueAccessor {
 
   get reverse() {
     return this._reverse;
+  }
+
+  @Input()
+  set loading(v: boolean) {
+    this._loading = v !== false;
+  }
+
+  get loading() {
+    return this._loading;
   }
 
   /**
@@ -127,8 +141,7 @@ export class UiSwitchComponent implements ControlValueAccessor {
     return this.checked ? this.color : this.defaultBgColor;
   }
 
-  @HostListener('click', ['$event'])
-  onToggle(event: MouseEvent) {
+  onClick(event: MouseEvent) {
     if (this.disabled) {
       return;
     }
@@ -143,6 +156,17 @@ export class UiSwitchComponent implements ControlValueAccessor {
     this.onChangeCallback(this.checked);
     this.onTouchedCallback(this.checked);
     this.cdr.markForCheck();
+  }
+
+  @HostListener('click', ['$event'])
+  onToggle(event: MouseEvent) {
+    if (this.beforeChange) {
+      this._beforeChange = this.beforeChange.subscribe((confirm: boolean) => {
+        if (confirm) { this.onClick(event); }
+      });
+    } else {
+      this.onClick(event);
+    }
   }
 
   writeValue(obj: any): void {
@@ -167,5 +191,11 @@ export class UiSwitchComponent implements ControlValueAccessor {
   }
 
   private onTouchedCallback = (v: any) => {};
-  private onChangeCallback = (v: any) => {};
+  private onChangeCallback = (v: any) => { };
+
+  ngOnDestroy() {
+    if (this._beforeChange) {
+      this._beforeChange.unsubscribe();
+    }
+  }
 }

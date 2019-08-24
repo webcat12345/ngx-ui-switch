@@ -151,6 +151,20 @@ Note that if you are using the switch in a child `NgModule`, such as a lazy load
 <ui-switch checked [disabled]="true"></ui-switch>
 ```
 
+### loading
+
+*Show a loading state for the toggle button when true. Often utilized with beforeChange.*
+
+> type: *boolean*
+
+> default: false
+
+```html
+<ui-switch [loading]="isLoading">
+  <i class="fa fa-spinner fa-pulse" *ngIf="isLoading"></i>
+</ui-switch>
+```
+
 ### change
 
 > type: *boolean*
@@ -180,6 +194,27 @@ Note that if you are using the switch in a child `NgModule`, such as a lazy load
 
 ```html
 <ui-switch (valueChange)="onValueChange($event)"></ui-switch>
+```
+
+### beforeChange
+
+*Utilize an observable to check that the toggle event should complete*
+
+> type: *Observable<boolean>*
+
+> default: noop
+
+```html
+<ui-switch [beforeChange]="OnBeforeChange"></ui-switch>
+```
+
+```javascript
+  OnBeforeChange: Observable<boolean> = Observable.create((observer) => {
+    const timeout = setTimeout(() => {
+      observer.next(true);
+    }, 2000);
+    return () => clearTimeout(timeout);
+  });
 ```
 
 ### size

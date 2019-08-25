@@ -12,7 +12,7 @@ export class DemoComponent implements OnInit {
   valueChange = false;
   changeEvent: MouseEvent;
   isLoading = false;
-  fakeAsync: Observable<boolean> = Observable.create((observer) => {
+  fakeAsync: Observable<boolean> = new Observable((observer) => {
     this.isLoading = true;
     const timeout = setTimeout(() => {
       this.isLoading = false;

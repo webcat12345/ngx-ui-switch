@@ -203,7 +203,7 @@ Note that if you are using the switch in a child `NgModule`, such as a lazy load
 ```
 
 ```javascript
-  OnBeforeChange: Observable<boolean> = Observable.create((observer) => {
+  OnBeforeChange: Observable<boolean> = new Observable((observer) => {
     const timeout = setTimeout(() => {
       observer.next(true);
     }, 2000);

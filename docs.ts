@@ -1,4 +1,3 @@
-// from https://github.com/angular/angularfire2/blob/master/tools/build.js
 import { from as observableFrom } from 'rxjs';
 import { copy } from 'fs-extra';
 

@@ -17,12 +17,15 @@
 .settings/
 *.sublime-workspace
 
-# IDE - VSCode
+# IDE - VS Code
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# IDE - Visual Studio
+/.vs
 
 # misc
 /.sass-cache
@@ -43,4 +46,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
-/.vs
+

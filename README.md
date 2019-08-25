@@ -17,6 +17,11 @@ Inspired by [switchery](https://github.com/abpetkov/switchery) in [Angular](http
 
 ## Installation
 
+```sh
+yarn add ngx-ui-switch
+# npm install ngx-ui-switch --save
+```
+
 ### Angular v4
 
 Angular v5/v6 uses a different metadata version for decorators, therefore, the
@@ -39,20 +44,9 @@ yarn add ngx-ui-switch@^1.6.0
 - CSS styling
 - Switch content (checkedLabel, uncheckedLabel) [#309](https://github.com/webcat12345/ngx-ui-switch/issues/309) [#343](https://github.com/webcat12345/ngx-ui-switch/issues/343)
 - Global options
+- beforeChange event [#314](https://github.com/webcat12345/ngx-ui-switch/issues/314) [#359](https://github.com/webcat12345/ngx-ui-switch/pull/359)
 
-> PRs welcome to add these features for the 1.x line.
-
-### Beyond Angular v4
-
-The master branch will contain the latest code for the latest version of Angular.
-When upgrading this library to a new version of Angular, a new _x.y-stable_
-branch will be created to allow bugfixes. Below is how to install the latest
-version of the library.
-
-```sh
-yarn add ngx-ui-switch
-# npm install ngx-ui-switch --save
-```
+> PRs are welcome to add these features for the 1.x line.
 
 ## Usage
 

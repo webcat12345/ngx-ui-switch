@@ -96,6 +96,17 @@
         "doc",
         "example"
       ]
+    },
+    {
+      "login": "kameelyan",
+      "name": "kameelyan",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/590274?v=4",
+      "profile": "https://github.com/kameelyan",
+      "contributions": [
+        "code",
+        "doc",
+        "example"
+      ]
     }
   ],
   "repoType": "github"

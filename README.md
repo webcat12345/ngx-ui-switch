@@ -300,9 +300,63 @@ Note that if you are using the switch in a child `NgModule`, such as a lazy load
 
 > default: null
 
-
 ```html
 <ui-switch uncheckedLabel="off"></ui-switch>
+```
+
+### checkedTextColor
+
+*checked text color of the label*
+
+> type: *string*
+
+> default: black
+
+```html
+<ui-switch checkedTextColor="#7CFC00"></ui-switch>
+```
+
+### uncheckedTextColor
+
+*Unchecked text color of the label*
+
+> type: *string*
+
+> default: black
+
+```html
+<ui-switch uncheckedTextColor="red"></ui-switch>
+```
+
+## Switch Content
+```html
+<ui-switch uncheckedLabel="off">
+  <img src=""/>
+</ui-switch>
+```
+
+### checkedTextColor
+
+*checked text color of the label (on)*
+
+> type: *string*
+
+> default: black
+
+```html
+<ui-switch uncheckedTextColor="#7CFC00"></ui-switch>
+```
+
+### uncheckedTextColor
+
+*Unchecked text color of the label (off)*
+
+> type: *string*
+
+> default: black
+
+```html
+<ui-switch uncheckedTextColor="red"></ui-switch>
 ```
 
 ## Switch Content

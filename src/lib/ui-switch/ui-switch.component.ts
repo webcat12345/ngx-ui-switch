@@ -30,7 +30,7 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
     [class.switch-medium]="size === 'medium'"
     [class.switch-small]="size === 'small'"
     [style.background-color]="getColor()"
-    [style.border-color]="getColor('checkedBorderColor')"
+    [style.border-color]="getColor('borderColor')"
     >
     <span class="switch-pane" *ngIf="checkedLabel || uncheckedLabel">
       <span class="switch-label-checked"

@@ -7,4 +7,6 @@ export interface UiSwitchModuleConfig {
   defaultBoColor?: string;
   checkedLabel?: string;
   uncheckedLabel?: string;
+  checkedTextColor?: string;
+  uncheckedTextColor?: string;
 }

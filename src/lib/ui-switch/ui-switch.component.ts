@@ -33,8 +33,10 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
     [style.border-color]="getColor('borderColor')"
     >
     <span class="switch-pane" *ngIf="checkedLabel || uncheckedLabel">
-      <span class="switch-label-checked">{{ this.checkedLabel }}</span>
-      <span class="switch-label-unchecked">{{ this.uncheckedLabel }}</span>
+      <span class="switch-label-checked"
+      [style.color]="getColor('checkedTextColor')">{{ this.checkedLabel }}</span>
+      <span class="switch-label-unchecked"
+      [style.color]="getColor('uncheckedTextColor')">{{ this.uncheckedLabel }}</span>
     </span>
     <small [style.background]="getColor('switchColor')">
       <ng-content></ng-content>
@@ -58,6 +60,8 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
   @Input() defaultBoColor;
   @Input() checkedLabel;
   @Input() uncheckedLabel;
+  @Input() checkedTextColor;
+  @Input() uncheckedTextColor;
   @Input() beforeChange: Observable<boolean>;
 
   @Input()
@@ -123,6 +127,8 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
     this.defaultBoColor = config && config.defaultBoColor;
     this.checkedLabel = config && config.checkedLabel;
     this.uncheckedLabel = config && config.uncheckedLabel;
+    this.checkedTextColor = config && config.checkedTextColor;
+    this.uncheckedTextColor = config && config.uncheckedTextColor;
   }
 
   getColor(flag = '') {
@@ -134,6 +140,12 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
         return !this.checked ? this.switchColor : this.switchOffColor || this.switchColor;
       }
       return this.checked ? this.switchColor : this.switchOffColor || this.switchColor;
+    }
+    if (flag === 'checkedTextColor') {
+      return this.reverse ? this.uncheckedTextColor : this.checkedTextColor;
+    }
+    if (flag === 'uncheckedTextColor') {
+      return this.reverse ? this.checkedTextColor : this.uncheckedTextColor;
     }
     if (this.reverse) {
       return !this.checked ? this.color : this.defaultBgColor;

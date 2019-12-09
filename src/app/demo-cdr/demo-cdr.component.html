@@ -1,0 +1,19 @@
+<div class="col-12">
+  <h4>
+    <span class="font-weight-bold">ngModel</span> with 2-way binding</h4>
+  <ui-switch [(ngModel)]="enable"></ui-switch>
+  <p>
+    Current Value: {{enable | json}}
+  </p>
+</div>
+
+<div class="col-12">
+  <h4>Manually updated
+    <span class="font-weight-bold">ngModel</span>
+  </h4>
+  <ui-switch [ngModel]="manualUpdate"
+             (ngModelChange)="manualUpdateEvent($event)"></ui-switch>
+  <p>
+    Current Value: {{manualUpdate | json}}
+  </p>
+</div>

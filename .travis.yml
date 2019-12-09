@@ -33,7 +33,7 @@ after_success:
 jobs:
   include:
     - stage: deploy github pages
-      if: branch = master AND head_branch IS BLANK
+      if: tag IS present
       script:
         - yarn build:demo
         - yarn typedoc

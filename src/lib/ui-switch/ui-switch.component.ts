@@ -22,7 +22,7 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
 @Component({
   selector: 'ui-switch',
   template: `
-    <span class="switch"
+    <button class="switch"
     [class.checked]="checked"
     [class.disabled]="disabled"
     [class.loading]="loading"
@@ -41,7 +41,7 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
     <small [style.background]="getColor('switchColor')">
       <ng-content></ng-content>
     </small>
-    </span>
+    </button>
   `,
   providers: [UI_SWITCH_CONTROL_VALUE_ACCESSOR],
 })
@@ -202,7 +202,7 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
     this.disabled = isDisabled;
   }
 
-  private onTouchedCallback = (v: any) => {};
+  private onTouchedCallback = (v: any) => { };
   private onChangeCallback = (v: any) => { };
 
   ngOnDestroy() {

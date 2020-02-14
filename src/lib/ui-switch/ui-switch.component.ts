@@ -22,7 +22,10 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
 @Component({
   selector: 'ui-switch',
   template: `
-    <button class="switch"
+    <button 
+    class="switch"
+    role="switch"
+    [attr.aria-checked]="checked"
     [class.checked]="checked"
     [class.disabled]="disabled"
     [class.loading]="loading"
@@ -30,17 +33,12 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
     [class.switch-medium]="size === 'medium'"
     [class.switch-small]="size === 'small'"
     [style.background-color]="getColor()"
-    [style.border-color]="getColor('borderColor')"
-    >
-    <span class="switch-pane" *ngIf="checkedLabel || uncheckedLabel">
-      <span class="switch-label-checked"
-      [style.color]="getColor('checkedTextColor')">{{ this.checkedLabel }}</span>
-      <span class="switch-label-unchecked"
-      [style.color]="getColor('uncheckedTextColor')">{{ this.uncheckedLabel }}</span>
-    </span>
-    <small [style.background]="getColor('switchColor')">
-      <ng-content></ng-content>
-    </small>
+    [style.border-color]="getColor('borderColor')">
+    <label class="switch-pane" *ngIf="checkedLabel || uncheckedLabel">
+    <span [attr.aria-label]="this.checkedLabel" class="switch-label-checked" [style.color]="getColor('checkedTextColor')">{{ this.checkedLabel }}</span>
+    <span [attr.aria-label]="this.uncheckedLabel" class="switch-label-unchecked" [style.color]="getColor('uncheckedTextColor')">{{ this.uncheckedLabel }}</span>
+    </label>
+    <small [style.background]="getColor('switchColor')"><ng-content></ng-content></small>
     </button>
   `,
   providers: [UI_SWITCH_CONTROL_VALUE_ACCESSOR],

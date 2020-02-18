@@ -38,6 +38,7 @@
     "karma-coverage-istanbul-reporter",
     "rxjs",
     "tslint",
+    "tsickle",
     "typedoc",
     "typescript"
   ]

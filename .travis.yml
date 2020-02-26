@@ -42,7 +42,7 @@ jobs:
         - echo "Deploying to github pages..."
       deploy:
         provider: pages
-        skip_cleanup: true
-        github_token: $GITHUB_TOKEN
+        edge: true
+        token: $GITHUB_TOKEN
         on:
           branch: master

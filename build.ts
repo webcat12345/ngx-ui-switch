@@ -119,12 +119,14 @@ function verifyVersions() {
 }
 
 function buildModule(globals) {
+  console.log('building modules');
   const es2015$ = spawnObservable(NGC, TSC_ARGS());
   const esm$ = spawnObservable(NGC, TSC_ARGS('esm'));
   return observableForkJoin([es2015$, esm$]);
 }
 
 function createBundles(globals) {
+  console.log('creating bundles');
   return observableForkJoin([
     observableFrom(createUmd(globals)),
     observableFrom(createEs(globals, 'es2015')),
@@ -133,6 +135,7 @@ function createBundles(globals) {
 }
 
 function copyFiles() {
+  console.log('copying files');
   const copyAll: (s: string, s1: string) => any = observableBindCallback(copyfiles);
   return observableForkJoin([
     copyAll(`${process.cwd()}/dist/es5/**/*.d.ts`, `${process.cwd()}/dist/packages-dist`),
@@ -159,6 +162,7 @@ function copyFiles() {
 }
 
 function compileCss() {
+  console.log('compiling css');
   return new Observable(observer => {
     render(
       { file: `${cssProcessConfig.inputPath}${cssProcessConfig.filename}.scss` },

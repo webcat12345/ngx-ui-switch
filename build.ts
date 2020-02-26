@@ -121,20 +121,20 @@ function verifyVersions() {
 function buildModule(globals) {
   const es2015$ = spawnObservable(NGC, TSC_ARGS());
   const esm$ = spawnObservable(NGC, TSC_ARGS('esm'));
-  return observableForkJoin(es2015$, esm$);
+  return observableForkJoin([es2015$, esm$]);
 }
 
 function createBundles(globals) {
-  return observableForkJoin(
+  return observableForkJoin([
     observableFrom(createUmd(globals)),
     observableFrom(createEs(globals, 'es2015')),
-    observableFrom(createEs(globals, 'es5'))
-  );
+    observableFrom(createEs(globals, 'es5')),
+  ]);
 }
 
 function copyFiles() {
-  const copyAll: ((s: string, s1: string) => any) = observableBindCallback(copyfiles);
-  return observableForkJoin(
+  const copyAll: (s: string, s1: string) => any = observableBindCallback(copyfiles);
+  return observableForkJoin([
     copyAll(`${process.cwd()}/dist/es5/**/*.d.ts`, `${process.cwd()}/dist/packages-dist`),
     copyAll(`${process.cwd()}/dist/es5/**/*.metadata.json`, `${process.cwd()}/dist/packages-dist`),
     observableFrom(
@@ -154,8 +154,8 @@ function copyFiles() {
         `${cssProcessConfig.inputPath}${cssProcessConfig.filename}.scss`,
         `${cssProcessConfig.outputPath}${cssProcessConfig.filename}.scss`
       )
-    )
-  );
+    ),
+  ]);
 }
 
 function compileCss() {
@@ -175,7 +175,7 @@ function saveCss(compiled) {
 
 function buildLibrary(globals) {
   const modules$ = buildModule(globals);
-  return observableForkJoin(modules$).pipe(
+  return modules$.pipe(
     switchMap(() => createBundles(globals)),
     switchMap(() => copyFiles()),
     switchMap(() => compileCss()),

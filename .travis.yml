@@ -10,7 +10,8 @@ addons:
   chrome: stable
 
 stages:
-  - test
+  - name: test
+    if: branch != master
   - name: build
     if: branch = master
   - name: deploy github pages

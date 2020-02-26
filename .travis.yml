@@ -16,6 +16,10 @@ stages:
 jobs:
   include:
     - stage: build
+      branches:
+        only:
+          - master
+
       # https://docs.travis-ci.com/user/gui-and-headless-browsers/#Using-the-Chrome-addon-in-the-headless-mode
       before_install:
         # start your web application and listen on `localhost`
@@ -26,14 +30,34 @@ jobs:
         - 'sudo chmod 4755 /opt/google/chrome/chrome-sandbox'
       after_success:
         - bash <(curl -s https://codecov.io/bash)
+
       script:
         - yarn build
         - yarn build:demo
-        - yarn bundlesize
+        # TODO: needs $BUNDLEWATCH_GITHUB_TOKEN
+        - yarn bundlewatch
         - yarn lint:ngx-ui-switch
         - yarn test:ci
         - yarn e2e:ci
         - yarn typedoc
+    - stage: build
+      branches:
+        except:
+          - master
+
+      before_install:
+        - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost:4200 &
+
+      before_script:
+        - 'sudo chown root /opt/google/chrome/chrome-sandbox'
+        - 'sudo chmod 4755 /opt/google/chrome/chrome-sandbox'
+
+      script:
+        - yarn build
+        - yarn build:demo
+        - yarn lint:ngx-ui-switch
+        - yarn test:ci
+        - yarn e2e:ci
     - stage: deploy github pages
       if: tag IS present
       script:

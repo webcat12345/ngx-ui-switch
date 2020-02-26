@@ -107,6 +107,39 @@
         "doc",
         "example"
       ]
+    },
+    {
+      "login": "gregoryalary",
+      "name": "Grégory Alary",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/20248805?v=4",
+      "profile": "https://gregoryalary.github.io/",
+      "contributions": [
+        "question",
+        "bug",
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "zehtravassos",
+      "name": "zehtravassos",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/2574403?v=4",
+      "profile": "https://github.com/zehtravassos",
+      "contributions": [
+        "code",
+        "design"
+      ]
+    },
+    {
+      "login": "hrueger",
+      "name": "H. Rüger",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/18656830?v=4",
+      "profile": "https://github.com/hrueger",
+      "contributions": [
+        "bug",
+        "code",
+        "maintenance"
+      ]
     }
   ],
   "repoType": "github"

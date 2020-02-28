@@ -24,7 +24,7 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
 
 @Component({
   selector: 'ui-switch',
-  templateUrl: './ui-switch.component.html',
+  templateUrl: 'ui-switch.component.html',
   providers: [UI_SWITCH_CONTROL_VALUE_ACCESSOR],
 })
 export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {

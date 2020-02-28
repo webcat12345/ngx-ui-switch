@@ -5,7 +5,10 @@ import {
   Output,
   EventEmitter,
   HostListener,
-  forwardRef, Inject, Optional, OnDestroy,
+  forwardRef,
+  Inject,
+  Optional,
+  OnDestroy,
 } from '@angular/core';
 import { NG_VALUE_ACCESSOR, ControlValueAccessor } from '@angular/forms';
 import { UI_SWITCH_OPTIONS } from './ui-switch.token';
@@ -21,28 +24,7 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
 
 @Component({
   selector: 'ui-switch',
-  template: `
-    <span class="switch"
-    [class.checked]="checked"
-    [class.disabled]="disabled"
-    [class.loading]="loading"
-    [class.switch-large]="size === 'large'"
-    [class.switch-medium]="size === 'medium'"
-    [class.switch-small]="size === 'small'"
-    [style.background-color]="getColor()"
-    [style.border-color]="getColor('borderColor')"
-    >
-    <span class="switch-pane" *ngIf="checkedLabel || uncheckedLabel">
-      <span class="switch-label-checked"
-      [style.color]="getColor('checkedTextColor')">{{ this.checkedLabel }}</span>
-      <span class="switch-label-unchecked"
-      [style.color]="getColor('uncheckedTextColor')">{{ this.uncheckedLabel }}</span>
-    </span>
-    <small [style.background]="getColor('switchColor')">
-      <ng-content></ng-content>
-    </small>
-    </span>
-  `,
+  templateUrl: 'ui-switch.component.html',
   providers: [UI_SWITCH_CONTROL_VALUE_ACCESSOR],
 })
 export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
@@ -119,7 +101,7 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
     @Inject(UI_SWITCH_OPTIONS) @Optional() config: UiSwitchModuleConfig = {},
     private cdr: ChangeDetectorRef
   ) {
-    this.size = config && config.size || 'medium';
+    this.size = (config && config.size) || 'medium';
     this.color = config && config.color;
     this.switchOffColor = config && config.switchOffColor;
     this.switchColor = config && config.switchColor;
@@ -174,7 +156,9 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
   onToggle(event: MouseEvent) {
     if (this.beforeChange) {
       this._beforeChange = this.beforeChange.subscribe((confirm: boolean) => {
-        if (confirm) { this.onClick(event); }
+        if (confirm) {
+          this.onClick(event);
+        }
       });
     } else {
       this.onClick(event);
@@ -203,7 +187,7 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
   }
 
   private onTouchedCallback = (v: any) => {};
-  private onChangeCallback = (v: any) => { };
+  private onChangeCallback = (v: any) => {};
 
   ngOnDestroy() {
     if (this._beforeChange) {

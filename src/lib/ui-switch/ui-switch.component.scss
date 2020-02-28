@@ -90,7 +90,12 @@ $sw-lg-min-width: 60px;
     justify-content: center;
   }
   // populate &.small, &.medium, &.large classes
-  @include config-switch-sizes( 'switch-', 'small' $sw-sm-knob-size, 'medium' $sw-md-knob-size, 'large' $sw-lg-knob-size );
+  @include config-switch-sizes(
+    'switch-',
+    'small' $sw-sm-knob-size,
+    'medium' $sw-md-knob-size,
+    'large' $sw-lg-knob-size
+  );
 
   &.checked {
     background: rgb(100, 189, 99);
@@ -105,11 +110,13 @@ $sw-lg-min-width: 60px;
 
       .switch-label {
         &-checked {
-          opacity: 1;
+          // opacity: 1;
+          display: block;
         }
 
         &-unchecked {
-          opacity: 0;
+          // opacity: 0;
+          display: none;
         }
       }
     }
@@ -138,13 +145,15 @@ $sw-lg-min-width: 60px;
 
     .switch-label {
       color: black;
-      
+
       &-checked {
-        opacity: 0;
+        // opacity: 0;
+        display: none;
       }
 
       &-unchecked {
-        opacity: 1;
+        // opacity: 1;
+        display: block;
       }
     }
   }

@@ -66,8 +66,11 @@
 			<div class="tsd-panel tsd-typography">
 				<h1 id="ngx-ui-switch-component">Ngx UI Switch Component</h1>
 				<p><a href="https://gitter.im/ngx-discuss/Lobby"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter"></a>
-					<a href="https://travis-ci.org/webcat12345/ngx-ui-switch"><img src="https://travis-ci.org/webcat12345/ngx-ui-switch.svg?branch=master" alt="Build Status"></a> <a href="https://badge.fury.io/js/ngx-ui-switch"><img src="https://badge.fury.io/js/ngx-ui-switch.svg" alt="npm version"></a> <a href="https://www.npmjs.com/package/ngx-ui-switch"><img src="https://img.shields.io/npm/dm/localeval.svg" alt="npm"></a>
-				<a href="#contributors"><img src="https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square" alt="All Contributors"></a></p>
+					<a href="https://travis-ci.org/webcat12345/ngx-ui-switch"><img src="https://travis-ci.org/webcat12345/ngx-ui-switch.svg?branch=master" alt="Build Status"></a>
+					<a href="https://github.com/webcat12345/ngx-ui-switch/blob/master/LICENSE"><img src="https://img.shields.io/github/license/webcat12345/ngx-ui-switch" alt="license"></a>
+					<a href="https://badge.fury.io/js/ngx-ui-switch"><img src="https://badge.fury.io/js/ngx-ui-switch.svg" alt="npm version"></a>
+					<a href="https://www.npmjs.com/package/ngx-ui-switch"><img src="https://img.shields.io/npm/dm/localeval.svg" alt="npm"></a>
+				<a href="#contributors"><img src="https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square" alt="All Contributors"></a></p>
 				<h2 id="description">Description</h2>
 				<p>This is a simple iOS 7 style switch component for <a href="https://angular.io">Angular</a>.</p>
 				<p>Live <a href="https://webcat12345.github.io/ngx-ui-switch/demo/">demo</a></p>
@@ -75,18 +78,8 @@
 				<p><img src="logo.png" alt="alt"></p>
 				<p>Inspired by <a href="https://github.com/abpetkov/switchery">switchery</a> in <a href="https://angular.io">Angular</a>.</p>
 				<h2 id="installation">Installation</h2>
-				<pre><code class="language-sh">yarn add ngx-ui-switch
-<span class="hljs-comment"># npm install ngx-ui-switch --save</span></code></pre>
-				<h3 id="angular-v4">Angular v4</h3>
-				<p>Angular v5/v6 uses a different metadata version for decorators, therefore, the
-					Angular v4 compatible versions of this library are 1.4.4 and below. However,
-					versions &lt; 1.6.0 have been deprecated to avoid the confusion brought up in
-				issue <a href="https://github.com/webcat12345/ngx-ui-switch/issues/219">#219</a></p>
-				<p>The code in the <a href="https://github.com/webcat12345/ngx-ui-switch/tree/1.x-stable">1.x-stable</a>
-				branch contains the Angular v4 code.</p>
-				<p><em>Note: The Angular v4 branch will only receive bug fixes.</em></p>
-				<pre><code class="language-sh">yarn add ngx-ui-switch@^1.6.0
-<span class="hljs-comment"># npm install ngx-ui-switch@^1.6.0 --save</span></code></pre>
+				<p>npm: <code>npm install ngx-ui-switch --save</code></p>
+				<p>yarn: <code>yarn add ngx-ui-switch</code></p>
 				<p><strong>Some features are not available in previous versions:</strong></p>
 				<ul>
 					<li>CSS styling</li>
@@ -94,9 +87,6 @@
 					<li>Global options</li>
 					<li>beforeChange event <a href="https://github.com/webcat12345/ngx-ui-switch/issues/314">#314</a> <a href="https://github.com/webcat12345/ngx-ui-switch/pull/359">#359</a></li>
 				</ul>
-				<blockquote>
-					<p>PRs are welcome to add these features for the 1.x line.</p>
-				</blockquote>
 				<h2 id="usage">Usage</h2>
 				<ul>
 					<li>Import into a module (<code>AppModule</code> example below)</li>
@@ -119,7 +109,7 @@
   &quot;./node_modules/ngx-ui-switch/ui-switch.component.css&quot;
 ]</code></pre>
 				<p>Alternatively, the scss version can be imported into a scss file:</p>
-				<pre><code class="language-scss">@<span class="hljs-keyword">import</span> <span class="hljs-string">'~ngx-ui-switch/ui-switch.component.scss'</span>;</code></pre>
+				<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">'~ngx-ui-switch/ui-switch.component.scss'</span>;</code></pre>
 				<h2 id="global-config">Global config</h2>
 				<p>Use when you want to change default values globally.</p>
 				<p>These settings will override anything passed in via property bindings.</p>
@@ -203,20 +193,21 @@
 				</blockquote>
 				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> (<span class="hljs-attr">valueChange</span>)=<span class="hljs-string">"onValueChange($event)"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
 				<h3 id="beforechange">beforeChange</h3>
-				<p><em>Utilize an observable to check that the toggle event should complete</em></p>
+				<p>Utilize an observable to check that the toggle event should complete</p>
 				<blockquote>
 					<p>type: <em>Observable<boolean></em></p>
 				</blockquote>
 				<blockquote>
 					<p>default: noop</p>
 				</blockquote>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> [<span class="hljs-attr">beforeChange</span>]=<span class="hljs-string">"OnBeforeChange"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
-				<pre><code class="language-javascript">  OnBeforeChange: Observable&lt;boolean&gt; = <span class="hljs-keyword">new</span> Observable(<span class="hljs-function">(<span class="hljs-params">observer</span>) =&gt;</span> {
-    <span class="hljs-keyword">const</span> timeout = setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
-      observer.next(<span class="hljs-literal">true</span>);
-    }, <span class="hljs-number">2000</span>);
-    <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> clearTimeout(timeout);
-  });</code></pre>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> [<span class="hljs-attr">beforeChange</span>]=<span class="hljs-string">"OnBeforeChange"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<pre><code class="language-typescript">OnBeforeChange: Observable&lt;<span class="hljs-built_in">boolean</span>&gt; = <span class="hljs-keyword">new</span> Observable(<span class="hljs-function">(<span class="hljs-params">observer</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> timeout = setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    observer.next(<span class="hljs-literal">true</span>);
+  }, <span class="hljs-number">2000</span>);
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> clearTimeout(timeout);
+});</code></pre>
 				<h3 id="size">size</h3>
 				<blockquote>
 					<p>type: <em>string</em></p>
@@ -251,7 +242,7 @@
 				</blockquote>
 				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">switchColor</span>=<span class="hljs-string">"#fcfcfc"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
 				<h3 id="defaultbgcolor">defaultBgColor</h3>
-				<p><em>Default background color</em></p>
+				<p>Default background color</p>
 				<blockquote>
 					<p>type: <em>string</em></p>
 				</blockquote>
@@ -287,7 +278,7 @@
 				</blockquote>
 				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">uncheckedLabel</span>=<span class="hljs-string">"off"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
 				<h3 id="checkedtextcolor">checkedTextColor</h3>
-				<p><em>checked text color of the label</em></p>
+				<p>checked text color of the label (on)</p>
 				<blockquote>
 					<p>type: <em>string</em></p>
 				</blockquote>
@@ -296,29 +287,7 @@
 				</blockquote>
 				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">checkedTextColor</span>=<span class="hljs-string">"#7CFC00"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
 				<h3 id="uncheckedtextcolor">uncheckedTextColor</h3>
-				<p><em>Unchecked text color of the label</em></p>
-				<blockquote>
-					<p>type: <em>string</em></p>
-				</blockquote>
-				<blockquote>
-					<p>default: black</p>
-				</blockquote>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">uncheckedTextColor</span>=<span class="hljs-string">"red"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
-				<h2 id="switch-content">Switch Content</h2>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">uncheckedLabel</span>=<span class="hljs-string">"off"</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span>/&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
-				<h3 id="checkedtextcolor">checkedTextColor</h3>
-				<p><em>checked text color of the label (on)</em></p>
-				<blockquote>
-					<p>type: <em>string</em></p>
-				</blockquote>
-				<blockquote>
-					<p>default: black</p>
-				</blockquote>
-				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">uncheckedTextColor</span>=<span class="hljs-string">"#7CFC00"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
-				<h3 id="uncheckedtextcolor">uncheckedTextColor</h3>
-				<p><em>Unchecked text color of the label (off)</em></p>
+				<p>Unchecked text color of the label (off)</p>
 				<blockquote>
 					<p>type: <em>string</em></p>
 				</blockquote>
@@ -360,9 +329,9 @@ yarn release</code></pre>
 					<tbody><tr>
 							<td align="center"><a href="http://mbejda.com"><img src="https://avatars1.githubusercontent.com/u/5429780?v=4" width="100px;" alt="Milos Bejda"/><br /><sub><b>Milos Bejda</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=mbejda" title="Code">💻</a> <a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=mbejda" title="Documentation">📖</a> <a href="#example-mbejda" title="Examples">💡</a></td>
 							<td align="center"><a href="https://github.com/kameelyan"><img src="https://avatars1.githubusercontent.com/u/590274?v=4" width="100px;" alt="kameelyan"/><br /><sub><b>kameelyan</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=kameelyan" title="Code">💻</a> <a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=kameelyan" title="Documentation">📖</a> <a href="#example-kameelyan" title="Examples">💡</a></td>
-							<td align="center"></td>
-							<td align="center"></td>
-							<td align="center"></td>
+							<td align="center"><a href="https://gregoryalary.github.io/"><img src="https://avatars0.githubusercontent.com/u/20248805?v=4" width="100px;" alt="Grégory Alary"/><br /><sub><b>Grégory Alary</b></sub></a><br /><a href="#question-gregoryalary" title="Answering Questions">💬</a> <a href="https://github.com/webcat12345/ngx-ui-switch/issues?q=author%3Agregoryalary" title="Bug reports">🐛</a> <a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=gregoryalary" title="Code">💻</a> <a href="#design-gregoryalary" title="Design">🎨</a></td>
+							<td align="center"><a href="https://github.com/zehtravassos"><img src="https://avatars2.githubusercontent.com/u/2574403?v=4" width="100px;" alt="zehtravassos"/><br /><sub><b>zehtravassos</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=zehtravassos" title="Code">💻</a> <a href="#design-zehtravassos" title="Design">🎨</a></td>
+							<td align="center"><a href="https://github.com/hrueger"><img src="https://avatars0.githubusercontent.com/u/18656830?v=4" width="100px;" alt="H. Rüger"/><br /><sub><b>H. Rüger</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/issues?q=author%3Ahrueger" title="Bug reports">🐛</a> <a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=hrueger" title="Code">💻</a> <a href="#maintenance-hrueger" title="Maintenance">🚧</a></td>
 							<td align="center"></td>
 							<td align="center"></td>
 						</tr>
@@ -377,9 +346,6 @@ yarn release</code></pre>
 						</tr>
 				</tbody></table>
 				<p>This project follows the <a href="https://github.com/kentcdodds/all-contributors">all-contributors</a> specification. Contributions of any kind welcome!</p>
-				<h2 id="faq">FAQ</h2>
-				<h2 id="license">License</h2>
-				<p>MIT</p>
 			</div>
 		</div>
 		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">

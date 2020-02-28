@@ -55,6 +55,11 @@ strong {
   }
 }
 
-.fa-spin, .fa-pulse {
+.switch:focus {
+  outline: thin dotted;
+}
+
+.fa-spin,
+.fa-pulse {
   filter: blur(0);
 }

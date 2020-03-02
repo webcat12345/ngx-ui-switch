@@ -1,6 +1,6 @@
 {
   "name": "ngx-ui-switch",
-  "version": "9.0.0-beta.3",
+  "version": "9.0.0",
   "description": "switch button for angular4",
   "bugs": "https://github.com/webcat12345/ngx-ui-switch/issues",
   "homepage": "https://github.com/webcat12345/ngx-ui-switch#readme",
@@ -50,7 +50,7 @@
     "font-awesome": "^4.7.0",
     "rxjs": "^6.5.2",
     "tslib": "^1.9.0",
-    "web-animations-js": "github:angular/web-animations-js#release_pr208",
+    "web-animations-js": "^2.3.2",
     "zone.js": "~0.10.2"
   },
   "devDependencies": {

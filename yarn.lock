@@ -9482,9 +9482,10 @@ wcwidth@^1.0.1:
   dependencies:
     defaults "^1.0.3"
 
-"web-animations-js@github:angular/web-animations-js#release_pr208":
-  version "2.3.2-pr208"
-  resolved "https://codeload.github.com/angular/web-animations-js/tar.gz/96635c1a82a730fc71cc5d6cabe5dfe7c8349ec5"
+web-animations-js@^2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/web-animations-js/-/web-animations-js-2.3.2.tgz#a51963a359c543f97b47c7d4bc2d811f9fc9e153"
+  integrity sha512-TOMFWtQdxzjWp8qx4DAraTWTsdhxVSiWa6NkPFSaPtZ1diKUxTn4yTix73A1euG1WbSOMMPcY51cnjTIHrGtDA==
 
 webdriver-js-extender@2.1.0:
   version "2.1.0"

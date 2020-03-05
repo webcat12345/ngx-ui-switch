@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+
 import { Observable } from 'rxjs';
 
 @Component({
@@ -6,13 +8,15 @@ import { Observable } from 'rxjs';
   templateUrl: './demo.component.html',
 })
 export class DemoComponent implements OnInit {
+  submitted = false;
   enable = true;
+  enableFeature = false;
   count = 0;
   change = false;
   valueChange = false;
   changeEvent: MouseEvent;
   isLoading = false;
-  fakeAsync: Observable<boolean> = new Observable((observer) => {
+  fakeAsync: Observable<boolean> = new Observable(observer => {
     this.isLoading = true;
     const timeout = setTimeout(() => {
       this.isLoading = false;
@@ -21,11 +25,15 @@ export class DemoComponent implements OnInit {
     return () => clearTimeout(timeout);
   });
 
+  @ViewChild('demoForm') demoForm: NgForm;
+
   constructor() {}
 
   ngOnInit() {}
 
-  onSubmit() {}
+  onSubmit(event: any) {
+    this.submitted = true;
+  }
 
   onChange(value: boolean) {
     this.count++;
@@ -40,5 +48,4 @@ export class DemoComponent implements OnInit {
   onValueChange(value: boolean) {
     this.valueChange = value;
   }
-
 }

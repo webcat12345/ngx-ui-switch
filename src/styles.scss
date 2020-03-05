@@ -14,7 +14,7 @@
 // @import "~bootstrap/scss/dropdown";
 // @import "~bootstrap/scss/button-group";
 // @import "~bootstrap/scss/input-group";
-// @import "~bootstrap/scss/custom-forms";
+@import '~bootstrap/scss/custom-forms';
 @import '~bootstrap/scss/nav';
 @import '~bootstrap/scss/navbar';
 // @import "~bootstrap/scss/card";
@@ -22,7 +22,7 @@
 // @import "~bootstrap/scss/pagination";
 // @import "~bootstrap/scss/badge";
 // @import "~bootstrap/scss/jumbotron";
-// @import "~bootstrap/scss/alert";
+@import '~bootstrap/scss/alert';
 // @import "~bootstrap/scss/progress";
 // @import "~bootstrap/scss/media";
 // @import "~bootstrap/scss/list-group";
@@ -62,4 +62,9 @@ strong {
 .fa-spin,
 .fa-pulse {
   filter: blur(0);
+}
+
+#enable-feature {
+  display: inline-block;
+  vertical-align: bottom;
 }

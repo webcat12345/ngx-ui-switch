@@ -154,6 +154,11 @@
 
 <form class="form-row" #demoForm="ngForm" (ngSubmit)="onSubmit($event)">
   <div class="col">
+    <label for="feature-name">Name</label>
+    <input type="text" class="form-control" id="feature-name" />
+  </div>
+
+  <div class="col">
     <label for="enable-feature">Enable Feature</label>
     <ui-switch
       class="custom-control"

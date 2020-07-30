@@ -7,26 +7,17 @@ import { UI_SWITCH_OPTIONS } from './ui-switch.token';
 import { UiSwitchModuleConfig } from './ui-switch.config';
 
 @NgModule({
-  declarations: [
-    UiSwitchComponent
-  ],
-  imports: [
-    CommonModule,
-    FormsModule
-  ],
-  exports: [
-    FormsModule,
-
-    UiSwitchComponent
-  ]
+  declarations: [UiSwitchComponent],
+  imports: [CommonModule, FormsModule],
+  exports: [FormsModule, UiSwitchComponent],
 })
 export class UiSwitchModule {
-  static forRoot(config: UiSwitchModuleConfig | null | undefined): ModuleWithProviders<UiSwitchModule> {
+  static forRoot(
+    config: UiSwitchModuleConfig | null | undefined
+  ): ModuleWithProviders<UiSwitchModule> {
     return {
       ngModule: UiSwitchModule,
-      providers: [
-        {provide: UI_SWITCH_OPTIONS, useValue: config || {}}
-      ]
+      providers: [{ provide: UI_SWITCH_OPTIONS, useValue: config || {} }],
     };
   }
 }

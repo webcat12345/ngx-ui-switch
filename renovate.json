@@ -33,9 +33,12 @@
     "@angular/router",
     "@angular-devkit/build-angular",
     "all-contributors-cli",
-    "karma",
-    "karma-cli",
+    "jasmine-core",
+    "jasmine-spec-reporter",
+    "karma-chrome-launcher",
     "karma-coverage-istanbul-reporter",
+    "karma-jasmine-html-reporter",
+    "karma-jasmine",
     "rollup",
     "rollup-plugin-filesize",
     "rollup-plugin-sourcemaps",
@@ -43,6 +46,7 @@
     "tslint",
     "tsickle",
     "typedoc",
-    "typescript"
+    "typescript",
+    "zone.js"
   ]
 }

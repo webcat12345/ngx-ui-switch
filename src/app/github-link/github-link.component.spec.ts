@@ -8,7 +8,7 @@ describe('GithubLinkComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GithubLinkComponent ]
+      declarations: [GithubLinkComponent],
     }).compileComponents();
   }));
 

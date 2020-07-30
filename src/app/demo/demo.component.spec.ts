@@ -29,8 +29,8 @@ describe('DemoComponent', () => {
   });
   it('Custom switch icons should have images', () => {
     expect(
-      fixture.debugElement.query(By.css('.custom-icons')).query(By.css('small'))
-        .nativeElement.innerHTML
+      fixture.debugElement.query(By.css('.custom-icons')).query(By.css('small')).nativeElement
+        .innerHTML
     ).toContain('i');
   });
 });

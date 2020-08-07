@@ -154,6 +154,9 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
 
   @HostListener('click', ['$event'])
   onToggle(event: MouseEvent) {
+    if (this.disabled) {
+      return;
+    }
     if (this.beforeChange) {
       this._beforeChange = this.beforeChange.subscribe((confirm: boolean) => {
         if (confirm) {

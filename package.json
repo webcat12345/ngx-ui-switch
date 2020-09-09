@@ -62,7 +62,7 @@
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
     "all-contributors-cli": "^5.10.0",
-    "bundlewatch": "^0.2.5",
+    "bundlewatch": "^0.3.0",
     "codelyzer": "^6.0.0",
     "copy": "^0.3.1",
     "fs-extra": "^7.0.0",

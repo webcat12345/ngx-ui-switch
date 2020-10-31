@@ -19,7 +19,7 @@ import json from '../lib/package.json';
 })
 export class AppComponent implements OnInit {
   constructor(private t: Title) {
-    const title = [t.getTitle()];
+    const title = [this.t.getTitle()];
     if (json) {
       title.push(`${json.version} Demo`);
     }

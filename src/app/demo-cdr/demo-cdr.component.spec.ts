@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { DemoCdrComponent } from './demo-cdr.component';
@@ -8,12 +8,14 @@ describe('DemoCdrComponent', () => {
   let component: DemoCdrComponent;
   let fixture: ComponentFixture<DemoCdrComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [DemoCdrComponent],
-      imports: [FormsModule, ReactiveFormsModule, UiSwitchModule],
-    }).compileComponents();
-  }));
+  beforeEach(
+    waitForAsync(() => {
+      TestBed.configureTestingModule({
+        declarations: [DemoCdrComponent],
+        imports: [FormsModule, ReactiveFormsModule, UiSwitchModule],
+      }).compileComponents();
+    })
+  );
 
   beforeEach(() => {
     fixture = TestBed.createComponent(DemoCdrComponent);

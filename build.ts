@@ -54,7 +54,7 @@ function spawnObservable(command, args) {
     cmd.stderr.on('data', data => {
       observer.error(data.toString());
     });
-    cmd.on('close', data => {
+    cmd.on('close', () => {
       observer.complete();
     });
   });
@@ -118,7 +118,7 @@ function verifyVersions() {
   });
 }
 
-function buildModule(globals) {
+function buildModule() {
   console.log('building modules');
   const es2015$ = spawnObservable(NGC, TSC_ARGS());
   const esm$ = spawnObservable(NGC, TSC_ARGS('esm'));
@@ -166,7 +166,13 @@ function compileCss() {
   return new Observable(observer => {
     render(
       { file: `${cssProcessConfig.inputPath}${cssProcessConfig.filename}.scss` },
-      (err, compiled) => observer.next(compiled)
+      (error, compiled) => {
+        if (error) {
+          observer.error(error);
+        } else {
+          observer.next(compiled);
+        }
+      }
     );
   });
 }
@@ -178,7 +184,7 @@ function saveCss(compiled) {
 }
 
 function buildLibrary(globals) {
-  const modules$ = buildModule(globals);
+  const modules$ = buildModule();
   return modules$.pipe(
     switchMap(() => createBundles(globals)),
     switchMap(() => copyFiles()),
@@ -189,7 +195,7 @@ function buildLibrary(globals) {
 }
 
 buildLibrary(GLOBALS).subscribe(
-  data => console.log('success'),
+  () => console.log('success'),
   err => console.log('err', err),
   () => console.log('complete')
 );

@@ -1,4 +1,4 @@
-# Ngx UI Switch Component
+# Angular UI Switch Component
 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ngx-discuss/Lobby)
 [![Build Status](https://travis-ci.org/webcat12345/ngx-ui-switch.svg?branch=master)](https://travis-ci.org/webcat12345/ngx-ui-switch)

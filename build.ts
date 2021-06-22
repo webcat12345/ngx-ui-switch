@@ -9,7 +9,7 @@ import {
 } from 'rxjs';
 import { switchMap, tap } from 'rxjs/operators';
 import { copy, outputFile } from 'fs-extra';
-import { render } from 'node-sass';
+import { render } from 'sass';
 import * as copyfiles from 'copy';
 import * as filesize from 'rollup-plugin-filesize';
 import * as sourcemaps from 'rollup-plugin-sourcemaps';

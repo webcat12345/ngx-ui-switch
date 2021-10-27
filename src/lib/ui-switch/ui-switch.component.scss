@@ -1,3 +1,5 @@
+@use 'sass:math';
+
 $sw-sm-knob-size: 20px !default;
 $sw-md-knob-size: 30px !default;
 $sw-lg-knob-size: 40px !default;
@@ -51,11 +53,11 @@ $sw-lg-min-width: 60px;
         .switch-label {
           &-checked {
             padding-right: nth($i, 2) + 5px;
-            padding-left: (nth($i, 2) / 3) * 1.5;
+            padding-left: (math.div(nth($i, 2), 3)) * 1.5;
           }
           &-unchecked {
             padding-left: nth($i, 2) + 5px;
-            padding-right: (nth($i, 2) / 3) * 1.5;
+            padding-right: (math.div(nth($i, 2), 3)) * 1.5;
           }
         }
       }

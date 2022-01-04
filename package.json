@@ -24,7 +24,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "rimraf dist && ts-node -P tsconfig.build.json build.ts",
-    "build:demo": "rimraf demo && ng build --aot --prod --base-href=/ngx-ui-switch/demo/ --output-path=demo",
+    "build:demo": "rimraf demo && ng build --aot --configuration production --base-href=/ngx-ui-switch/demo/ --output-path=demo",
     "release": "cd dist/packages-dist && yarn publish",
     "bundlewatch": "bundlewatch",
     "test": "ng test",
@@ -37,27 +37,27 @@
     "typedoc": "typedoc --options typedoc.json src/lib/*.ts && ts-node -P tsconfig.build.json docs.ts"
   },
   "dependencies": {
-    "@angular/animations": "^11.2.14",
-    "@angular/common": "^11.2.14",
-    "@angular/compiler": "^11.2.14",
-    "@angular/core": "^11.2.14",
-    "@angular/forms": "^11.2.14",
-    "@angular/platform-browser": "^11.2.14",
-    "@angular/platform-browser-dynamic": "^11.2.14",
-    "@angular/router": "^11.2.14",
+    "@angular/animations": "^12.2.15",
+    "@angular/common": "^12.2.15",
+    "@angular/compiler": "^12.2.15",
+    "@angular/core": "^12.2.15",
+    "@angular/forms": "^12.2.15",
+    "@angular/platform-browser": "^12.2.15",
+    "@angular/platform-browser-dynamic": "^12.2.15",
+    "@angular/router": "^12.2.15",
     "bootstrap": "^4.3.1",
     "core-js": "^2.5.1",
     "font-awesome": "^4.7.0",
     "rxjs": "^6.5.2",
     "tslib": "^2.0.0",
     "web-animations-js": "^2.3.2",
-    "zone.js": "~0.10.3"
+    "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.1102.14",
-    "@angular/cli": "^11.2.14",
-    "@angular/compiler-cli": "^11.2.14",
-    "@angular/language-service": "^11.2.14",
+    "@angular-devkit/build-angular": "~12.2.14",
+    "@angular/cli": "^12.2.14",
+    "@angular/compiler-cli": "^12.2.15",
+    "@angular/language-service": "^12.2.15",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^14.0.0",
@@ -83,7 +83,7 @@
     "tsickle": "^0.39.0",
     "tslint": "~6.1.0",
     "typedoc": "^0.14.2",
-    "typescript": "~4.1.6"
+    "typescript": "~4.3.5"
   },
   "angular-cli": {},
   "bundlewatch": [

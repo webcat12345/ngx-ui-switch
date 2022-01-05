@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
     "module": "es2015",
     "target": "es2015",
     "noImplicitAny": false,

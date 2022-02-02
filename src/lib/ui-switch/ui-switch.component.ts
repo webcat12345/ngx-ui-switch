@@ -22,6 +22,7 @@ const UI_SWITCH_CONTROL_VALUE_ACCESSOR: any = {
 };
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'ui-switch',
   templateUrl: 'ui-switch.component.html',
   providers: [UI_SWITCH_CONTROL_VALUE_ACCESSOR],
@@ -84,6 +85,7 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
   /**
    * Emits changed value
    */
+  // eslint-disable-next-line @angular-eslint/no-output-native
   @Output() change = new EventEmitter<boolean>();
 
   /**

@@ -12,16 +12,16 @@ import { HeaderComponent } from './header/header.component';
 import { GithubLinkComponent } from './github-link/github-link.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        DemoComponent,
-        DemoCdrComponent,
-        FooterComponent,
-        HeaderComponent,
-        GithubLinkComponent,
-    ],
-    imports: [BrowserModule, BrowserAnimationsModule, UiSwitchModule],
-    providers: [],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent,
+    DemoComponent,
+    DemoCdrComponent,
+    FooterComponent,
+    HeaderComponent,
+    GithubLinkComponent,
+  ],
+  imports: [BrowserModule, BrowserAnimationsModule, UiSwitchModule],
+  providers: [],
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

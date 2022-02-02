@@ -1,8 +1,7 @@
-/* tslint:disable:max-line-length */
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'github-link',
+  selector: 'app-github-link',
   styles: [
     `
       .githubLink {
@@ -43,7 +42,7 @@ export class GithubLinkComponent {
 
   constructor() {}
 
-  href(username, repo) {
+  href(username: string, repo: string) {
     return `https://github.com/${username}/${repo}`;
   }
 }

@@ -5,9 +5,9 @@ name: Deploy demo to GitHub pages
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   build-and-deploy:
@@ -21,6 +21,7 @@ jobs:
         run: |
           yarn install
           yarn build:demo
+          yarn typedoc
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.3

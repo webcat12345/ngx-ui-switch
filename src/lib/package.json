@@ -18,11 +18,11 @@
     "ui"
   ],
   "peerDependencies": {
-    "@angular/core": ">=5.0.0 <13.0.0",
-    "@angular/animations": ">=5.0.0 <13.0.0",
-    "@angular/common": ">=5.0.0 <13.0.0",
-    "@angular/forms": ">=5.0.0 <13.0.0",
-    "@angular/platform-browser": ">=5.0.0 <13.0.0"
+    "@angular/core": ">=5.0.0 <14.0.0",
+    "@angular/animations": ">=5.0.0 <14.0.0",
+    "@angular/common": ">=5.0.0 <14.0.0",
+    "@angular/forms": ">=5.0.0 <14.0.0",
+    "@angular/platform-browser": ">=5.0.0 <14.0.0"
   },
   "ngPackage": {
     "lib": {

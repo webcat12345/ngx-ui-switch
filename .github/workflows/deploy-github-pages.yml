@@ -24,14 +24,12 @@ jobs:
           yarn install
           yarn build:demo
           yarn typedoc
+          mkdir pages
+          cp -r demo pages
+          cp -r docs pages
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
           branch: gh-pages
-          folder: demo
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4.2.3
-        with:
-          branch: gh-pages
-          folder: docs
+          folder: pages

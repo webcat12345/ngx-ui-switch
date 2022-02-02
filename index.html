@@ -1,37 +1,453 @@
-<!DOCTYPE html><html lang="en"><head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Angular UI Switch</title>
-    <base href="/ngx-ui-switch/demo/">
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>ngx-ui-switch</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<a href="index.html" class="title">ngx-ui-switch</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+							<input type="checkbox" id="tsd-filter-externals" checked />
+							<label class="tsd-widget" for="tsd-filter-externals">Externals</label>
+							<input type="checkbox" id="tsd-filter-only-exported" />
+							<label class="tsd-widget" for="tsd-filter-only-exported">Only exported</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="globals.html">Globals</a>
+				</li>
+			</ul>
+			<h1> ngx-ui-switch</h1>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-8 col-content">
+			<div class="tsd-panel tsd-typography">
+				<h1 id="angular-ui-switch-component">Angular UI Switch Component</h1>
+				<p><a href="https://gitter.im/ngx-discuss/Lobby"><img src="https://badges.gitter.im/Join%20Chat.svg" alt="Gitter"></a>
+					<a href="https://travis-ci.org/webcat12345/ngx-ui-switch"><img src="https://travis-ci.org/webcat12345/ngx-ui-switch.svg?branch=master" alt="Build Status"></a>
+					<a href="https://github.com/webcat12345/ngx-ui-switch/blob/master/LICENSE"><img src="https://img.shields.io/github/license/webcat12345/ngx-ui-switch" alt="license"></a>
+					<a href="https://badge.fury.io/js/ngx-ui-switch"><img src="https://badge.fury.io/js/ngx-ui-switch.svg" alt="npm version"></a>
+					<a href="https://www.npmjs.com/package/ngx-ui-switch"><img src="https://img.shields.io/npm/dm/localeval.svg" alt="npm"></a>
+				<a href="#contributors"><img src="https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square" alt="All Contributors"></a></p>
+				<h2 id="description">Description</h2>
+				<p>This is a simple iOS 7 style switch component for <a href="https://angular.io">Angular</a>.</p>
+				<p>Live <a href="https://webcat12345.github.io/ngx-ui-switch/demo/">demo</a></p>
+				<p>A <a href="https://stackblitz.com">stackblitz</a> is also available <a href="https://stackblitz.com/edit/ngx-ui-switch">here</a></p>
+				<p><img src="logo.png" alt="alt"></p>
+				<p>Inspired by <a href="https://github.com/abpetkov/switchery">switchery</a> in <a href="https://angular.io">Angular</a>.</p>
+				<h2 id="installation">Installation</h2>
+				<p>npm: <code>npm install ngx-ui-switch --save</code></p>
+				<p>yarn: <code>yarn add ngx-ui-switch</code></p>
+				<p><strong>Some features are not available in previous versions:</strong></p>
+				<ul>
+					<li>CSS styling</li>
+					<li>Switch content (checkedLabel, uncheckedLabel) <a href="https://github.com/webcat12345/ngx-ui-switch/issues/309">#309</a> <a href="https://github.com/webcat12345/ngx-ui-switch/issues/343">#343</a></li>
+					<li>Global options</li>
+					<li>beforeChange event <a href="https://github.com/webcat12345/ngx-ui-switch/issues/314">#314</a> <a href="https://github.com/webcat12345/ngx-ui-switch/pull/359">#359</a></li>
+				</ul>
+				<h2 id="usage">Usage</h2>
+				<ul>
+					<li>Import into a module (<code>AppModule</code> example below)</li>
+				</ul>
+				<pre><code class="language-javascript"><span class="hljs-comment">// app.module.ts</span>
+<span class="hljs-keyword">import</span> { UiSwitchModule } <span class="hljs-keyword">from</span> <span class="hljs-string">'ngx-ui-switch'</span>;
+<span class="hljs-keyword">import</span> { AppComponent } <span class="hljs-keyword">from</span> <span class="hljs-string">'./app.component'</span>;
 
-    <meta name="description" content="Easy Toasts for Angular">
-    <meta name="keywords" content="angular2,angular4,ngx,ng2,uiswitch,switch,ui">
-    <meta name="author" content="@webcat12345">
+@NgModule({
+  <span class="hljs-attr">imports</span>: [BrowserModule, UiSwitchModule],
+  <span class="hljs-attr">declarations</span>: [AppComponent],
+  <span class="hljs-attr">bootstrap</span>: [AppComponent]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}</code></pre>
+				<ul>
+					<li>Add default css file to appropriate project(s) <code>angular.json</code></li>
+				</ul>
+				<pre><code class="language-json">&quot;styles&quot;: [
+  &quot;src/styles.css&quot;,
+  &quot;./node_modules/ngx-ui-switch/ui-switch.component.css&quot;
+]</code></pre>
+				<p>Alternatively, the scss version can be imported into a scss file:</p>
+				<pre><code class="language-scss"><span class="hljs-keyword">@import</span> <span class="hljs-string">'~ngx-ui-switch/ui-switch.component.scss'</span>;</code></pre>
+				<h2 id="global-config">Global config</h2>
+				<p>Use when you want to change default values globally.</p>
+				<p>These settings will override anything passed in via property bindings.</p>
+				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { UiSwitchModule } <span class="hljs-keyword">from</span> <span class="hljs-string">'ngx-ui-switch'</span>;
+<span class="hljs-keyword">import</span> { AppComponent } <span class="hljs-keyword">from</span> <span class="hljs-string">'./app.component'</span>;
 
-    <!-- Search Engine -->
-    <meta name="image" content="https://raw.githubusercontent.com/webcat12345/ngx-ui-switch/master/logo.png">
-    <!-- Schema.org for Google -->
-    <meta itemprop="name" content="Angular UI Switch">
-    <meta itemprop="image" content="https://raw.githubusercontent.com/webcat12345/ngx-ui-switch/master/logo.png">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Angular UI Switch">
-    <meta name="twitter:site" content="@webcat12345">
-    <meta name="twitter:creator" content="@webcat12345">
-    <meta name="twitter:image:src" content="https://raw.githubusercontent.com/webcat12345/ngx-ui-switch/master/logo.png">
-    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
-    <meta name="og:title" content="Angular UI Switch">
-    <meta name="og:image" content="https://raw.githubusercontent.com/webcat12345/ngx-ui-switch/master/logo.png">
-    <meta name="og:url" content="https://webcat12345.github.io/ngx-ui-switch">
-    <meta name="og:site_name" content="Angular UI Switch">
-    <meta name="og:type" content="website">
-
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <style>@charset "UTF-8";@media print{*,*:before,*:after{text-shadow:none!important;box-shadow:none!important}@page{size:a3}body{min-width:992px!important}}*,*:before,*:after{box-sizing:border-box}html{font-family:sans-serif;line-height:1.15;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{margin:0;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,Liberation Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";font-size:1rem;font-weight:400;line-height:1.5;color:#212529;text-align:left;background-color:#fff}h4{margin-top:0;margin-bottom:.5rem}h4{margin-bottom:.5rem;font-weight:500;line-height:1.2}h4{font-size:1.5rem}body{background-color:#fcfcfc;padding-top:5rem}</style><link rel="stylesheet" href="styles.b01cda59ec368dfb.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.b01cda59ec368dfb.css"></noscript></head>
-  <body>
-    <app-root>
-      <h4 style="text-align: center;">Loading...</h4>
-    </app-root>
-  <script src="runtime.19ec93fe07720328.js" type="module"></script><script src="polyfills.bebc866df362ad79.js" type="module"></script><script src="main.90e29312bafddea7.js" type="module"></script>
-
-</body></html>
+@NgModule({
+  <span class="hljs-attr">imports</span>: [
+    BrowserModule,
+    UiSwitchModule.forRoot({
+      <span class="hljs-attr">size</span>: <span class="hljs-string">'small'</span>,
+      <span class="hljs-attr">color</span>: <span class="hljs-string">'rgb(0, 189, 99)'</span>,
+      <span class="hljs-attr">switchColor</span>: <span class="hljs-string">'#80FFA2'</span>,
+      <span class="hljs-attr">defaultBgColor</span>: <span class="hljs-string">'#00ACFF'</span>,
+      <span class="hljs-attr">defaultBoColor</span> : <span class="hljs-string">'#476EFF'</span>,
+      <span class="hljs-attr">checkedLabel</span>: <span class="hljs-string">'on'</span>,
+      <span class="hljs-attr">uncheckedLabel</span>: <span class="hljs-string">'off'</span>
+    })
+  ],
+  <span class="hljs-attr">declarations</span>: [AppComponent],
+  <span class="hljs-attr">bootstrap</span>: [AppComponent]
+})
+<span class="hljs-keyword">export</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">AppModule</span> </span>{}</code></pre>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<p>Note that if you are using the switch in a child <code>NgModule</code>, such as a lazy loaded module, then you must also import the module in the module itself or within a shared module. Otherwise you will get the error that it is an unknown component as seen in issue <a href="https://github.com/webcat12345/ngx-ui-switch/issues/227">#227</a>.</p>
+				<h1 id="two-way-binding">Two way binding</h1>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> [(<span class="hljs-attr">ngModel</span>)]=<span class="hljs-string">"enable"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h1 id="params">Params</h1>
+				<h3 id="checked">checked</h3>
+				<blockquote>
+					<p>type: <em>boolean</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: false</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">checked</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> [<span class="hljs-attr">checked</span>]=<span class="hljs-string">"false"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="disabled">disabled</h3>
+				<blockquote>
+					<p>type: <em>boolean</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: false</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">disabled</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">checked</span> [<span class="hljs-attr">disabled</span>]=<span class="hljs-string">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="loading">loading</h3>
+				<p><em>Show a loading state for the toggle button when true. Often utilized with beforeChange.</em></p>
+				<blockquote>
+					<p>type: <em>boolean</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: false</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> [<span class="hljs-attr">loading</span>]=<span class="hljs-string">"isLoading"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"fa fa-spinner fa-pulse"</span> *<span class="hljs-attr">ngIf</span>=<span class="hljs-string">"isLoading"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="change">change</h3>
+				<blockquote>
+					<p>type: <em>boolean</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: noop</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> (<span class="hljs-attr">change</span>)=<span class="hljs-string">"onChange($event)"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="changeevent">changeEvent</h3>
+				<blockquote>
+					<p>type: <em>MouseEvent</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: noop</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> (<span class="hljs-attr">changeEvent</span>)=<span class="hljs-string">"onChangeEvent($event)"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> (<span class="hljs-attr">changeEvent</span>)=<span class="hljs-string">"$event.stopPropagation()"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="valuechange">valueChange</h3>
+				<blockquote>
+					<p>type: <em>boolean</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: noop</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> (<span class="hljs-attr">valueChange</span>)=<span class="hljs-string">"onValueChange($event)"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="beforechange">beforeChange</h3>
+				<p>Utilize an observable to check that the toggle event should complete</p>
+				<blockquote>
+					<p>type: <em>Observable<boolean></em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: noop</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> [<span class="hljs-attr">beforeChange</span>]=<span class="hljs-string">"OnBeforeChange"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<pre><code class="language-typescript">OnBeforeChange: Observable&lt;<span class="hljs-built_in">boolean</span>&gt; = <span class="hljs-keyword">new</span> Observable(<span class="hljs-function">(<span class="hljs-params">observer</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> timeout = setTimeout(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    observer.next(<span class="hljs-literal">true</span>);
+  }, <span class="hljs-number">2000</span>);
+  <span class="hljs-keyword">return</span> <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> clearTimeout(timeout);
+});</code></pre>
+				<h3 id="size">size</h3>
+				<blockquote>
+					<p>type: <em>string</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: medium</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"small"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">size</span>=<span class="hljs-string">"large"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="reverse">reverse</h3>
+				<blockquote>
+					<p>type: <em>boolean</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: false</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">reverse</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="color">color</h3>
+				<blockquote>
+					<p>type: <em>string</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: rgb(100, 189, 99)</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">color</span>=<span class="hljs-string">"red"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="switchcolor">switchColor</h3>
+				<blockquote>
+					<p>type: <em>string</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: #fff</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">switchColor</span>=<span class="hljs-string">"#fcfcfc"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="defaultbgcolor">defaultBgColor</h3>
+				<p>Default background color</p>
+				<blockquote>
+					<p>type: <em>string</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: #fff</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">defaultBgColor</span>=<span class="hljs-string">"red"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="defaultbocolor">defaultBoColor</h3>
+				<p><em>Default border color</em></p>
+				<blockquote>
+					<p>type: <em>string</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: #dfdfdf</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">defaultBoColor</span>=<span class="hljs-string">"black"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="checkedlabel">checkedLabel</h3>
+				<p><em>Checked label (on)</em></p>
+				<blockquote>
+					<p>type: <em>string</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: null</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">checkedLabel</span>=<span class="hljs-string">"on"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="uncheckedlabel">uncheckedLabel</h3>
+				<p><em>Unchecked label (off)</em></p>
+				<blockquote>
+					<p>type: <em>string</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: null</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">uncheckedLabel</span>=<span class="hljs-string">"off"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="checkedtextcolor">checkedTextColor</h3>
+				<p>checked text color of the label (on)</p>
+				<blockquote>
+					<p>type: <em>string</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: black</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">checkedTextColor</span>=<span class="hljs-string">"#7CFC00"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h3 id="uncheckedtextcolor">uncheckedTextColor</h3>
+				<p>Unchecked text color of the label (off)</p>
+				<blockquote>
+					<p>type: <em>string</em></p>
+				</blockquote>
+				<blockquote>
+					<p>default: black</p>
+				</blockquote>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">uncheckedTextColor</span>=<span class="hljs-string">"red"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h2 id="switch-content">Switch Content</h2>
+				<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">ui-switch</span> <span class="hljs-attr">uncheckedLabel</span>=<span class="hljs-string">"off"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span>/&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ui-switch</span>&gt;</span></code></pre>
+				<h2 id="development">Development</h2>
+				<h3 id="setup">Setup</h3>
+				<pre><code class="language-sh">yarn install</code></pre>
+				<h3 id="demo">Demo</h3>
+				<p>Edit files in <code>src/app</code> to add to the demo or try changes to the library.</p>
+				<h3 id="build-library">Build library</h3>
+				<p><em>First, edit version in <code>package.json</code> and <code>src/lib/package.json</code> to publish a new version to npmjs.org</em></p>
+				<pre><code class="language-sh"><span class="hljs-comment"># Build the library into dist/{es5,es2015}</span>
+yarn build
+<span class="hljs-comment"># Publish to npm</span>
+yarn release</code></pre>
+				<h2 id="contributors">Contributors</h2>
+				<p>Thanks goes to these wonderful people (<a href="https://github.com/kentcdodds/all-contributors#emoji-key">emoji key</a>):</p>
+				<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+				<!-- prettier-ignore -->
+				<table>
+					<thead>
+						<tr>
+							<th align="center"><a href="https://webcat12345.github.io/"><img src="https://avatars3.githubusercontent.com/u/19761422?v=4" width="100px;" alt="webcat_black"/><br /><sub><b>webcat_black</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=webcat12345" title="Code">💻</a> <a href="#design-webcat12345" title="Design">🎨</a> <a href="#example-webcat12345" title="Examples">💡</a> <a href="#ideas-webcat12345" title="Ideas, Planning, &amp; Feedback">🤔</a> <a href="#review-webcat12345" title="Reviewed Pull Requests">👀</a></th>
+							<th align="center"><a href="https://github.com/cmckni3"><img src="https://avatars0.githubusercontent.com/u/735717?v=4" width="100px;" alt="Chris McKnight"/><br /><sub><b>Chris McKnight</b></sub></a><br /><a href="#question-cmckni3" title="Answering Questions">💬</a> <a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=cmckni3" title="Code">💻</a> <a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=cmckni3" title="Documentation">📖</a> <a href="#ideas-cmckni3" title="Ideas, Planning, &amp; Feedback">🤔</a> <a href="#infra-cmckni3" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#plugin-cmckni3" title="Plugin/utility libraries">🔌</a> <a href="#review-cmckni3" title="Reviewed Pull Requests">👀</a> <a href="#tool-cmckni3" title="Tools">🔧</a></th>
+							<th align="center"><a href="https://github.com/kubiq"><img src="https://avatars0.githubusercontent.com/u/302721?v=4" width="100px;" alt="Jakub"/><br /><sub><b>Jakub</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=kubiq" title="Code">💻</a> <a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=kubiq" title="Documentation">📖</a></th>
+							<th align="center"><a href="https://github.com/cmajsmith"><img src="https://avatars2.githubusercontent.com/u/915077?v=4" width="100px;" alt="Serhii Kovalenko"/><br /><sub><b>Serhii Kovalenko</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=cmajsmith" title="Code">💻</a> <a href="#example-cmajsmith" title="Examples">💡</a> <a href="#platform-cmajsmith" title="Packaging/porting to new platform">📦</a></th>
+							<th align="center"><a href="https://github.com/rmcsharry"><img src="https://avatars1.githubusercontent.com/u/1156100?v=4" width="100px;" alt="Richard McSharry"/><br /><sub><b>Richard McSharry</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=rmcsharry" title="Documentation">📖</a></th>
+							<th align="center"><a href="https://github.com/bitsprint"><img src="https://avatars1.githubusercontent.com/u/507874?v=4" width="100px;" alt="bitsprint"/><br /><sub><b>bitsprint</b></sub></a><br /><a href="#infra-bitsprint" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#platform-bitsprint" title="Packaging/porting to new platform">📦</a> <a href="#tool-bitsprint" title="Tools">🔧</a></th>
+							<th align="center"><a href="http://www.gamepix.com"><img src="https://avatars0.githubusercontent.com/u/11628507?v=4" width="100px;" alt="Gianluca Paronitti"/><br /><sub><b>Gianluca Paronitti</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=gparonitti" title="Code">💻</a></th>
+						</tr>
+					</thead>
+					<tbody><tr>
+							<td align="center"><a href="http://mbejda.com"><img src="https://avatars1.githubusercontent.com/u/5429780?v=4" width="100px;" alt="Milos Bejda"/><br /><sub><b>Milos Bejda</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=mbejda" title="Code">💻</a> <a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=mbejda" title="Documentation">📖</a> <a href="#example-mbejda" title="Examples">💡</a></td>
+							<td align="center"><a href="https://github.com/kameelyan"><img src="https://avatars1.githubusercontent.com/u/590274?v=4" width="100px;" alt="kameelyan"/><br /><sub><b>kameelyan</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=kameelyan" title="Code">💻</a> <a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=kameelyan" title="Documentation">📖</a> <a href="#example-kameelyan" title="Examples">💡</a></td>
+							<td align="center"><a href="https://gregoryalary.github.io/"><img src="https://avatars0.githubusercontent.com/u/20248805?v=4" width="100px;" alt="Grégory Alary"/><br /><sub><b>Grégory Alary</b></sub></a><br /><a href="#question-gregoryalary" title="Answering Questions">💬</a> <a href="https://github.com/webcat12345/ngx-ui-switch/issues?q=author%3Agregoryalary" title="Bug reports">🐛</a> <a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=gregoryalary" title="Code">💻</a> <a href="#design-gregoryalary" title="Design">🎨</a></td>
+							<td align="center"><a href="https://github.com/zehtravassos"><img src="https://avatars2.githubusercontent.com/u/2574403?v=4" width="100px;" alt="zehtravassos"/><br /><sub><b>zehtravassos</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=zehtravassos" title="Code">💻</a> <a href="#design-zehtravassos" title="Design">🎨</a></td>
+							<td align="center"><a href="https://github.com/hrueger"><img src="https://avatars0.githubusercontent.com/u/18656830?v=4" width="100px;" alt="H. Rüger"/><br /><sub><b>H. Rüger</b></sub></a><br /><a href="https://github.com/webcat12345/ngx-ui-switch/issues?q=author%3Ahrueger" title="Bug reports">🐛</a> <a href="https://github.com/webcat12345/ngx-ui-switch/commits?author=hrueger" title="Code">💻</a> <a href="#maintenance-hrueger" title="Maintenance">🚧</a></td>
+							<td align="center"></td>
+							<td align="center"></td>
+						</tr>
+						<tr>
+							<td align="center"><!-- ALL-CONTRIBUTORS-LIST:END --></td>
+							<td align="center"></td>
+							<td align="center"></td>
+							<td align="center"></td>
+							<td align="center"></td>
+							<td align="center"></td>
+							<td align="center"></td>
+						</tr>
+				</tbody></table>
+				<p>This project follows the <a href="https://github.com/kentcdodds/all-contributors">all-contributors</a> specification. Contributions of any kind welcome!</p>
+			</div>
+		</div>
+		<div class="col-4 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation primary">
+				<ul>
+					<li class="globals  ">
+						<a href="globals.html"><em>Globals</em></a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Internals</span>
+					</li>
+					<li class=" tsd-kind-external-module">
+						<a href="modules/_public_api_.html">"public_<wbr>api"</a>
+					</li>
+					<li class="label tsd-is-external">
+						<span>Externals</span>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="modules/_ui_switch_ui_switch_component_.html">"ui-<wbr>switch/ui-<wbr>switch.component"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="modules/_ui_switch_ui_switch_config_.html">"ui-<wbr>switch/ui-<wbr>switch.config"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="modules/_ui_switch_ui_switch_module_.html">"ui-<wbr>switch/ui-<wbr>switch.module"</a>
+					</li>
+					<li class=" tsd-kind-external-module tsd-is-external">
+						<a href="modules/_ui_switch_ui_switch_token_.html">"ui-<wbr>switch/ui-<wbr>switch.token"</a>
+					</li>
+				</ul>
+			</nav>
+			<nav class="tsd-navigation secondary menu-sticky">
+				<ul class="before-current">
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>
+<footer class="with-border-bottom">
+	<div class="container">
+		<h2>Legend</h2>
+		<div class="tsd-legend-group">
+			<ul class="tsd-legend">
+				<li class="tsd-kind-module"><span class="tsd-kind-icon">Module</span></li>
+				<li class="tsd-kind-object-literal"><span class="tsd-kind-icon">Object literal</span></li>
+				<li class="tsd-kind-variable"><span class="tsd-kind-icon">Variable</span></li>
+				<li class="tsd-kind-function"><span class="tsd-kind-icon">Function</span></li>
+				<li class="tsd-kind-function tsd-has-type-parameter"><span class="tsd-kind-icon">Function with type parameter</span></li>
+				<li class="tsd-kind-index-signature"><span class="tsd-kind-icon">Index signature</span></li>
+				<li class="tsd-kind-type-alias"><span class="tsd-kind-icon">Type alias</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-enum"><span class="tsd-kind-icon">Enumeration</span></li>
+				<li class="tsd-kind-enum-member"><span class="tsd-kind-icon">Enumeration member</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-enum"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-enum"><span class="tsd-kind-icon">Method</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-interface"><span class="tsd-kind-icon">Interface</span></li>
+				<li class="tsd-kind-interface tsd-has-type-parameter"><span class="tsd-kind-icon">Interface with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-interface"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-interface"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-interface"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-interface"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li>
+				<li class="tsd-kind-class tsd-has-type-parameter"><span class="tsd-kind-icon">Class with type parameter</span></li>
+				<li class="tsd-kind-constructor tsd-parent-kind-class"><span class="tsd-kind-icon">Constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class"><span class="tsd-kind-icon">Property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class"><span class="tsd-kind-icon">Method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class"><span class="tsd-kind-icon">Accessor</span></li>
+				<li class="tsd-kind-index-signature tsd-parent-kind-class"><span class="tsd-kind-icon">Index signature</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited constructor</span></li>
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-inherited"><span class="tsd-kind-icon">Inherited accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-protected"><span class="tsd-kind-icon">Protected accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private property</span></li>
+				<li class="tsd-kind-method tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private method</span></li>
+				<li class="tsd-kind-accessor tsd-parent-kind-class tsd-is-private"><span class="tsd-kind-icon">Private accessor</span></li>
+			</ul>
+			<ul class="tsd-legend">
+				<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static property</span></li>
+				<li class="tsd-kind-call-signature tsd-parent-kind-class tsd-is-static"><span class="tsd-kind-icon">Static method</span></li>
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="container tsd-generator">
+	<p>Generated using <a href="http://typedoc.org/" target="_blank">TypeDoc</a></p>
+</div>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

@@ -42,7 +42,7 @@ export class GithubLinkComponent {
 
   constructor() {}
 
-  href(username, repo) {
+  href(username: string, repo: string) {
     return `https://github.com/${username}/${repo}`;
   }
 }

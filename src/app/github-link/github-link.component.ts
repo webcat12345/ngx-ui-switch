@@ -1,8 +1,7 @@
-/* tslint:disable:max-line-length */
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'github-link',
+  selector: 'app-github-link',
   styles: [
     `
       .githubLink {

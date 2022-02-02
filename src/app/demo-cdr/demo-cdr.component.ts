@@ -1,17 +1,15 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'app-demo-cdr',
   templateUrl: './demo-cdr.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DemoCdrComponent implements OnInit {
+export class DemoCdrComponent {
   enable = true;
   manualUpdate = false;
 
   constructor() {}
-
-  ngOnInit() {}
 
   manualUpdateEvent(value: boolean) {
     this.manualUpdate = value;

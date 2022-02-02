@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 import { Observable } from 'rxjs';
@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   selector: 'app-demo',
   templateUrl: './demo.component.html',
 })
-export class DemoComponent implements OnInit {
+export class DemoComponent {
   submitted = false;
   enable = true;
   enableFeature = false;
@@ -28,8 +28,6 @@ export class DemoComponent implements OnInit {
   @ViewChild('demoForm') demoForm: NgForm;
 
   constructor() {}
-
-  ngOnInit() {}
 
   onSubmit(event: any) {
     this.submitted = true;

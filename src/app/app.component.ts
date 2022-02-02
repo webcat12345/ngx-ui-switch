@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
 import json from '../lib/package.json';
@@ -17,7 +17,7 @@ import json from '../lib/package.json';
     `,
   ],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   constructor(private t: Title) {
     const title = [this.t.getTitle()];
     if (json) {
@@ -25,6 +25,4 @@ export class AppComponent implements OnInit {
     }
     t.setTitle(title.join(' '));
   }
-
-  ngOnInit() {}
 }

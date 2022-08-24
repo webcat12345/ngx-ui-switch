@@ -1,7 +1,6 @@
 {
-  "$schema": "./node_modules/ng-packagr/package.schema.json",
   "name": "ngx-ui-switch",
-  "version": "13.0.2",
+  "version": "14.0.0",
   "description": "switch button for angular4",
   "bugs": "https://github.com/webcat12345/ngx-ui-switch/issues",
   "homepage": "https://github.com/webcat12345/ngx-ui-switch#readme",
@@ -18,11 +17,11 @@
     "ui"
   ],
   "peerDependencies": {
-    "@angular/core": ">=5.0.0 <14.0.0",
-    "@angular/animations": ">=5.0.0 <14.0.0",
-    "@angular/common": ">=5.0.0 <14.0.0",
-    "@angular/forms": ">=5.0.0 <14.0.0",
-    "@angular/platform-browser": ">=5.0.0 <14.0.0"
+    "@angular/core": ">=5.0.0 <15.0.0",
+    "@angular/animations": ">=5.0.0 <15.0.0",
+    "@angular/common": ">=5.0.0 <15.0.0",
+    "@angular/forms": ">=5.0.0 <15.0.0",
+    "@angular/platform-browser": ">=5.0.0 <15.0.0"
   },
   "ngPackage": {
     "lib": {

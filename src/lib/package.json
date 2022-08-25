@@ -22,5 +22,16 @@
     "@angular/common": ">=10.0.0",
     "@angular/forms": ">=10.0.0",
     "@angular/platform-browser": ">=10.0.0"
+  },
+  "ngPackage": {
+    "lib": {
+      "entryFile": "public_api.ts"
+    },
+    "dest": "../../dist"
+  },
+  "exports": {
+    "./ui-switch.component": {
+      "sass": "./ui-switch.component.scss"
+    }
   }
 }

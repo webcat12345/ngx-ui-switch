@@ -26,6 +26,7 @@
     "build": "ng-packagr -p src/lib/ng-package.json",
     "postbuild": "ts-node -P tsconfig.build.json build.ts",
     "build:demo": "rimraf demo && ng build --aot --configuration production --base-href=/ngx-ui-switch/demo/ --output-path=demo",
+    "prerelease": "ng-packagr -p src/lib/ng-package.json",
     "release": "cd dist && yarn publish",
     "test": "ng test",
     "test:ci": "ng test --browsers=ChromeHeadless --watch=false",

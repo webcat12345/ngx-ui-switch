@@ -5983,13 +5983,6 @@ ng-packagr@^14.0.0:
   optionalDependencies:
     esbuild "^0.15.0"
 
-ngx-ui-switch@^14:
-  version "14.0.3"
-  resolved "https://registry.yarnpkg.com/ngx-ui-switch/-/ngx-ui-switch-14.0.3.tgz#2aea1977db2d56c37e53c5b329a605bba37ac2d9"
-  integrity sha512-SZ8ZnTCuNJgNWuY3/mOG3TdsRUNPCX3vGdCKKx1ZHVMTUynerJQlTWck2JrYlnrexNnd7wy4P10jDvdtDwoYeg==
-  dependencies:
-    tslib "^2.3.0"
-
 nice-napi@^1.0.2:
   version "1.0.2"
   resolved "https://registry.npmjs.org/nice-napi/-/nice-napi-1.0.2.tgz"

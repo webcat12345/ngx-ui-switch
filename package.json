@@ -47,7 +47,6 @@
     "@angular/router": "^14.0.0",
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
-    "ngx-ui-switch": "^14",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

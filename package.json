@@ -27,7 +27,7 @@
     "postbuild": "ts-node -P tsconfig.build.json build.ts",
     "build:demo": "rimraf demo && ng build --aot --configuration production --base-href=/ngx-ui-switch/demo/ --output-path=demo",
     "prerelease": "ng-packagr -p src/lib/ng-package.json",
-    "release": "cd dist && yarn publish",
+    "release": "cd dist && npm publish",
     "test": "ng test",
     "test:ci": "ng test --browsers=ChromeHeadless --watch=false",
     "cleanup": "rimraf build dist waste deploy demo docs",
@@ -47,6 +47,7 @@
     "@angular/router": "^14.0.0",
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
+    "ngx-ui-switch": "^14",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"

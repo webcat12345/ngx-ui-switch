@@ -10,7 +10,7 @@
     "moduleResolution": "node",
     "experimentalDecorators": true,
     "noUnusedLocals": true,
-    "target": "es2015",
+    "target": "ES2022",
     "skipLibCheck": true,
     "strictNullChecks": true,
     "typeRoots": [
@@ -19,6 +19,7 @@
     "lib": [
       "es2016",
       "dom"
-    ]
+    ],
+    "useDefineForClassFields": false
   }
 }

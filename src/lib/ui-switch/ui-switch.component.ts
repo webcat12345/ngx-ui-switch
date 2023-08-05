@@ -45,6 +45,7 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
   @Input() checkedTextColor;
   @Input() uncheckedTextColor;
   @Input() beforeChange: Observable<boolean>;
+  @Input() ariaLabel: string;
 
   @Input()
   set checked(v: boolean) {

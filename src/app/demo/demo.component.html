@@ -4,8 +4,8 @@
 
     <h4>checked</h4>
     <p>
-      <ui-switch checked></ui-switch>
-      <ui-switch [checked]="false"></ui-switch>
+      <ui-switch checked [ariaLabel]="'checked'"></ui-switch>
+      <ui-switch [ariaLabel]="'unchecked'" [checked]="false"></ui-switch>
     </p>
 
     <h4>Disabled</h4>
@@ -15,7 +15,7 @@
     </p>
 
     <h4>Change</h4>
-    <ui-switch (change)="onChange($event)"></ui-switch>
+    <ui-switch (change)="onChange($event)" [ariaLabel]="'Change'"></ui-switch>
     <p>change count {{ count }}</p>
     <p>value {{ change }}</p>
 
@@ -89,9 +89,17 @@
       <div class="col-12">
         <h2>Custom labels</h2>
         <p>
-          <ui-switch uncheckedLabel="off" checkedLabel="on" size="small"></ui-switch>
+          <ui-switch
+            uncheckedLabel="off"
+            checkedLabel="on"
+            size="small"
+          ></ui-switch>
           <ui-switch uncheckedLabel="off" checkedLabel="on"></ui-switch>
-          <ui-switch uncheckedLabel="off" checkedLabel="on" size="large"></ui-switch>
+          <ui-switch
+            uncheckedLabel="off"
+            checkedLabel="on"
+            size="large"
+          ></ui-switch>
         </p>
 
         <p>
@@ -100,7 +108,10 @@
             uncheckedLabel="Super Long Label"
             size="small"
           ></ui-switch>
-          <ui-switch checkedLabel="Super Long Label" uncheckedLabel="Super Long Label"></ui-switch>
+          <ui-switch
+            checkedLabel="Super Long Label"
+            uncheckedLabel="Super Long Label"
+          ></ui-switch>
           <ui-switch
             checkedLabel="Super Long Label"
             uncheckedLabel="Super Long Label"
@@ -135,11 +146,13 @@
             <i class="fa fa-check fa-2x"></i>
           </ui-switch>
         </p>
-        <h4>
-          Before Change handling + Loading Icon Example
-        </h4>
+        <h4>Before Change handling + Loading Icon Example</h4>
         <p>
-          <ui-switch [loading]="isLoading" [beforeChange]="fakeAsync" [(ngModel)]="enable">
+          <ui-switch
+            [loading]="isLoading"
+            [beforeChange]="fakeAsync"
+            [(ngModel)]="enable"
+          >
             <i class="fa fa-check" *ngIf="enable && !isLoading"></i>
             <i class="fa fa-times" *ngIf="!enable && !isLoading"></i>
             <i class="fa fa-spinner fa-pulse" *ngIf="isLoading"></i>
@@ -168,7 +181,9 @@
     ></ui-switch>
   </div>
 
-  <div *ngIf="submitted" class="col-12 alert alert-info" role="alert">Submitted!</div>
+  <div *ngIf="submitted" class="col-12 alert alert-info" role="alert">
+    Submitted!
+  </div>
 
   <div class="col-12 mt-4">
     <button type="submit" class="btn btn-primary">Submit</button>

@@ -321,6 +321,12 @@ Unchecked text color of the label (off)
 </ui-switch>
 ```
 
+## Aria Label
+
+```html
+<ui-switch [ariaLabel]="'labelName'"></ui-switch>
+```
+
 ## Development
 
 ### Setup

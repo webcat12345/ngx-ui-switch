@@ -5,7 +5,7 @@ name: Deploy demo to GitHub pages
 
 on:
   push:
-    branches: [master]
+    tags: ['*']
 
 jobs:
   build-and-deploy:

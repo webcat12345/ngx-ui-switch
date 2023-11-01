@@ -7,7 +7,7 @@
 [![npm](https://img.shields.io/npm/dm/ngx-ui-switch)](https://www.npmjs.com/package/ngx-ui-switch)
 [![GitHub Pages](https://img.shields.io/badge/Demo-blue?logo=angular&label=Pages&color=7952B3)](https://webcat12345.github.io/ngx-ui-switch/demo/)
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg)](#contributors)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/ngx-ui-switch)
 

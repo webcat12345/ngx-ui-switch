@@ -71,8 +71,8 @@ function buildLibrary() {
   );
 }
 
-buildLibrary().subscribe(
-  () => console.log('success'),
-  err => console.log('err', err),
-  () => console.log('complete')
-);
+buildLibrary().subscribe({
+  next: () => console.log('success'),
+  error: err => console.log('err', err),
+  complete: () => console.log('complete'),
+});

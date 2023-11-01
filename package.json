@@ -1,6 +1,6 @@
 {
   "name": "ngx-ui-switch",
-  "version": "14.0.4",
+  "version": "14.1.0",
   "description": "switch button for angular4",
   "bugs": "https://github.com/webcat12345/ngx-ui-switch/issues",
   "homepage": "https://github.com/webcat12345/ngx-ui-switch#readme",
@@ -26,7 +26,7 @@
     "build": "ng-packagr -p src/lib/ng-package.json",
     "postbuild": "ts-node -P tsconfig.build.json build.ts",
     "build:demo": "rimraf demo && ng build --aot --configuration production --base-href=/ngx-ui-switch/demo/ --output-path=demo",
-    "prerelease": "ng-packagr -p src/lib/ng-package.json",
+    "prerelease": "yarn run build",
     "release": "cd dist && npm publish",
     "test": "ng test",
     "test:ci": "ng test --browsers=ChromeHeadless --watch=false",
@@ -47,7 +47,7 @@
     "@angular/router": "^16.1.8",
     "bootstrap": "^4.3.1",
     "font-awesome": "^4.7.0",
-    "rxjs": "~7.5.0",
+    "rxjs": "^7.5.5",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.1"
   },

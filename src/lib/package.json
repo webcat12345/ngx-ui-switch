@@ -23,6 +23,9 @@
     "@angular/forms": ">=10.0.0",
     "@angular/platform-browser": ">=10.0.0"
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
   "ngPackage": {
     "lib": {
       "entryFile": "public_api.ts"

@@ -95,20 +95,6 @@
           }
         }
       }
-    },
-    "ngx-ui-switch-e2e": {
-      "root": "",
-      "sourceRoot": "",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "ngx-ui-switch:serve"
-          }
-        }
-      }
     }
   },
   "schematics": {

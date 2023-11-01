@@ -111,7 +111,6 @@
       }
     }
   },
-  "defaultProject": "ngx-ui-switch",
   "schematics": {
     "@schematics/angular:component": {
       "prefix": "app",

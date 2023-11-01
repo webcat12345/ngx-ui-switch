@@ -9,7 +9,7 @@
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/ngx-ui-switch)
 
-[![GitHub Pages](https://img.shields.io/badge/-Demo-7952B3?style=flat-square&logo=html5&logoColor=white)](https://webcat12345.github.io/ngx-ui-switch/demo/)
+[![GitHub Pages](https://img.shields.io/badge/Demo-blue?logo=angular&label=Pages&color=7952B3)](https://webcat12345.github.io/ngx-ui-switch/demo/)
 
 ## Description
 

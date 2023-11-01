@@ -1,6 +1,8 @@
-name: Build
+name: Integration Tests
 
-on: [push]
+on:
+  push:
+    branches: [master]
 
 jobs:
   build-and-lint:
@@ -9,7 +11,7 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v2
 
-      - name: Install and Build 🔧
+      - name: Install and Run Integration tests 🧪
         run: |
           yarn install
-          yarn build
+          yarn e2e:ci

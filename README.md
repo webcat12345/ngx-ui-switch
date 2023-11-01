@@ -15,8 +15,6 @@
 
 This is a simple iOS 7 style switch component for [Angular](https://angular.io).
 
-Live [demo](https://webcat12345.github.io/ngx-ui-switch/demo/)
-
 ![alt](logo.png)
 
 Inspired by [switchery](https://github.com/abpetkov/switchery) in [Angular](https://angular.io).

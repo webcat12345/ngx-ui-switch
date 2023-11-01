@@ -44,9 +44,9 @@ npm version ${VERSION} --no-commit-hooks --no-git-tag-version --preid beta
 popd
 
 if [ "$COMMIT" = "1" ]; then
-  echo "Commiting and tagging"
+  echo "Commiting and tagging ${VERSION}"
 
-  git commit -am 'chore(version): Bump version'
+  git commit -am "chore(version): Bump version ${VERSION}"
 
   git tag -a "${VERSION}" -m "Version ${VERSION}"
 fi

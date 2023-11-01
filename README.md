@@ -5,11 +5,10 @@
 [![license](https://img.shields.io/github/license/webcat12345/ngx-ui-switch)](https://github.com/webcat12345/ngx-ui-switch/blob/master/LICENSE)
 [![npm version](https://badge.fury.io/js/ngx-ui-switch.svg)](https://badge.fury.io/js/ngx-ui-switch)
 [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://www.npmjs.com/package/ngx-ui-switch)
+[![GitHub Pages](https://img.shields.io/badge/Demo-blue?logo=angular&label=Pages&color=7952B3)](https://webcat12345.github.io/ngx-ui-switch/demo/)
 [![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors)
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/ngx-ui-switch)
-
-[![GitHub Pages](https://img.shields.io/badge/Demo-blue?logo=angular&label=Pages&color=7952B3)](https://webcat12345.github.io/ngx-ui-switch/demo/)
 
 ## Description
 

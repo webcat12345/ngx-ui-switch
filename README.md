@@ -7,13 +7,15 @@
 [![npm](https://img.shields.io/npm/dm/localeval.svg)](https://www.npmjs.com/package/ngx-ui-switch)
 [![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors)
 
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/ngx-ui-switch)
+
+[![GitHub Pages](https://img.shields.io/badge/-Demo-7952B3?style=flat-square&logo=html5&logoColor=white)](https://webcat12345.github.io/ngx-ui-switch/demo/)
+
 ## Description
 
 This is a simple iOS 7 style switch component for [Angular](https://angular.io).
 
 Live [demo](https://webcat12345.github.io/ngx-ui-switch/demo/)
-
-A [stackblitz](https://stackblitz.com) is also available [here](https://stackblitz.com/edit/ngx-ui-switch)
 
 ![alt](logo.png)
 

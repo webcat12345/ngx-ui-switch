@@ -3,7 +3,7 @@ name: Build
 on: [push]
 
 jobs:
-  build-and-lint:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 🛎️

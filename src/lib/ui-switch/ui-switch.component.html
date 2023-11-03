@@ -16,13 +16,13 @@
   <label class="switch-pane" *ngIf="checkedLabel || uncheckedLabel">
     <span
       [attr.aria-label]="this.checkedLabel"
-      class="switch-label-checked"
+      [class]="reverse ? 'switch-label-unchecked' : 'switch-label-checked'"
       [style.color]="getColor('checkedTextColor')"
       >{{ this.checkedLabel }}</span
     >
     <span
       [attr.aria-label]="this.uncheckedLabel"
-      class="switch-label-unchecked"
+      [class]="reverse ? 'switch-label-checked' : 'switch-label-unchecked'"
       [style.color]="getColor('uncheckedTextColor')"
       >{{ this.uncheckedLabel }}</span
     >

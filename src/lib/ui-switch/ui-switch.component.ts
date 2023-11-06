@@ -104,10 +104,10 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
     private cdr: ChangeDetectorRef
   ) {
     this.size = (config && config.size) || 'medium';
-    this.color = (config && config.color) || 'rgb(100, 189, 99)';
+    this.color = config && config.color;
     this.switchOffColor = config && config.switchOffColor;
     this.switchColor = config && config.switchColor;
-    this.defaultBgColor = (config && config.defaultBgColor) || 'rgb(240, 240, 240)';
+    this.defaultBgColor = config && config.defaultBgColor;
     this.defaultBoColor = config && config.defaultBoColor;
     this.checkedLabel = config && config.checkedLabel;
     this.uncheckedLabel = config && config.uncheckedLabel;

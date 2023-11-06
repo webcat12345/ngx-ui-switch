@@ -137,6 +137,11 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
     return this.checked ? this.color : this.defaultBgColor;
   }
 
+  getLabelClass(labelType: 'checked' | 'unchecked'): string {
+     const checked = labelType === (this.reverse ? 'unchecked' : 'checked');
+     return checked ? 'switch-label-checked' : 'switch-label-unchecked'
+  }
+
   onClick(event: MouseEvent) {
     if (this.disabled) {
       return;

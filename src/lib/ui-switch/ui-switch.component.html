@@ -2,9 +2,9 @@
   type="button"
   class="switch"
   role="switch"
-  [attr.aria-checked]="checked"
+  [attr.aria-checked]="reverse ? !checked : checked"
   [attr.aria-label]="ariaLabel"
-  [class.checked]="checked"
+  [class.checked]="reverse ? !checked : checked"
   [class.disabled]="disabled"
   [class.loading]="loading"
   [class.switch-large]="size === 'large'"
@@ -16,13 +16,13 @@
   <label class="switch-pane" *ngIf="checkedLabel || uncheckedLabel">
     <span
       [attr.aria-label]="this.checkedLabel"
-      class="switch-label-checked"
+      [class]="getLabelClass('checked')"
       [style.color]="getColor('checkedTextColor')"
       >{{ this.checkedLabel }}</span
     >
     <span
       [attr.aria-label]="this.uncheckedLabel"
-      class="switch-label-unchecked"
+      [class]="getLabelClass('unchecked')"
       [style.color]="getColor('uncheckedTextColor')"
       >{{ this.uncheckedLabel }}</span
     >

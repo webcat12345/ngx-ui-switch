@@ -3,7 +3,7 @@ import { Component, VERSION } from '@angular/core';
 @Component({
   selector: 'app-footer',
   template: `
-    <footer class="footer mb-4 mt-2">
+    <footer class="footer mb-4 pb-4 mt-2">
       Demo using Angular {{ version }}
       <br />
       Released under the

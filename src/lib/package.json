@@ -1,6 +1,6 @@
 {
   "name": "ngx-ui-switch",
-  "version": "14.0.4",
+  "version": "15.0.0",
   "description": "switch button for angular4",
   "bugs": "https://github.com/webcat12345/ngx-ui-switch/issues",
   "homepage": "https://github.com/webcat12345/ngx-ui-switch#readme",
@@ -22,6 +22,9 @@
     "@angular/common": ">=10.0.0",
     "@angular/forms": ">=10.0.0",
     "@angular/platform-browser": ">=10.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   },
   "ngPackage": {
     "lib": {

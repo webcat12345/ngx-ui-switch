@@ -1,4 +1,4 @@
-name: Deploy demo to GitHub pages
+name: Deploy demo and docs to GitHub pages
 
 on:
   push:
@@ -22,7 +22,9 @@ jobs:
           yarn build:demo
           yarn typedoc
           mkdir pages
+          echo "Copying demo"
           cp -r demo pages
+          echo "Copying docs"
           cp -r docs pages
 
       - name: Deploy 🚀

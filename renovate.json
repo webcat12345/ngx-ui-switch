@@ -1,8 +1,7 @@
 {
   "extends": [
-    "config:base",
-    ":preserveSemverRanges",
-    "monorepo:angular"
+    "config:recommended",
+    ":preserveSemverRanges"
   ],
   "packageRules": [
     {

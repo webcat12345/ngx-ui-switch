@@ -1,7 +1,8 @@
 {
   "extends": [
     "config:base",
-    ":preserveSemverRanges"
+    ":preserveSemverRanges",
+    "monorepo:angular"
   ],
   "packageRules": [
     {
@@ -20,18 +21,6 @@
     }
   ],
   "ignoreDeps": [
-    "@angular-devkit/build-angular",
-    "@angular/animations",
-    "@angular/cli",
-    "@angular/common",
-    "@angular/compiler-cli",
-    "@angular/compiler",
-    "@angular/core",
-    "@angular/forms",
-    "@angular/language-service",
-    "@angular/platform-browser-dynamic",
-    "@angular/platform-browser",
-    "@angular/router",
     "@types/jasmine",
     "all-contributors-cli",
     "bootstrap",

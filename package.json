@@ -47,7 +47,7 @@
     "@angular/platform-browser": "^16.1.8",
     "@angular/platform-browser-dynamic": "^16.1.8",
     "@angular/router": "^16.1.8",
-    "bootstrap": "^4.3.1",
+    "bootstrap": "^5.0.0",
     "font-awesome": "^4.7.0",
     "rxjs": "^7.5.5",
     "tslib": "^2.3.0",

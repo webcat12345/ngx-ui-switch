@@ -15,7 +15,7 @@
       "depTypeList": [
         "dependencies"
       ],
-      "semanticCommitType": "fix",
+      "semanticCommitType": "feat",
       "semanticCommitScope": "dependencies"
     }
   ],

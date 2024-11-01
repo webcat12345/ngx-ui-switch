@@ -8,14 +8,23 @@ import { Observable } from 'rxjs';
   templateUrl: './demo.component.html',
 })
 export class DemoComponent {
-  submitted = false;
+  // two-way binding
   enable = true;
-  enableFeature = false;
+
+  // Event-based
   count = 0;
   change = false;
   valueChange = false;
+
+  // Template driven form
+  submitted = false;
+  enableFeature = false;
+  submittedValue = null;
+
   changeEvent: MouseEvent;
+
   isLoading = false;
+  beforeChangeValue = false;
   fakeAsync: Observable<boolean> = new Observable(observer => {
     this.isLoading = true;
     const timeout = setTimeout(() => {
@@ -29,10 +38,13 @@ export class DemoComponent {
 
   constructor() {}
 
+  // Template driven form
   onSubmit(event: any) {
     this.submitted = true;
+    this.submittedValue = this.demoForm.value;
   }
 
+  // Event-based
   onChange(value: boolean) {
     this.count++;
     this.change = value;

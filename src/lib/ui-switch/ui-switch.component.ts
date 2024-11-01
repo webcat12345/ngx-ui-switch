@@ -138,8 +138,8 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
   }
 
   getLabelClass(labelType: 'checked' | 'unchecked'): string {
-     const checked = labelType === (this.reverse ? 'unchecked' : 'checked');
-     return checked ? 'switch-label-checked' : 'switch-label-unchecked'
+    const checked = labelType === (this.reverse ? 'unchecked' : 'checked');
+    return checked ? 'switch-label-checked' : 'switch-label-unchecked';
   }
 
   onClick(event: MouseEvent) {
@@ -181,6 +181,9 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
     }
 
     this.onChangeCallback(this.checked);
+    // Added as part of #243 when change detection OnPush is set for the
+    // hosting component
+    // https://github.com/webcat12345/ngx-ui-switch/issues/243
     if (this.cdr) {
       this.cdr.markForCheck();
     }

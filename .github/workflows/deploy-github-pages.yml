@@ -3,6 +3,7 @@ name: Deploy demo and docs to GitHub pages
 on:
   push:
     tags: ['*']
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:

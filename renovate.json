@@ -17,6 +17,17 @@
       ],
       "semanticCommitType": "feat",
       "semanticCommitScope": "dependencies"
+    },
+    {
+      "packagePatterns": [
+        "@angular",
+        "angular"
+      ],
+      "depTypeList": [
+        "dependencies"
+      ],
+      "semanticCommitType": "feat!",
+      "semanticCommitScope": "dependencies"
     }
   ],
   "ignoreDeps": [

@@ -180,7 +180,6 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
       this.checked = !!obj;
     }
 
-    this.onChangeCallback(this.checked);
     // Added as part of #243 when change detection OnPush is set for the
     // hosting component
     // https://github.com/webcat12345/ngx-ui-switch/issues/243

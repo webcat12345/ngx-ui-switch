@@ -70,7 +70,7 @@
     "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "7.11.0",
     "@typescript-eslint/parser": "7.11.0",
-    "all-contributors-cli": "^5.10.0",
+    "all-contributors-cli": "^6.0.0",
     "cypress": "^14.0.0",
     "eslint": "^8.0.0",
     "fs-extra": "^11.0.0",

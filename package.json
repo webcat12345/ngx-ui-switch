@@ -36,7 +36,8 @@
     "e2e:ci": "ng run ngx-ui-switch:cypress-run",
     "typedoc": "typedoc --options typedoc.json src/lib/*.ts && ts-node -P tsconfig.build.json docs.ts",
     "cypress:open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "validate:renovate": "npx --yes --package renovate -- renovate-config-validator --strict"
   },
   "dependencies": {
     "@angular/animations": "^16.0.0",

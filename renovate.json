@@ -5,29 +5,29 @@
   ],
   "packageRules": [
     {
-      "packagePatterns": [
-        "*"
-      ],
       "semanticCommitType": "build",
-      "semanticCommitScope": "dev-dependencies"
+      "semanticCommitScope": "dev-dependencies",
+      "matchPackageNames": [
+        "*"
+      ]
     },
     {
-      "depTypeList": [
+      "matchDepTypes": [
         "dependencies"
       ],
       "semanticCommitType": "feat",
       "semanticCommitScope": "dependencies"
     },
     {
-      "packagePatterns": [
-        "@angular",
-        "angular"
-      ],
-      "depTypeList": [
+      "matchDepTypes": [
         "dependencies"
       ],
       "semanticCommitType": "feat!",
-      "semanticCommitScope": "dependencies"
+      "semanticCommitScope": "dependencies",
+      "matchPackageNames": [
+        "/@angular/",
+        "/angular/"
+      ]
     }
   ],
   "ignoreDeps": [

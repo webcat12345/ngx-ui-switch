@@ -19,3 +19,6 @@ jobs:
         run: |
           yarn build
           yarn build:demo
+
+      - name: Lint 🕵️
+        run: yarn lint

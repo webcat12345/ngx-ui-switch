@@ -5,34 +5,34 @@
   ],
   "packageRules": [
     {
-      "packagePatterns": [
-        "*"
-      ],
       "semanticCommitType": "build",
-      "semanticCommitScope": "dev-dependencies"
+      "semanticCommitScope": "dev-dependencies",
+      "matchPackageNames": [
+        "*"
+      ]
     },
     {
-      "depTypeList": [
+      "matchDepTypes": [
         "dependencies"
       ],
       "semanticCommitType": "feat",
       "semanticCommitScope": "dependencies"
     },
     {
-      "packagePatterns": [
-        "@angular",
-        "angular"
-      ],
-      "depTypeList": [
+      "matchDepTypes": [
         "dependencies"
       ],
       "semanticCommitType": "feat!",
-      "semanticCommitScope": "dependencies"
+      "semanticCommitScope": "dependencies",
+      "matchPackageNames": [
+        "/^@angular/",
+        "/^angular/",
+        "ng-packagr"
+      ]
     }
   ],
   "ignoreDeps": [
     "@types/jasmine",
-    "all-contributors-cli",
     "bootstrap",
     "jasmine-core",
     "jasmine-spec-reporter",
@@ -46,7 +46,6 @@
     "rollup",
     "rxjs",
     "tsickle",
-    "tslint",
     "typedoc",
     "typescript",
     "zone.js"

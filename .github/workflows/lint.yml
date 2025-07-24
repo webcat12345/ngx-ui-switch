@@ -1,4 +1,4 @@
-name: Build
+name: Lint
 
 on: [push]
 
@@ -15,7 +15,5 @@ jobs:
       - name: Install dependencies 📦
         run: yarn install --frozen-lockfile
 
-      - name: Build 🔧
-        run: |
-          yarn build
-          yarn build:demo
+     - name: Lint 🕵️
+        run: yarn lint

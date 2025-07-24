@@ -200,7 +200,9 @@ export class UiSwitchComponent implements ControlValueAccessor, OnDestroy {
     this.disabled = isDisabled;
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private onTouchedCallback = (v: any) => {};
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   private onChangeCallback = (v: any) => {};
 
   ngOnDestroy() {

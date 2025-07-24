@@ -40,6 +40,7 @@ export class DemoComponent {
 
   // Template driven form
   onSubmit(event: any) {
+    console.log(event, event.toString(), JSON.stringify(event));
     this.submitted = true;
     this.submittedValue = this.demoForm.value;
   }

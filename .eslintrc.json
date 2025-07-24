@@ -1,7 +1,8 @@
 {
   "root": true,
   "ignorePatterns": [
-    "projects/**/*"
+    "projects/**/*",
+    "*.d.ts"
   ],
   "overrides": [
     {
@@ -12,6 +13,7 @@
         "eslint:recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates",
         "plugin:@angular-eslint/template/process-inline-templates"
       ],
       "rules": {
@@ -30,6 +32,10 @@
             "prefix": "app",
             "style": "kebab-case"
           }
+        ],
+        "@typescript-eslint/no-explicit-any": [
+          "warn",
+          {}
         ]
       }
     },

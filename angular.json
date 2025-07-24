@@ -54,18 +54,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-ui-switch:build"
+            "buildTarget": "ngx-ui-switch:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-ui-switch:build:production"
+              "buildTarget": "ngx-ui-switch:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-ui-switch:build"
+            "buildTarget": "ngx-ui-switch:build"
           }
         },
         "test": {

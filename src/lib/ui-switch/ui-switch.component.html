@@ -13,6 +13,7 @@
   [style.background-color]="getColor()"
   [style.border-color]="getColor('borderColor')"
 >
+  <!-- eslint-disable-next-line @angular-eslint/template/label-has-associated-control -->
   <label class="switch-pane" *ngIf="checkedLabel || uncheckedLabel">
     <span
       [attr.aria-label]="this.checkedLabel"

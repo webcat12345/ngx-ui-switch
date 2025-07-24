@@ -10,8 +10,13 @@ jobs:
     steps:
       - name: Checkout 🛎️
         uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          cache: 'yarn'
 
-      - name: Install and Run Integration tests 🧪
+      - name: Install dependencies 📦
+        run: yarn install --frozen-lockfile
+
+      - name: Run Integration tests 🧪
         run: |
-          yarn install
           yarn e2e:ci

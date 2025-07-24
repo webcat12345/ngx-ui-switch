@@ -1,4 +1,4 @@
-name: Integration Tests
+name: Unit Tests
 
 on:
   pull_request:
@@ -17,6 +17,6 @@ jobs:
       - name: Install dependencies 📦
         run: yarn install --frozen-lockfile
 
-      - name: Run Integration tests 🧪
+      - name: Run Unit tests 🧪
         run: |
-          yarn e2e:ci
+          yarn test:ci

@@ -25,14 +25,14 @@
       "semanticCommitType": "feat!",
       "semanticCommitScope": "dependencies",
       "matchPackageNames": [
-        "/@angular/",
-        "/angular/"
+        "/^@angular/",
+        "/^angular/",
+        "ng-packagr"
       ]
     }
   ],
   "ignoreDeps": [
     "@types/jasmine",
-    "all-contributors-cli",
     "bootstrap",
     "jasmine-core",
     "jasmine-spec-reporter",
@@ -46,7 +46,6 @@
     "rollup",
     "rxjs",
     "tsickle",
-    "tslint",
     "typedoc",
     "typescript",
     "zone.js"

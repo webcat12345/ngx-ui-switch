@@ -52,11 +52,11 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^20.0.0",
-    "@angular-eslint/builder": "^17.0.0",
-    "@angular-eslint/eslint-plugin": "^17.0.0",
-    "@angular-eslint/eslint-plugin-template": "^17.0.0",
-    "@angular-eslint/schematics": "^17.0.0",
-    "@angular-eslint/template-parser": "^17.0.0",
+    "@angular-eslint/builder": "^18.0.0",
+    "@angular-eslint/eslint-plugin": "^18.0.0",
+    "@angular-eslint/eslint-plugin-template": "^18.0.0",
+    "@angular-eslint/schematics": "^20.0.0",
+    "@angular-eslint/template-parser": "^18.0.0",
     "@angular/cli": "^20.0.0",
     "@angular/compiler-cli": "^20.0.0",
     "@angular/language-service": "^20.0.0",
@@ -64,8 +64,10 @@
     "@types/jasmine": "^4.3.0",
     "@types/jasminewd2": "^2.0.10",
     "@types/node": "^22.0.0",
-    "@typescript-eslint/eslint-plugin": "7.11.0",
-    "@typescript-eslint/parser": "7.11.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@typescript-eslint/types": "^7.0.0",
+    "@typescript-eslint/utils": "^7.0.0",
     "all-contributors-cli": "^6.0.0",
     "cypress": "^14.0.0",
     "eslint": "^8.0.0",
@@ -80,9 +82,7 @@
     "ng-packagr": "^20.0.0",
     "sass": "^1.69.5",
     "ts-node": "^10.9.1",
-    "tsickle": "^0.46.3",
-    "typedoc": "^0.25.1",
-    "typescript": "~5.4.5"
+    "typedoc": "^0.28.14",
+    "typescript": "~5.8.0"
   }
-  
 }

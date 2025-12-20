@@ -1393,13 +1393,14 @@
     tunnel-agent "^0.6.0"
     uuid "^8.3.2"
 
-"@cypress/schematic@2.5.2":
-  version "2.5.2"
-  resolved "https://registry.yarnpkg.com/@cypress/schematic/-/schematic-2.5.2.tgz#c64e3e4728d43f223e48fa67e92517cf773ee0ab"
-  integrity sha512-H+V3ZP3KQVOs6b49N66jioXa+rkLzszVi+Bl3jiroVTURUNMOpSa4BOrt10Pn8F57TO0Bamhch2WOk/e9cq98w==
+"@cypress/schematic@5.0.0":
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/@cypress/schematic/-/schematic-5.0.0.tgz#dbe31049abc71228718d6dd01936ea606dc2de26"
+  integrity sha512-z8+myDqT4SONCBvNI+cFzhADFCOOsSOcfp6mxMx4FxMMpyeaYbUNUCZlt886UnjnSsL5BWSX7WNJLhPptewKVw==
   dependencies:
-    jsonc-parser "^3.0.0"
-    rxjs "~6.6.0"
+    jsonc-parser "^3.3.1"
+    rxjs "~7.8.2"
+    semver "^7.7.3"
 
 "@cypress/xvfb@^1.2.4":
   version "1.2.4"
@@ -6149,10 +6150,15 @@ jsonc-parser@3.2.1:
   resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-3.2.1.tgz#031904571ccf929d7670ee8c547545081cb37f1a"
   integrity sha512-AilxAyFOAcK5wA1+LeaySVBrHsGQvUFCDWXKpZjzaL0PqW+xfBOttn8GNtWKFWqneyMZj41MWF9Kl6iPWLwgOA==
 
-jsonc-parser@^3.0.0, jsonc-parser@^3.2.0:
+jsonc-parser@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-3.2.0.tgz#31ff3f4c2b9793f89c67212627c51c6394f88e76"
   integrity sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==
+
+jsonc-parser@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jsonc-parser/-/jsonc-parser-3.3.1.tgz#f2a524b4f7fd11e3d791e559977ad60b98b798b4"
+  integrity sha512-HUgH65KyejrUFPvHFPbqOY0rsFip3Bo5wb4ngvdi1EpCYWUQDC5V+Y7mZws+DLkr4M//zQJoanu1SP+87Dv1oQ==
 
 jsonfile@^4.0.0:
   version "4.0.0"
@@ -7949,14 +7955,14 @@ rxjs@7.8.1, rxjs@^7.5.1, rxjs@^7.5.5:
   dependencies:
     tslib "^2.1.0"
 
-rxjs@^6.6.0, rxjs@~6.6.0:
+rxjs@^6.6.0:
   version "6.6.7"
   resolved "https://registry.npmjs.org/rxjs/-/rxjs-6.6.7.tgz"
   integrity sha512-hTdwr+7yYNIT5n4AMYp85KA6yw2Va0FLa3Rguvbpa4W3I5xynaBZo41cM3XM+4Q6fRMj3sBYIR1VAmZMXYJvRQ==
   dependencies:
     tslib "^1.9.0"
 
-rxjs@^7.8.1:
+rxjs@^7.8.1, rxjs@~7.8.2:
   version "7.8.2"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-7.8.2.tgz#955bc473ed8af11a002a2be52071bf475638607b"
   integrity sha512-dhKf903U/PQZY6boNNtAGdWbG85WAbjT/1xYoZIC7FAY0yWapOBQVsVrDl58W86//e1VpMNBtRV4MaXfdMySFA==
@@ -8106,6 +8112,11 @@ semver@^7.6.0:
   version "7.7.1"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.7.1.tgz#abd5098d82b18c6c81f6074ff2647fd3e7220c9f"
   integrity sha512-hlq8tAfn0m/61p4BVRcPzIGr6LKiMwo4VM6dGi6pt4qcRkmNzTcWq6eCEjEh+qXjkMDvPlOFFSGwQjoEa6gyMA==
+
+semver@^7.7.3:
+  version "7.7.3"
+  resolved "https://registry.yarnpkg.com/semver/-/semver-7.7.3.tgz#4b5f4143d007633a8dc671cd0a6ef9147b8bb946"
+  integrity sha512-SdsKMrI9TdgjdweUSR9MweHA4EJ8YxHn8DFaDisvhVlUOe4BF1tLD7GAj0lIqWVl+dPb/rExr0Btby5loQm20Q==
 
 send@0.18.0:
   version "0.18.0"

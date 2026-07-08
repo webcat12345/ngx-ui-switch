@@ -55,7 +55,7 @@
     "@cypress/schematic": "2.5.2",
     "@types/jasmine": "^4.3.0",
     "@types/jasminewd2": "^2.0.10",
-    "@types/node": "^22.0.0",
+    "@types/node": "^24.0.0",
     "@typescript-eslint/eslint-plugin": "7.11.0",
     "@typescript-eslint/parser": "7.11.0",
     "all-contributors-cli": "^6.0.0",

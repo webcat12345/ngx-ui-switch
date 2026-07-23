@@ -28,7 +28,6 @@
     "validate:renovate": "npx --yes --package renovate -- renovate-config-validator --strict"
   },
   "dependencies": {
-    "@angular/animations": "^17.0.0",
     "@angular/common": "^17.0.0",
     "@angular/compiler": "^17.0.0",
     "@angular/core": "^17.0.0",

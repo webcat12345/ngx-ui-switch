@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { UiSwitchModule } from '../lib/public_api';
 
@@ -20,7 +19,7 @@ import { GithubLinkComponent } from './github-link/github-link.component';
     HeaderComponent,
     GithubLinkComponent,
   ],
-  imports: [BrowserModule, BrowserAnimationsModule, UiSwitchModule],
+  imports: [BrowserModule, UiSwitchModule],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,6 +1,5 @@
 import { TestBed, waitForAsync } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { UiSwitchModule } from '../lib/public_api';
 
@@ -14,7 +13,7 @@ import { GithubLinkComponent } from './github-link/github-link.component';
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule, FormsModule, ReactiveFormsModule, UiSwitchModule],
+      imports: [FormsModule, ReactiveFormsModule, UiSwitchModule],
       declarations: [
         AppComponent,
         DemoComponent,

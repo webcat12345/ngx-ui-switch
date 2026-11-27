@@ -2,6 +2,7 @@
   type="button"
   class="switch"
   role="switch"
+  [disabled]="disabled"
   [attr.aria-checked]="reverse ? !checked : checked"
   [attr.aria-label]="ariaLabel"
   [class.checked]="reverse ? !checked : checked"
